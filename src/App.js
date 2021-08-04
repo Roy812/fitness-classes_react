@@ -1,15 +1,11 @@
 import React from "react";
 import './App.css';
-import Header from "./components/Header";
-import './components/Header.css';
-import Banner from "./components/Banner";
-import "./components/Banner.css";
-import Quotes from "./components/Quotes";
-import "./components/Quotes.css";
-import Footer from "./components/Footer";
-import "./components/Footer.css";
-import Login from "./components/Login";
-import "./components/Login.css";
+import Header from "./components/header/Header";
+import Banner from "./components/banner/Banner";
+import Quotes from "./components/quotes/Quotes";
+import Footer from "./components/footer/Footer";
+import Login from "./components/login/Login";
+
 
 function App() {
   return (

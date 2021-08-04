@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&family=Roboto&display=swap');
 
-.button_inquotes_container {
+.button_container {
     position: relative;
     top: 40px;
     right: 20px;
@@ -8,7 +8,7 @@
     font-size: 24px;
 }
 
-.button_one {
+.button_smu {
     position: relative;
     bottom: 35px;
     left: 25px;
@@ -20,6 +20,30 @@
     position: relative;
     left: 155px;
     bottom: 90px;
+}
+
+.cup {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 10px;
+    top: 90px;
+}
+
+.lock {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 65px;
+    top: 265px;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    right: 30px;
+    top: 430px;
 }
 
 .quote {
@@ -39,32 +63,8 @@
     flex-basis: 750px;
 }
 
-.extra_quote_container {
+.quotes_direction_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.lock {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    left: 65px;
-    top: 265px;
-}
-
-.cup {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    left: 10px;
-    top: 90px;
-}
-
-.play {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    right: 30px;
-    top: 430px;
 }
