@@ -7,7 +7,10 @@ import loginIcon from "../../assets/login.svg"
 function NavBar() {
     return (
         <nav className={styles["navbar"]}>
-            <img className={styles["navbar__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
+
+            <Link to="/">
+                <img className={styles["navbar__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
+            </Link>
             <ul className={styles["navbar__menu"]}>
 
                 <li>
