@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+.navbar {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background-color: #F62525;
+    flex-basis: 150px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.navbar__logo {
+    margin-left: -10px;
+}
+
+.navbar__menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 60px;
+    list-style: none;
+    margin-left: -10px;
+    margin-right: 35px;
+}
+
+.navbar__link {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    /*border-bottom: 2px solid #fff;*/
+}
+
+.navbar__link:hover {
+    border-bottom: 3px solid #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.navbar__login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__login-icon {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 8px;
+}
+
+.navbar__login-link {
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.navbar__login-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+.bar_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-basis: 75px;
+}
+
+.bar_one {
+    height: 1px;
+    background-color: white;
+    flex-basis: 120px;
+    position: relative;
+    right: 68px;
+    bottom: 56px;
+}
+
+.bar_two {
+    height: 1px;
+    background-color: white;
+    flex-basis: 68px;
+    position: relative;
+    right: 74px;
+    bottom: 56px;
+}
+
+.bar_three {
+    height: 1px;
+    background-color: white;
+    flex-basis: 120px;
+    position: relative;
+    right: 24px;
+    bottom: 56px;
+}
+
+.bar_four {
+    height: 1px;
+    background-color: white;
+    flex-basis: 86px;
+    position: relative;
+    right: 28px;
+    bottom: 56px;
+}
+
+.logo_fc {
+    flex-basis: 150px;
+}
+
+.phantom {
+    width: 76px;
+    height: 1px;
+    background-color: #F62525;
+    flex-basis: 150px;
+    position: relative;
+    bottom: 10px;
+}
+
+.title {
+    color: white;
+    flex-basis: 150px;
+    position: relative;
+    top: 20px;
+    font-size: 24px;
+    border-bottom: solid 2px #fff;
+}
