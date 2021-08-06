@@ -11,6 +11,8 @@ function NavBar() {
             <Link to="/">
                 <img className={styles["navbar__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
             </Link>
+
+            {/*testy*/}
             <ul className={styles["navbar__menu"]}>
 
                 <li>
