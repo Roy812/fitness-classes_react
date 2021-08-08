@@ -1,0 +1,58 @@
+.register-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.register-content__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    right: 120px;
+    margin-top: 45px;
+}
+
+.register-content__one {
+
+}
+
+.register-content__one__input {
+    -webkit-text-fill-color: black;
+    font-size: 12px;
+    width: 166px;
+    border-bottom: solid 3px black;
+}
+
+.register-content__two {
+    margin-top: 35px;
+}
+
+.register-content__two__input {
+    -webkit-text-fill-color: black;
+    font-size: 12px;
+    width: 150px;
+    border-bottom: solid 3px black;
+}
+
+.register-content__three {
+    width: 420px;
+    margin-top: 35px;
+}
+
+.register-content__three-button {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #33769C;
+    color: #fff;
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+

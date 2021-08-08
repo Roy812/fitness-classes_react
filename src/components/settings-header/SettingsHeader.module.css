@@ -1,0 +1,43 @@
+.settings-header {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*position: fixed;*/
+    z-index: 999;
+    background-color: #F62525;
+    flex-basis: 150px;
+}
+
+.settings-header__logo {
+    margin-left: -10px;
+}
+
+.settings-header__title {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    flex-basis: 250px;
+    text-align: center;
+}
+
+.settings-header__user {
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+.settings-header__user-icon {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 8px;
+}
+
+.settings-header__user-message {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 20px;
+}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
 
-function NavBar() {
+function NavBar( {message} ) {
 
     return (
         <nav className={styles["navbar"]}>
@@ -55,7 +55,7 @@ function NavBar() {
                 <Link
                     to="/login"
                     className={styles["navbar__login-link"]}>
-                    LOGIN
+                    {message}
                 </Link>
             </div>
 

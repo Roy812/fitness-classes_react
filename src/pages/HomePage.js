@@ -9,7 +9,9 @@ import Button from "../components/button/Button";
 function HomePage() {
     return (
         <>
-            <NavBar />
+            <NavBar
+            message="LOGIN"
+            />
             <Banner />
             <Quotes />
             <Content />

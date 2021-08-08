@@ -1,0 +1,17 @@
+.register-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: #F62525;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    /*margin-top: 60px;*/
+}
+
+.register-footer__message {
+    flex-basis: 250px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
