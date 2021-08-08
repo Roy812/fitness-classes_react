@@ -1,27 +1,23 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import {useForm} from "react-hook-form";
+import {Link} from "react-router-dom";
 
-function Footer( {message} ) {
-
-    const {register, handleSubmit} = useForm()
-
-    function handleFooterSubmit(data) {
-        console.log(data);
-    }
-
+function Footer() {
     return (
-        <div className={styles["footer_container"]}>
-            <h3 className={styles["message"]} >{message}</h3>
-            <div className={styles["form_container"]} >
-                <form onSubmit={handleSubmit(handleFooterSubmit)} >
-                    <label>
-                        Your mail:
-                        <input {...register("test")} type="text" name="mail"/>
+        <div className={styles["footer"]}>
+            <h3 className={styles["footer__message"]} >KEEP UP-TO-DATE,<br/>GET OUR NEWSLETTER!</h3>
+            <div className={styles["footer__container"]} >
+                <form className={styles["footer__form"]}>
+                    <label className={styles["footer__label"]}>
+                        <input className={styles["footer__label__input"]} type="text" name="mail" placeholder="YOUR MAIL:"/>
                     </label>
-                    <button type="submit"
-                    >Join
-                    </button>
+                    <Link
+                        to="/newsletter"
+                        className={styles["footer__form__link"]}
+                        >
+                        JOIN
+                    </Link>
+
                 </form>
         </div>
         </div>

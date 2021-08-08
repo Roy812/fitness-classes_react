@@ -1,38 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
-
-.banner_container {
+.banner {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    justify-content: center;
 }
 
-.picture {
-    width: 400px;
-    height: 250px;
+.picture__lifting {
+    width: 455px;
+    height: 240px;
 }
 
-.quote1 {
-    color: black;
-    display: flex;
-    position: relative;
-    right: 135px;
-    margin: 10px;
+.picture__food {
+    width: 455px;
+    height: 240px;
 }
 
-.quote2 {
-    color: black;
-    display: flex;
-    position: relative;
-    right: 135px;
-    margin: 10px;
+.picture__homegym {
+    width: 455px;
+    height: 240px;
 }
 
-.quote3 {
-    color: black;
-    display: flex;
-    position: relative;
-    right: 70px;
-    margin: 10px;
-}
+
+/*.quote1 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 135px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.quote2 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 135px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.quote3 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 70px;*/
+/*    margin: 10px;*/
+/*}*/

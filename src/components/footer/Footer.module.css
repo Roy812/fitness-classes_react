@@ -1,19 +1,45 @@
-.form_container {
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #F62525;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin-top: 60px;
+}
+
+.footer__message {
+    flex-basis: 250px;
+    font-size: 20px;
+}
+
+.footer__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.footer_container {
+.footer__form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 15px;
-    background-color: #F62525;
-    color: white;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.message {
-    flex-basis: 180px;
-    font-size: 20px;
+.footer__label {
+    -webkit-text-fill-color: black;
+}
+
+.footer__label__input {
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer__form__link {
+    -webkit-text-fill-color: white;
+    background-color: black;
+    font-weight: 600;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    text-decoration: none;
 }

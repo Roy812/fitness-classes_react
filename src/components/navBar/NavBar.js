@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 import { Link } from "react-router-dom";
+//NB: Alt = useHistory -- destructure and use the .push method on a event handler -- place onClick event listener.
 import logoPicture from "../../assets/Logo F.C. (1).svg";
-import loginIcon from "../../assets/login.svg"
+import loginIcon from "../../assets/Login(icon).png"
 
 function NavBar() {
+
     return (
         <nav className={styles["navbar"]}>
 
@@ -12,14 +14,14 @@ function NavBar() {
                 <img className={styles["navbar__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
             </Link>
 
-            {/*testy*/}
+
             <ul className={styles["navbar__menu"]}>
 
                 <li>
                     <Link
                         to="/categories"
                         className={styles["navbar__link"]}>
-                        Categories
+                        CATEGORIES
                     </Link>
                 </li>
 
@@ -27,7 +29,7 @@ function NavBar() {
                     <Link
                         to="/about"
                         className={styles["navbar__link"]}>
-                        About
+                        ABOUT
                     </Link>
                 </li>
 
@@ -35,7 +37,7 @@ function NavBar() {
                     <Link
                         to="/newsletter"
                         className={styles["navbar__link"]}>
-                        Newsletter
+                        NEWSLETTER
                     </Link>
                 </li>
 
@@ -43,7 +45,7 @@ function NavBar() {
                     <Link
                         to="/review"
                         className={styles["navbar__link"]}>
-                        Review
+                        REVIEW
                     </Link>
                 </li>
             </ul>
@@ -53,7 +55,7 @@ function NavBar() {
                 <Link
                     to="/login"
                     className={styles["navbar__login-link"]}>
-                    Login
+                    LOGIN
                 </Link>
             </div>
 
