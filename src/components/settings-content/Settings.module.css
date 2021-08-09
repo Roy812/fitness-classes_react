@@ -12,27 +12,27 @@
     align-items: center;
     position: relative;
     right: 25px;
-    bottom: 130px;
+    bottom: 256px;
 }
 
 .settings-content__icons-lock {
     position: relative;
-    bottom: 5px;
+    bottom: 35px;
 }
 
 .settings-content__icons-photo {
     position: relative;
-    top: 56px;
+    top: 78px;
 }
 
 .settings-content__icons-newsletter {
     position: relative;
-    top: 176px;
+    top: 325px;
 }
 
 .settings-content__icons-delete {
     position: relative;
-    top: 310px;
+    top: 420px;
 }
 
 .settings-content__container {
@@ -54,13 +54,27 @@
 }
 
 .settings-content__one-label {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .settings-content__one-input {
     width: 200px;
     -webkit-text-fill-color: black;
     border-bottom: solid 3px black;
+}
+
+.settings-content__one-button {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F62525;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
 }
 
 .settings-content__two {
@@ -101,12 +115,14 @@
     margin-top: 30px;
 }
 
-.settings-content__three-label {
-
-}
-
-.settings-content__three-input {
-
+.settings-content__three-button {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    color: #31A12E;
+    padding: 5px;
+    margin-top: 20px;
 }
 
 .settings-content__four {
@@ -115,4 +131,22 @@
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+.settings-content__four-message {
+    font-size: 12px;
+    text-align: center;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.settings-content__four-button {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F62525;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 45px;
 }

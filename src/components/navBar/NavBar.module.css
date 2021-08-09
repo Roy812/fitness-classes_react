@@ -39,12 +39,29 @@
 .navbar__login {
     display: flex;
     align-items: center;
+    position: relative;
+    left: 10px;
 }
 
 .navbar__login-icon {
     max-width: 40px;
     max-height: 40px;
     margin-right: 8px;
+}
+
+.navbar__login-input__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.navbar__login-input {
+    width: 130px;
+    text-align: center;
+    -webkit-text-fill-color: black;
+    font-size: 10px;
 }
 
 .navbar__login-link {

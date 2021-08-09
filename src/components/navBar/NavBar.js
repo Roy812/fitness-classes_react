@@ -43,15 +43,31 @@ function NavBar( {message} ) {
 
                 <li>
                     <Link
-                        to="/review"
+                        to="/reviews"
                         className={styles["navbar__link"]}>
-                        REVIEW
+                        REVIEWS
                     </Link>
                 </li>
             </ul>
 
             <div className={styles["navbar__login"]}>
-            <img className={styles["navbar__login-icon"]} src={loginIcon} alt="login-icon"/>
+                <img className={styles["navbar__login-icon"]} src={loginIcon} alt="login-icon"/>
+                <div className={styles["navbar__login-input__container"]}>
+                    <label>
+                        <input
+                        className={styles["navbar__login-input"]}
+                        type="text"
+                        placeholder="MAIL"
+                        />
+                    </label>
+                    <label>
+                        <input
+                        className={styles["navbar__login-input"]}
+                        type="text"
+                        placeholder="PASSWORD"
+                        />
+                    </label>
+                </div>
                 <Link
                     to="/login"
                     className={styles["navbar__login-link"]}>

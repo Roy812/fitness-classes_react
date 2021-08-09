@@ -14,7 +14,7 @@ function RegisterHeader({title, message} ) {
             <div className={styles["header__login"]}>
                 <img className={styles["header__login-icon"]} src={loginIcon} alt="login-icon"/>
                 <Link
-                    to="/login"
+                    to="/"
                     className={styles["header__login-link"]}>
                     {message}
                 </Link>

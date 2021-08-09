@@ -16,10 +16,12 @@
 
 .settings-header__title {
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    flex-basis: 250px;
+    flex-basis: 425px;
     text-align: center;
+    position: relative;
+    left: 75px;
 }
 
 .settings-header__user {

@@ -1,0 +1,34 @@
+.login-footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px;
+    margin-top: 45px;
+    background-color: #F62525;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.login-footer__link1 {
+    text-decoration: none;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.login-footer__link1:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.login-footer__link2 {
+    text-decoration: none;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.login-footer__link2:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}

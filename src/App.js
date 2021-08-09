@@ -26,7 +26,7 @@ function App() {
               <Route path="/newsletter">
                   <NewsletterPage />
               </Route>
-              <Route path="/review">
+              <Route path="/reviews">
                   <ReviewPage />
               </Route>
               <Route path="/login">
