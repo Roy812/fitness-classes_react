@@ -1,0 +1,20 @@
+.CICO-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin-top: 300px;
+}
+
+.CICO-content-message {
+
+}
+
+.CICO-content-button {
+    background-color: black;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./NutritionBody.module.css";
+import {Link} from "react-router-dom";
 
 function NutritionBody() {
     return(
@@ -14,19 +15,31 @@ function NutritionBody() {
             </div>
 
             <div className={styles["nutrition-content-CICO"]}>
-                <h4 className={styles["nutrition-body-CICO-title"]}>1. "CICO, IT"s ALL YOU NEED" BY - GREG DOUCHETTE</h4>
+                <Link
+                    className={styles["nutrition-body-CICO-title"]}
+                    to="/CICO"
+                >
+                    1. "CICO, IT"s ALL YOU NEED" BY - GREG DOUCHETTE</Link>
                 <h4 className={styles["nutrition-body-CICO-playtime"]} >90 MIN</h4>
                 <h4 className={styles["nutrition-body-CICO-subcategory"]} >MACRONUTRIENTS</h4>
             </div>
 
             <div className={styles["nutrition-body-workoutsnacks"]}>
-                <h4 className={styles["nutrition-body-workoutsnacks-title"]}>2. "THE PERFECT WORKOUT SNACKS" BY - JIM STOPPANI</h4>
+                <Link
+                    className={styles["nutrition-body-workoutsnacks-title"]}
+                    to="/workoutsnacks"
+                >
+                    2. "THE PERFECT WORKOUT SNACKS" BY - JIM STOPPANI</Link>
                 <h4 className={styles["nutrition-body-workoutsnacks-playtime"]} >120 MIN</h4>
                 <h4 className={styles["nutrition-body-workoutsnacks-subcategory"]} >TRAINING</h4>
             </div>
 
             <div className={styles["nutrition-body-testlevelsanddiets"]}>
-                <h4 className={styles["nutrition-body-testlevelsanddiets-title"]}>2. "TESTOSTERONE LEVELS & DIETS" BY - MIKE ISRATEL</h4>
+                <Link
+                    className={styles["nutrition-body-testlevelsanddiets-title"]}
+                    to="/testlevelsanddiets"
+                >
+                    3. "TESTOSTERONE LEVELS & DIETS" BY - MIKE ISRATEL</Link>
                 <h4 className={styles["nutrition-body-testlevelsanddiets-playtime"]} >100 MIN</h4>
                 <h4 className={styles["nutrition-body-testlevelsanddiets-subcategory"]} >HORMONAL BALANCE</h4>
             </div>

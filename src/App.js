@@ -10,6 +10,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import SettingsPage from "./pages/SettingsPage";
 import NutritionPage from "./pages/NutritionPage";
+import CICOPage from "./pages/CICOPage";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
               </Route>
               <Route path="/nutrition">
                   <NutritionPage />
+              </Route>
+              <Route path="/CICO">
+                  <CICOPage />
               </Route>
               <Route path="/about">
                   <AboutPage />
