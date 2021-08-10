@@ -1,16 +1,16 @@
 import React from "react";
 import LoginNavbar from "../components/login-navbar/LoginNavbar";
 import LoginFooter from "../components/login-footer/LoginFooter";
-import CategoriesContent from "../components/categories-content/CategoriesContent";
+import NutritionBody from "../components/nutrition-body/NutritionBody";
 
-function CategoriesPage() {
-    return (
+function NutritionPage() {
+    return(
         <>
             <LoginNavbar />
-            <CategoriesContent />
+            <NutritionBody />
             <LoginFooter />
         </>
     );
 }
 
-export default CategoriesPage;
+export default NutritionPage;

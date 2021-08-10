@@ -9,6 +9,7 @@ import ReviewPage from "./pages/ReviewPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import SettingsPage from "./pages/SettingsPage";
+import NutritionPage from "./pages/NutritionPage";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
               </Route>
               <Route path="/categories">
                   <CategoriesPage />
+              </Route>
+              <Route path="/nutrition">
+                  <NutritionPage />
               </Route>
               <Route path="/about">
                   <AboutPage />

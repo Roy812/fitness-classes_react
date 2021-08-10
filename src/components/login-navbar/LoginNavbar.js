@@ -20,9 +20,9 @@ function LoginNavbar() {
                 </li>
                 <li>
                     <Link
-                        to="/findlessons"
+                        to="/categories"
                         className={styles["login-navbar__link"]}>
-                        FIND LESSONS
+                        CATEGORIES
                     </Link>
                 </li>
                 <li>

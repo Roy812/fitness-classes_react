@@ -1,0 +1,78 @@
+.nutrition-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.nutrition-body-title {
+    font-size: 24px;
+    color: black;
+    margin-top: 45px;
+}
+
+.nutrition-body-subheaders {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #F62525;
+    margin-top: 45px;
+}
+
+.nutrition-content-CICO {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 35px;
+    position: relative;
+    right: 40px;
+}
+
+.nutrition-body-CICO-title {
+    width: 240px;
+}
+
+.nutrition-body-CICO-playtime {
+    position: relative;
+    right: 48px;
+}
+
+.nutrition-body-CICO-subcategory {
+    position: relative;
+    left: 8px;
+}
+
+.nutrition-body-workoutsnacks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 35px;
+    position: relative;
+    right: 58px;
+}
+
+.nutrition-body-workoutsnacks-title {
+    width: 240px;
+
+}
+
+.nutrition-body-workoutsnacks-playtime {
+    position: relative;
+    right: 60px;
+}
+
+.nutrition-body-workoutsnacks-subcategory {
+    position: relative;
+    left: 4px;
+}
+
+.nutrition-body-testlevelsanddiets {
+
+}
