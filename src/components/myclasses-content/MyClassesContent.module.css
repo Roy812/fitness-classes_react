@@ -1,0 +1,13 @@
+.myclasses-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.myclasses-content-message {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    color: #F62525;
+    margin-top: 40px;
+}

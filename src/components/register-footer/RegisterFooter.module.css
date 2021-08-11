@@ -14,4 +14,11 @@
     font-size: 20px;
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.register-footer__message:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
 }

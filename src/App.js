@@ -11,6 +11,7 @@ import RegisterPage from "./pages/RegisterPage";
 import SettingsPage from "./pages/SettingsPage";
 import NutritionPage from "./pages/NutritionPage";
 import CICOPage from "./pages/CICOPage";
+import MyClassesPage from "./pages/MyClassesPage";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
               </Route>
               <Route path="/login">
                   <LoginPage />
+              </Route>
+              <Route path="/myclasses">
+                  <MyClassesPage />
               </Route>
               <Route path="/register">
                   <RegisterPage />
