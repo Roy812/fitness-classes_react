@@ -12,6 +12,7 @@ import SettingsPage from "./pages/SettingsPage";
 import NutritionPage from "./pages/NutritionPage";
 import CICOPage from "./pages/CICOPage";
 import MyClassesPage from "./pages/MyClassesPage";
+import CICOPay from "./pages/CICOPay";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
               </Route>
               <Route path="/CICO">
                   <CICOPage />
+              </Route>
+              <Route path="/CICOpay">
+                  <CICOPay />
               </Route>
               <Route path="/about">
                   <AboutPage />

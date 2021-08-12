@@ -4,7 +4,21 @@
     justify-content: center;
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    margin-top: 300px;
+    margin-top: 70px;
+}
+
+.CICO-content-link {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F62525;
+    margin-bottom: 70px;
+}
+
+.CICO-content-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
 }
 
 .CICO-content-message {

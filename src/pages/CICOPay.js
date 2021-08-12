@@ -1,18 +1,16 @@
 import React from "react";
 import LoginNavbar from "../components/login-navbar/LoginNavbar";
 import LoginFooter from "../components/login-footer/LoginFooter";
-import CategoriesContent from "../components/categories-content/CategoriesContent";
+import CICOPayContent from "../components/cicopay-content/CICOPayContent";
 
-function CategoriesPage() {
-    return (
+function CICOPay() {
+    return(
         <>
             <LoginNavbar />
-            <CategoriesContent
-            message="BROWSE OUR CATEGORIES"
-            />
+            <CICOPayContent />
             <LoginFooter />
         </>
     );
 }
 
-export default CategoriesPage;
+export default CICOPay;

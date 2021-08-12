@@ -1,0 +1,60 @@
+.cicopay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.cicopay-content-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #F62525;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cicopay-content-entermail {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.cicopay-content-inputmail {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.cicopay-content-enterpassword {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.cicopay-content-inputpassword {
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.cicopay-content-confirm {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.cicopay-content-confirm-button {
+    width: 125px;
+    height: 50px;
+    background-color: #33769C;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}

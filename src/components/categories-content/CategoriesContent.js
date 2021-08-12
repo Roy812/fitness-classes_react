@@ -6,11 +6,11 @@ import platePicture from "../../assets/Plate(icon).png";
 import toolsPicture from "../../assets/Tools(icon).png";
 import {Link} from "react-router-dom";
 
-function CategoriesContent() {
+function CategoriesContent( {message} ) {
     return(
         <div className={styles["categories-content"]}>
             <div className={styles["categories-content-title"]}>
-                <h1>BROWSE OUR CATEGORIES</h1>
+                <h1>{message}</h1>
             </div>
             <div className={styles["categories-content-nutrition"]}>
                 <img className={styles["categories-content-nutrition-icon"]} src={dietPicture} alt="diet-icon"/>
