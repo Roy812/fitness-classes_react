@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Categories.module.css";
+import styles from "./CategoriesContent.module.css";
 import dietPicture from "../../assets/Diet(icon).png";
 import dumbbellPicture from "../../assets/Dumbbell(icon).png";
 import platePicture from "../../assets/Plate(icon).png";

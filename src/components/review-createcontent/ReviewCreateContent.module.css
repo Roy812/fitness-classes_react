@@ -1,0 +1,116 @@
+.review-create-link-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.review-create-link-content-title {
+    font-size: 16px;
+}
+
+.review-create-link-content-nutrition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 30px;
+    position: relative;
+    left: 10px;
+}
+
+.review-create-link-content-nutrition-icon {
+    position: relative;
+    right: 46px;
+}
+
+.review-create-link-content-nutrition-link {
+    text-decoration: none;
+    color: black;
+}
+
+.review-create-link-content-nutrition-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.review-create-link-content-buildmuscle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 18px;
+}
+
+.review-create-link-content-buildmuscle-icon {
+    position: relative;
+    right: 36px;
+}
+
+.review-create-link-content-buildmuscle-link {
+    text-decoration: none;
+    color: black;
+}
+
+.review-create-link-content-buildmuscle-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.review-create-link-content-buildpower {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 22px;
+}
+
+.review-create-link-content-buildpower-icon {
+    position: relative;
+    right: 40px;
+}
+
+.review-create-link-content-buildpower-link {
+    text-decoration: none;
+    color: black;
+}
+
+.review-create-link-content-buildpower-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.review-create-link-content-buildahomegym {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 50px;
+}
+
+.review-create-link-content-buildahomegym-icon {
+    position: relative;
+    right: 40px;
+}
+
+.review-create-link-content-buildahomegym-link {
+    text-decoration: none;
+    color: black;
+}
+
+.review-create-link-content-buildahomegym-link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}

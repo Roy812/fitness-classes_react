@@ -5,10 +5,10 @@ import {Link} from "react-router-dom";
 
 function ReviewCreate() {
     return(
-        <div className={styles["review-create"]}>
-            <img className={styles["review-create-plusicon"]} src={greenplusPicture} alt="greenplus-image"/>
+        <div className={styles["review-create-link"]}>
+            <img className={styles["review-create-link-plusicon"]} src={greenplusPicture} alt="greenplus-image"/>
             <Link
-            className={styles["review-create-link"]}
+            className={styles["review-create-link-link"]}
             to="/createreview"
             >
             CREATE REVIEW

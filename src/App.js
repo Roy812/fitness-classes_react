@@ -13,6 +13,7 @@ import NutritionPage from "./pages/NutritionPage";
 import CICOPage from "./pages/CICOPage";
 import MyClassesPage from "./pages/MyClassesPage";
 import CICOPay from "./pages/CICOPay";
+import ReviewPageNutrition from "./pages/ReviewPageNutrition";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
               </Route>
               <Route path="/reviews">
                   <ReviewPage />
+              </Route>
+              <Route path="/nutritionreviews">
+                  <ReviewPageNutrition />
               </Route>
               <Route path="/login">
                   <LoginPage />
