@@ -1,7 +1,7 @@
 import React from "react";
-import RegisterFooter from "../components/register-footer/RegisterFooter";
-import RegisterHeader from "../components/register-header/RegisterHeader";
-import AboutContent from "../components/about-content/AboutContent";
+import RegisterFooter from "../components/registerFooter/RegisterFooter";
+import RegisterHeader from "../components/registerHeader/RegisterHeader";
+import AboutContent from "../components/aboutContent/AboutContent";
 
 function AboutPage() {
     return (

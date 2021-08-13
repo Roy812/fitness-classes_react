@@ -1,7 +1,7 @@
 import React from "react";
-import RegisterHeader from "../components/register-header/RegisterHeader";
-import Footer from "../components/footer/Footer";
-import NewsletterContent from "../components/newsletter-content/NewsletterContent";
+import RegisterHeader from "../components/registerHeader/RegisterHeader";
+import Footer from "../components/Footer/Footer";
+import NewsletterContent from "../components/newsletterContent/NewsletterContent";
 
 function NewsletterPage() {
     return (

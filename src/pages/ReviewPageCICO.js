@@ -1,16 +1,16 @@
 import React from "react";
 import LoginNavbar from "../components/loginNavbar/LoginNavbar";
 import LoginFooter from "../components/loginFooter/LoginFooter";
-import NutritionBody from "../components/nutritionBody/NutritionBody";
+import ReviewCICOBody from "../components/reviewCicoBody/ReviewCICOBody";
 
-function NutritionPage() {
+function ReviewPageCICO() {
     return(
         <>
             <LoginNavbar />
-            <NutritionBody />
+            <ReviewCICOBody />
             <LoginFooter />
         </>
     );
 }
 
-export default NutritionPage;
+export default ReviewPageCICO;

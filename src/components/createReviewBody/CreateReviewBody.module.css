@@ -1,0 +1,64 @@
+.create-review-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.create-review-body-title {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 22px;
+}
+
+.create-review-body-dropdown {
+    margin-top: 20px;
+}
+
+.create-review-body-input {
+    width: 500px;
+    height: 200px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-text-fill-color: #666161;
+    border: solid 2px #000;
+    margin-top: 30px;
+}
+
+.create-review-body-ratingmessage {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #F62525;
+    margin-top: 30px;
+}
+
+.create-review-body-rating__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.create-review-body-rating {
+    padding: 5px;
+}
+
+.create-review-body-rating:hover{
+    border-bottom: solid 2px #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.create-review-body-post {
+    width: 150px;
+    height: 50px;
+    background-color: #33769C;
+    color: #fff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}

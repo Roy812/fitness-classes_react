@@ -1,7 +1,7 @@
 import React from "react";
-import LoginNavbar from "../components/login-navbar/LoginNavbar";
-import LoginFooter from "../components/login-footer/LoginFooter";
-import CICOPayContent from "../components/cicopay-content/CICOPayContent";
+import LoginNavbar from "../components/loginNavbar/LoginNavbar";
+import LoginFooter from "../components/loginFooter/LoginFooter";
+import CICOPayContent from "../components/cicoPayContent/CICOPayContent";
 
 function CICOPay() {
     return(

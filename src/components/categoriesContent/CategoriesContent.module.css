@@ -1,0 +1,117 @@
+.categories-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.categories-content__title {
+    font-size: 16px;
+}
+
+.categories-content__nutrition {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 10px;
+}
+
+.categories-content__nutrition__icon {
+    position: relative;
+    right: 46px;
+}
+
+.categories-content__nutrition__link {
+    text-decoration: none;
+    color: black;
+}
+
+.categories-content__nutrition__link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+
+.categories-content__buildmuscle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 18px;
+}
+
+.categories-content__buildmuscle__icon {
+    position: relative;
+    right: 36px;
+}
+
+.categories-content__buildmuscle__link {
+    text-decoration: none;
+    color: black;
+}
+
+.categories-content__buildmuscle__link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.categories-content__buildpower {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 22px;
+}
+
+.categories-content__buildpower__icon {
+    position: relative;
+    right: 40px;
+}
+
+.categories-content__buildpower__link {
+    text-decoration: none;
+    color: black;
+}
+
+.categories-content__buildpower__link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.categories-content__buildahomegym {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 20px;
+    position: relative;
+    left: 50px;
+}
+
+.categories-content__buildahomegym__icon {
+    position: relative;
+    right: 40px;
+}
+
+.categories-content__buildahomegym__link {
+    text-decoration: none;
+    color: black;
+}
+
+.categories-content__buildahomegym__link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}

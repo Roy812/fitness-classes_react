@@ -1,0 +1,44 @@
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner__picture-lifting {
+    width: 455px;
+    height: 240px;
+}
+
+.banner__picture-food {
+    width: 455px;
+    height: 240px;
+}
+
+.banner__picture-homegym {
+    width: 455px;
+    height: 240px;
+}
+
+
+/*.quote1 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 135px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.quote2 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 135px;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*.quote3 {*/
+/*    color: black;*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    right: 70px;*/
+/*    margin: 10px;*/
+/*}*/

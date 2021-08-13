@@ -1,7 +1,7 @@
 import React from "react";
-import LoginNavbar from "../components/login-navbar/LoginNavbar";
-import LoginFooter from "../components/login-footer/LoginFooter";
-import MyClassesContent from "../components/myclasses-content/MyClassesContent";
+import LoginNavbar from "../components/loginNavbar/LoginNavbar";
+import LoginFooter from "../components/loginFooter/LoginFooter";
+import MyClassesContent from "../components/myClassesContent/MyClassesContent";
 
 function MyClassesPage() {
     return(

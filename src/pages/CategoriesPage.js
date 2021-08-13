@@ -1,7 +1,7 @@
 import React from "react";
-import LoginNavbar from "../components/login-navbar/LoginNavbar";
-import LoginFooter from "../components/login-footer/LoginFooter";
-import CategoriesContent from "../components/categories-content/CategoriesContent";
+import LoginNavbar from "../components/loginNavbar/LoginNavbar";
+import LoginFooter from "../components/loginFooter/LoginFooter";
+import CategoriesContent from "../components/categoriesContent/CategoriesContent";
 
 function CategoriesPage() {
     return (

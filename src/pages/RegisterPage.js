@@ -1,7 +1,7 @@
 import React from "react";
-import RegisterHeader from "../components/register-header/RegisterHeader";
-import RegisterFooter from "../components/register-footer/RegisterFooter";
-import RegisterContent from "../components/register-content/RegisterContent";
+import RegisterHeader from "../components/registerHeader/RegisterHeader";
+import RegisterFooter from "../components/registerFooter/RegisterFooter";
+import RegisterContent from "../components/registerContent/RegisterContent";
 
 
 function RegisterPage() {

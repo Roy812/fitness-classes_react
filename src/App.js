@@ -14,6 +14,8 @@ import CICOPage from "./pages/CICOPage";
 import MyClassesPage from "./pages/MyClassesPage";
 import CICOPay from "./pages/CICOPay";
 import ReviewPageNutrition from "./pages/ReviewPageNutrition";
+import ReviewPageCICO from "./pages/ReviewPageCICO";
+import CreateReviewPage from "./pages/CreateReviewPage";
 
 function App() {
   return (
@@ -45,6 +47,12 @@ function App() {
               </Route>
               <Route path="/nutritionreviews">
                   <ReviewPageNutrition />
+              </Route>
+              <Route path="/CICOreview">
+                  <ReviewPageCICO />
+              </Route>
+              <Route path="/createreview">
+                  <CreateReviewPage />
               </Route>
               <Route path="/login">
                   <LoginPage />

@@ -1,8 +1,8 @@
 import React from "react";
-import LoginNavbar from "../components/login-navbar/LoginNavbar";
-import CICOTitle from "../components/cico-title/CICOTitle";
-import CICOContent from "../components/cico-content/CICOContent";
-import CICOFooter from "../components/cico-footer/CICOFooter";
+import LoginNavbar from "../components/loginNavbar/LoginNavbar";
+import CICOTitle from "../components/cicoTitle/CICOTitle";
+import CICOContent from "../components/cicoContent/CICOContent";
+import CICOFooter from "../components/cicoFooter/CICOFooter";
 
 function CICOPage() {
     return(

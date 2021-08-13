@@ -1,0 +1,23 @@
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about-content__item1 {
+
+}
+
+.about-content__item2 {
+    margin-top: 30px;
+}
+
+.about-content__item3 {
+    margin-top: 30px;
+}

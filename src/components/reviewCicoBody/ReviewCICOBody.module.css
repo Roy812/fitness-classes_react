@@ -1,0 +1,24 @@
+.review-cico-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.review-cico-body-title {
+    color: #F62525;
+    font-size: 20px;
+}
+
+.review-cico-body-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.review-cico-body-fourstars {
+    margin-top: 30px;
+}

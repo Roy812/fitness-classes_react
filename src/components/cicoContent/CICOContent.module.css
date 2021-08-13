@@ -1,0 +1,34 @@
+.CICO-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin-top: 70px;
+}
+
+.CICO-content__link {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #F62525;
+    margin-bottom: 70px;
+}
+
+.CICO-content__link:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
+}
+
+.CICO-content__message {
+
+}
+
+.CICO-content__button {
+    background-color: black;
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    padding: 5px;
+    margin-top: 20px;
+}

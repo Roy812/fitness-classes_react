@@ -1,9 +1,9 @@
 import React from "react";
-import SettingsHeader from "../components/settings-header/SettingsHeader";
-import SettingsContent from "../components/settings-content/SettingsContent";
+import SettingsHeader from "../components/settingsHeader/SettingsHeader";
+import SettingsContent from "../components/settingsContent/SettingsContent";
 
 function SettingsPage() {
-    return(
+    return (
         <>
             <SettingsHeader />
             <SettingsContent />
