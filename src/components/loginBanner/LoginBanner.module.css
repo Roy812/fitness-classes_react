@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.login-banner-img {
+.login-banner__img-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -10,14 +10,14 @@
     align-items: center;
 }
 
-.login-banner-cookbook {
+.login-banner__img-container-cookbook {
     position: relative;
     top: 8px;
     width: 400px;
     height: 130px;
 }
 
-.login-banner-hitt {
+.login-banner__img-container-hitt {
     width: 655px;
     height: 130px;
     position: relative;
@@ -37,8 +37,4 @@
     text-align: center;
     position: relative;
     left: 702px;
-}
-
-.login-banner__podcastmessage {
-
 }

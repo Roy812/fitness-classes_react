@@ -5,7 +5,7 @@
     margin-top: 45px;
 }
 
-.content__icon__container {
+.content__icon-container {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-gap: 35px;
@@ -13,28 +13,28 @@
     right: 10px;
 }
 
-.cup {
+.content__icon-container__cup {
     width: 40px;
     height: 40px;
     flex-basis: 100px;
     margin-top: 20px;
 }
 
-.lock {
+.content__icon-container__lock {
     width: 40px;
     height: 40px;
     flex-basis: 100px;
     margin-top: 20px;
 }
 
-.play {
+.content__icon-container__play {
     width: 40px;
     height: 40px;
     flex-basis: 100px;
     margin-top: 20px;
 }
 
-.content__line__container {
+.content__line-container {
     display: flex;
     width: 600px;
     flex-direction: column;
@@ -46,16 +46,16 @@
     text-align: center;
 }
 
-.line__one {
+.content__icon-container__line1 {
     text-align: center;
 }
 
-.line__two {
+.content__icon-container__line2 {
     position: relative;
     top: 15px;
 }
 
-.line__three {
+.content__icon-container__line3 {
     position: relative;
     top: 25px;
 }

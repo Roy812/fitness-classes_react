@@ -13,22 +13,22 @@
     right: 340px;
 }
 
-.register-banner-message__one {
+.register-banner__message1 {
     margin-top: 45px;
 }
 
-.register-banner-fitflix {
+.register-banner__fitflix {
     margin-top: 35px;
     width: 100%;
     height: 110px;
 }
 
-.register-banner-message__two {
+.register-banner__message2 {
     margin-top: 35px;
 
 }
 
-.register-banner-cheering {
+.register-banner__cheering {
     width: 100%;
     position: relative;
     top: 47px;

@@ -27,19 +27,19 @@
     align-items: center;
 }
 
-.header__login-icon {
+.header__login__icon {
     max-width: 40px;
     max-height: 40px;
     margin-right: 8px;
 }
 
-.header__login-link {
+.header__login__link {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
 }
 
-.header__login-link:hover {
+.header__login__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }

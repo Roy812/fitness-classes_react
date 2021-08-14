@@ -4,13 +4,12 @@ import greenplusPicture from "../../assets/Greenplus.svg";
 import {Link} from "react-router-dom";
 
 function ReviewCreate() {
-    return(
-        <div className={styles["review-create-link"]}>
-            <img className={styles["review-create-link-plusicon"]} src={greenplusPicture} alt="greenplus-image"/>
+    return (
+        <div className={styles["review-create"]}>
+            <img className={styles["review-create__plus-icon"]} src={greenplusPicture} alt="greenplus-image"/>
             <Link
-            className={styles["review-create-link-link"]}
-            to="/createreview"
-            >
+            className={styles["review-create__link"]}
+            to="/createreview">
             CREATE REVIEW
             </Link>
         </div>

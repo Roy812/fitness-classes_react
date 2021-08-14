@@ -3,15 +3,15 @@ import styles from "./ReviewCICOBody.module.css";
 import fourstars from "../../assets/Stars(4_5).svg";
 
 function ReviewCICOBody() {
-    return(
+    return (
         <div className={styles["review-cico-body"]}>
             <h3
-                className={styles["review-cico-body-title"]}
-            >
+                className={styles["review-cico-body__title"]}>
                 "CICO, IT's ALL YOU NEED"<br/>
                 REVIEW BY USER
             </h3>
-            <p className={styles["review-cico-body-text"]}>
+
+            <p className={styles["review-cico-body__text"]}>
                 THIS CLASS HELPED ME TO <br/>
                 UNDERSTAND WHY IT IS EASY TO <br/>
                 OVERCOMPLICATE YOUR DIET <br/>
@@ -19,7 +19,8 @@ function ReviewCICOBody() {
                 A PRACTICAL APPROACH TO A <br/>
                 CIRCLE DIET LIFESTYLE
             </p>
-            <img className={styles["review-cico-body-fourstars"]} src={fourstars} alt="fourstars-image"/>
+
+            <img className={styles["review-cico-body__fourstars"]} src={fourstars} alt="fourstars-image"/>
         </div>
     );
 }

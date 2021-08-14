@@ -10,12 +10,14 @@ function RegisterHeader({title, message} ) {
             <Link to="/">
                 <img className={styles["header__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
             </Link>
+
             <h1 className={styles["header__title"]}>{title}</h1>
+
             <div className={styles["header__login"]}>
-                <img className={styles["header__login-icon"]} src={loginIcon} alt="login-icon"/>
+                <img className={styles["header__login__icon"]} src={loginIcon} alt="login-icon"/>
                 <Link
                     to="/"
-                    className={styles["header__login-link"]}>
+                    className={styles["header__login__link"]}>
                     {message}
                 </Link>
             </div>

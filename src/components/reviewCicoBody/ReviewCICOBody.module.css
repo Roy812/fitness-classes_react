@@ -8,17 +8,17 @@
     margin-top: 40px;
 }
 
-.review-cico-body-title {
+.review-cico-body__title {
     color: #F62525;
     font-size: 20px;
 }
 
-.review-cico-body-text {
+.review-cico-body__text {
     font-size: 20px;
     font-weight: 600;
     margin-top: 30px;
 }
 
-.review-cico-body-fourstars {
+.review-cico-body__fourstars {
     margin-top: 30px;
 }

@@ -1,4 +1,4 @@
-.login-footer__container {
+.login__footer {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -11,24 +11,24 @@
     text-align: center;
 }
 
-.login-footer__link1 {
+.login__footer__link1 {
     text-decoration: none;
     color: white;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.login-footer__link1:hover {
+.login__footer__link1:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.login-footer__link2 {
+.login__footer__link2 {
     text-decoration: none;
     color: white;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.login-footer__link2:hover {
+.login__footer__link2:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }

@@ -4,7 +4,7 @@
     justify-content: center;
     padding: 30px;
     background-color: #F62525;
-    color: white;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     margin-top: 60px;
 }
@@ -14,30 +14,25 @@
     font-size: 20px;
 }
 
-.footer__container {
+.footer__form-container__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.footer__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/*.footer__form-container__form__label {*/
+/*    !*-webkit-text-fill-color: #000;*!*/
+/*}*/
 
-.footer__label {
-    -webkit-text-fill-color: black;
-}
-
-.footer__label__input {
+.footer__form-container__form__label__input {
     font-size: 12px;
     text-align: center;
+    -webkit-text-fill-color: #000;
 }
 
-.footer__form__link {
-    -webkit-text-fill-color: white;
-    background-color: black;
+.footer__form-container__form__link {
+    -webkit-text-fill-color: #fff;
+    background-color: #000;
     font-weight: 600;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;

@@ -1,4 +1,4 @@
-.review-create-link-content {
+.review-create-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,11 +7,11 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.review-create-link-content-title {
+.review-create-content__title {
     font-size: 16px;
 }
 
-.review-create-link-content-nutrition {
+.review-create-content__nutrition {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,22 +22,22 @@
     left: 10px;
 }
 
-.review-create-link-content-nutrition-icon {
+.review-create-content__nutrition__icon {
     position: relative;
     right: 46px;
 }
 
-.review-create-link-content-nutrition-link {
+.review-create-content__nutrition__link {
     text-decoration: none;
     color: black;
 }
 
-.review-create-link-content-nutrition-link:hover {
+.review-create-content__nutrition__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-create-link-content-buildmuscle {
+.review-create-content__buildmuscle {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,22 +48,22 @@
     left: 18px;
 }
 
-.review-create-link-content-buildmuscle-icon {
+.review-create-content__buildmuscle__icon {
     position: relative;
     right: 36px;
 }
 
-.review-create-link-content-buildmuscle-link {
+.review-create-content__buildmuscle__link {
     text-decoration: none;
     color: black;
 }
 
-.review-create-link-content-buildmuscle-link:hover {
+.review-create-content__buildmuscle__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-create-link-content-buildpower {
+.review-create-content__buildpower {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -74,22 +74,22 @@
     left: 22px;
 }
 
-.review-create-link-content-buildpower-icon {
+.review-create-content__buildpower__icon {
     position: relative;
     right: 40px;
 }
 
-.review-create-link-content-buildpower-link {
+.review-create-content__buildpower__link {
     text-decoration: none;
     color: black;
 }
 
-.review-create-link-content-buildpower-link:hover {
+.review-create-content__buildpower__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-create-link-content-buildahomegym {
+.review-create-content__build-a-homegym {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -100,17 +100,17 @@
     left: 50px;
 }
 
-.review-create-link-content-buildahomegym-icon {
+.review-create-content__build-a-homegym__icon {
     position: relative;
     right: 40px;
 }
 
-.review-create-link-content-buildahomegym-link {
+.review-create-content__build-a-homegym__link {
     text-decoration: none;
     color: black;
 }
 
-.review-create-link-content-buildahomegym-link:hover {
+.review-create-content__build-a-homegym__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }

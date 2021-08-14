@@ -4,7 +4,7 @@
     justify-content: center;
     padding: 25px;
     background-color: #F62525;
-    color: white;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     /*margin-top: 60px;*/
 }
@@ -15,7 +15,7 @@
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .register-footer__message:hover {

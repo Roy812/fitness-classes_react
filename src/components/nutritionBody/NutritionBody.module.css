@@ -6,13 +6,13 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.nutrition-body-title {
+.nutrition-body__title {
     font-size: 24px;
     color: black;
     margin-top: 45px;
 }
 
-.nutrition-body-subheaders {
+.nutrition-body__subheader-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
     margin-top: 45px;
 }
 
-.nutrition-content-CICO {
+.nutrition-body__CICO {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@
     right: 40px;
 }
 
-.nutrition-body-CICO-title {
+.nutrition-body__CICO__title {
     width: 240px;
     text-decoration: none;
     color: black;
@@ -41,22 +41,22 @@
     font-weight: 600;
 }
 
-.nutrition-body-CICO-title:hover {
+.nutrition-body__CICO__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.nutrition-body-CICO-playtime {
+.nutrition-body__CICO__playtime {
     position: relative;
     right: 48px;
 }
 
-.nutrition-body-CICO-subcategory {
+.nutrition-body__CICO__subcategory {
     position: relative;
     left: 8px;
 }
 
-.nutrition-body-workoutsnacks {
+.nutrition-body__workoutsnacks {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -67,7 +67,7 @@
     right: 58px;
 }
 
-.nutrition-body-workoutsnacks-title {
+.nutrition-body__workoutsnacks__title {
     width: 240px;
     text-decoration: none;
     color: black;
@@ -75,22 +75,22 @@
     font-weight: 600;
 }
 
-.nutrition-body-workoutsnacks-title:hover {
+.nutrition-body__workoutsnacks__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.nutrition-body-workoutsnacks-playtime {
+.nutrition-body__workoutsnacks__playtime {
     position: relative;
     right: 60px;
 }
 
-.nutrition-body-workoutsnacks-subcategory {
+.nutrition-body__workoutsnacks__subcategory {
     position: relative;
     left: 4px;
 }
 
-.nutrition-body-testlevelsanddiets {
+.nutrition-body__testlevelsanddiets {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -101,7 +101,7 @@
     right: 36px;
 }
 
-.nutrition-body-testlevelsanddiets-title {
+.nutrition-body__testlevelsanddiets__title {
     width: 230px;
     text-decoration: none;
     color: black;
@@ -109,17 +109,17 @@
     font-weight: 600;
 }
 
-.nutrition-body-testlevelsanddiets-title:hover {
+.nutrition-body__testlevelsanddiets__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.nutrition-body-testlevelsanddiets-playtime {
+.nutrition-body__testlevelsanddiets__playtime {
     position: relative;
     right: 32px;
 }
 
-.nutrition-body-testlevelsanddiets-subcategory {
+.nutrition-body__testlevelsanddiets__subcategory {
     position: relative;
     left: 15px;
 }

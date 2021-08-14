@@ -6,13 +6,13 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.review-nutrition-body-title {
+.review-nutrition-body__title {
     font-size: 24px;
     color: #F62525;
     margin-top: 45px;
 }
 
-.review-nutrition-body-subheaders {
+.review-nutrition-body__subheader-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
     margin-top: 45px;
 }
 
-.review-nutrition-content-CICO {
+.review-nutrition-body__CICO {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,7 +34,7 @@
     margin-bottom: 20px;
 }
 
-.review-nutrition-body-CICO-title {
+.review-nutrition-body__CICO__title {
     width: 240px;
     text-decoration: none;
     color: black;
@@ -42,22 +42,22 @@
     font-weight: 600;
 }
 
-.review-nutrition-body-CICO-title:hover {
+.review-nutrition-body__CICO__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-nutrition-body-CICO-teacher {
+.review-nutrition-body__CICO__teacher {
     position: relative;
     right: 75px;
 }
 
-.review-nutrition-body-CICO-user {
+.review-nutrition-body__CICO__user {
     position: relative;
     right: 30px;
 }
 
-.review-nutrition-body-workoutsnacks {
+.review-nutrition-body__workoutsnacks {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -69,7 +69,7 @@
     margin-bottom: 10px;
 }
 
-.review-nutrition-body-workoutsnacks-title {
+.review-nutrition-body__workoutsnacks__title {
     width: 240px;
     text-decoration: none;
     color: black;
@@ -77,22 +77,22 @@
     font-weight: 600;
 }
 
-.review-nutrition-body-workoutsnacks-title:hover {
+.review-nutrition-body__workoutsnacks__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-nutrition-body-workoutsnacks-teacher {
+.review-nutrition-body__workoutsnacks__teacher {
     position: relative;
     right: 60px;
 }
 
-.review-nutrition-body-workoutsnacks-user {
+.review-nutrition-body__workoutsnacks__user {
     position: relative;
     right: 4px;
 }
 
-.review-nutrition-body-testlevelsanddiets {
+.review-nutrition-body__testlevelsanddiets {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -103,7 +103,7 @@
     margin-top: 35px;
 }
 
-.review-nutrition-body-testlevelsanddiets-title {
+.review-nutrition-body__testlevelsanddiets__title {
     width: 230px;
     text-decoration: none;
     color: black;
@@ -111,17 +111,17 @@
     font-weight: 600;
 }
 
-.review-nutrition-body-testlevelsanddiets-title:hover {
+.review-nutrition-body__testlevelsanddiets__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-nutrition-body-testlevelsanddiets-teacher {
+.review-nutrition-body__testlevelsanddiets__teacher {
     position: relative;
     right: 60px;
 }
 
-.review-nutrition-body-testlevelsanddiets-user {
+.review-nutrition-body__testlevelsanddiets__user {
     position: relative;
     right: 10px;
 }

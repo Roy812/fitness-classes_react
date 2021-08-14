@@ -18,34 +18,30 @@
     margin-top: 45px;
 }
 
-.register-content__one {
-
-}
-
-.register-content__one__input {
-    -webkit-text-fill-color: black;
+.register-content__container__one__input {
+    -webkit-text-fill-color: #000;
     font-size: 12px;
     width: 166px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #000;
 }
 
-.register-content__two {
+.register-content__container__two {
     margin-top: 35px;
 }
 
-.register-content__two__input {
-    -webkit-text-fill-color: black;
+.register-content__container__two__input {
+    -webkit-text-fill-color: #000;
     font-size: 12px;
     width: 150px;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #000;
 }
 
-.register-content__three {
+.register-content__container__three {
     width: 420px;
     margin-top: 35px;
 }
 
-.register-content__three-button {
+.register-content__container__three__button {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;

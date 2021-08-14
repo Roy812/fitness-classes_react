@@ -1,4 +1,4 @@
-.quotes__container {
+.quotes {
     display: grid;
     grid-template-columns: repeat(3, auto);
     text-align: center;

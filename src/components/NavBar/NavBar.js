@@ -9,18 +9,15 @@ function NavBar( {message} ) {
 
     return (
         <nav className={styles["navbar"]}>
-
             <Link to="/">
-                <img className={styles["navbar__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
+                <img className={styles["navbar__link__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
             </Link>
 
-
             <ul className={styles["navbar__menu"]}>
-
                 <li>
                     <Link
                         to="/categories"
-                        className={styles["navbar__link"]}>
+                        className={styles["navbar__menu__item__link"]}>
                         CATEGORIES
                     </Link>
                 </li>
@@ -28,7 +25,7 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/about"
-                        className={styles["navbar__link"]}>
+                        className={styles["navbar__menu__item__link"]}>
                         ABOUT
                     </Link>
                 </li>
@@ -36,7 +33,7 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/newsletter"
-                        className={styles["navbar__link"]}>
+                        className={styles["navbar__menu__item__link"]}>
                         NEWSLETTER
                     </Link>
                 </li>
@@ -44,37 +41,31 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/reviews"
-                        className={styles["navbar__link"]}>
+                        className={styles["navbar__menu__item__link"]}>
                         REVIEWS
                     </Link>
                 </li>
             </ul>
 
             <div className={styles["navbar__login"]}>
-                <img className={styles["navbar__login-icon"]} src={loginIcon} alt="login-icon"/>
-                <div className={styles["navbar__login-input__container"]}>
-                    <label>
-                        <input
-                        className={styles["navbar__login-input"]}
+                <img className={styles["navbar__login__icon"]} src={loginIcon} alt="login-icon"/>
+                <div className={styles["navbar__login__input-container"]}>
+                    <input
+                        className={styles["navbar__login__input-container__mail"]}
                         type="text"
-                        placeholder="MAIL"
-                        />
-                    </label>
-                    <label>
-                        <input
-                        className={styles["navbar__login-input"]}
-                        type="text"
-                        placeholder="PASSWORD"
-                        />
-                    </label>
+                        placeholder="MAIL"/>
+                    <input
+                        className={styles["navbar__login__input-container__password"]}
+                        type="password"
+                        placeholder="PASSWORD"/>
                 </div>
+
                 <Link
                     to="/login"
-                    className={styles["navbar__login-link"]}>
+                    className={styles["navbar__login__link"]}>
                     {message}
                 </Link>
             </div>
-
         </nav>
     );
 }

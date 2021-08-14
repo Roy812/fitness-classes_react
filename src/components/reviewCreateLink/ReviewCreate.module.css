@@ -1,16 +1,16 @@
-.review-create-link {
+.review-create {
     position: relative;
     bottom: 5px;
     right: 5px;
 }
 
-.review-create-link-plusicon {
+.review-create__plus-icon {
     position: relative;
     top: 45px;
     left: 168px;
 }
 
-.review-create-link-link {
+.review-create__link {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

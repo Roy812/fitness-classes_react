@@ -8,43 +8,43 @@ import toolsPicture from "../../assets/Tools(icon).png";
 
 function ReviewCreateContent() {
     return (
-        <div className={styles["review-create-link-content"]}>
-            <div className={styles["review-create-link-content-title"]}>
+        <div className={styles["review-create-content"]}>
+            <div className={styles["review-create-content__title"]}>
                 <h1>FIND REVIEWS FOR ALL YOU FAVOURITE CLASSES</h1>
             </div>
-            <div className={styles["review-create-link-content-nutrition"]}>
-                <img className={styles["review-create-link-content-nutrition-icon"]} src={dietPicture} alt="diet-icon"/>
+
+            <div className={styles["review-create-content__nutrition"]}>
+                <img className={styles["review-create-content__nutrition__icon"]} src={dietPicture} alt="diet-icon"/>
                 <Link
-                    className={styles["review-create-link-content-nutrition-link"]}
-                    to="/nutritionreviews"
-                >
+                    className={styles["review-create-content__nutrition__link"]}
+                    to="/nutritionreviews">
                     NUTRITION
                 </Link>
             </div>
-            <div className={styles["review-create-link-content-buildmuscle"]}>
-                <img className={styles["review-create-link-content-buildmuscle-icon"]} src={dumbbellPicture} alt="dumbbell-icon"/>
+
+            <div className={styles["review-create-content__buildmuscle"]}>
+                <img className={styles["review-create-content__buildmuscle__icon"]} src={dumbbellPicture} alt="dumbbell-icon"/>
                 <Link
-                    className={styles["review-create-link-content-buildmuscle-link"]}
-                    to="/buildmusclereviews"
-                >
+                    className={styles["review-create-content__buildmuscle__link"]}
+                    to="/buildmusclereviews">
                     BUILD MUSCLE
                 </Link>
             </div>
-            <div className={styles["review-create-link-content-buildpower"]}>
-                <img className={styles["review-create-link-content-buildpower-icon"]} src={platePicture} alt="plate-icon"/>
+
+            <div className={styles["review-create-content__buildpower"]}>
+                <img className={styles["review-create-content__buildpower__icon"]} src={platePicture} alt="plate-icon"/>
                 <Link
-                    className={styles["review-create-link-content-buildpower-link"]}
-                    to="/buildpowerreviews"
-                >
+                    className={styles["review-create-content__buildpower__link"]}
+                    to="/buildpowerreviews">
                     BUILD POWER
                 </Link>
             </div>
-            <div className={styles["review-create-link-content-buildahomegym"]}>
-                <img className={styles["review-create-link-content-buildahomegym-icon"]} src={toolsPicture} alt="tools-icon"/>
+
+            <div className={styles["review-create-content__build-a-homegym"]}>
+                <img className={styles["review-create-content__build-a-homegym__icon"]} src={toolsPicture} alt="tools-icon"/>
                 <Link
-                    className={styles["review-create-link-content-buildahomegym-link"]}
-                    to="/buildahomegymreviews"
-                >
+                    className={styles["review-create-content__build-a-homegym__link"]}
+                    to="/buildahomegymreviews">
                     BUILD A HOME GYM
                 </Link>
             </div>

@@ -11,7 +11,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.login-navbar__logo {
+.login-navbar__link__logo {
     margin-left: -10px;
 }
 
@@ -24,14 +24,14 @@
     margin-right: 35px;
 }
 
-.login-navbar__link {
+.login-navbar__item__link {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
     /*border-bottom: 2px solid #fff;*/
 }
 
-.login-navbar__link:hover {
+.login-navbar__item__link:hover {
     border-bottom: 3px solid #efbe11;
     transition: all 0.2s ease-out;
 }
