@@ -25,6 +25,13 @@
     border-bottom: solid 3px #000;
 }
 
+.register-content__container__one__input__error1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F62525;
+}
+
 .register-content__container__two {
     margin-top: 35px;
 }
@@ -34,6 +41,13 @@
     font-size: 12px;
     width: 150px;
     border-bottom: solid 3px #000;
+}
+
+.register-content__container__one__input__error2 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F62525;
 }
 
 .register-content__container__three {

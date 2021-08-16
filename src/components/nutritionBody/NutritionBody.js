@@ -16,7 +16,7 @@ function NutritionBody() {
 
             <div className={styles["nutrition-body__CICO"]}>
                 <Link
-                    className={styles["nutrition-body-CICO__title"]}
+                    className={styles["nutrition-body__CICO__title"]}
                     to="/CICO">
                     1. "CICO, IT"s ALL YOU NEED" BY - GREG DOUCHETTE</Link>
                 <h4 className={styles["nutrition-body__CICO__playtime"]} >90 MIN</h4>

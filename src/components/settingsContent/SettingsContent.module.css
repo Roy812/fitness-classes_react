@@ -61,13 +61,27 @@
     margin-top: 10px;
 }
 
-.settings-content__container1__item1__label__input {
-    width: 200px;
-    -webkit-text-fill-color: black;
-    border-bottom: solid 3px black;
+.settings-content__container1__item1__label__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.settings-content__container1__item1__label__button {
+.settings-content__container1__item1__label__form__password {
+    width: 200px;
+    -webkit-text-fill-color: #000;
+    border-bottom: solid 3px #000;
+}
+
+.settings-content__container1__item1__label__form__error1 {
+    /*font-family: 'M PLUS Rounded 1c', sans-serif;*/
+    font-size: 14px;
+    font-weight: 600;
+    color: #F62525;
+}
+
+.settings-content__container1__item1__label__form__button {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;

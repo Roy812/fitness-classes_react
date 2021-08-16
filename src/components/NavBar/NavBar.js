@@ -1,11 +1,22 @@
 import React from "react";
 import styles from "./NavBar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 //NB: Alt = useHistory -- destructure and use the .push method on a event handler -- place onClick event listener.
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
+import { useForm } from "react-hook-form";
 
 function NavBar( {message} ) {
+
+    const {register, handleSubmit, formState: {errors}} = useForm();
+
+    function onSubmit(data) {
+        //e.preventDefault();
+        console.log(data);
+        history.push("/login");
+    }
+
+    const history = useHistory();
 
     return (
         <nav className={styles["navbar"]}>
@@ -49,22 +60,43 @@ function NavBar( {message} ) {
 
             <div className={styles["navbar__login"]}>
                 <img className={styles["navbar__login__icon"]} src={loginIcon} alt="login-icon"/>
-                <div className={styles["navbar__login__input-container"]}>
+                <form className={styles["navbar__login__form-container"]} onSubmit={handleSubmit(onSubmit)}>
                     <input
-                        className={styles["navbar__login__input-container__mail"]}
-                        type="text"
-                        placeholder="MAIL"/>
-                    <input
-                        className={styles["navbar__login__input-container__password"]}
-                        type="password"
-                        placeholder="PASSWORD"/>
-                </div>
+                        className={styles["navbar__login__form-container__input-mail"]}
+                        type="mail"
+                        name="mail"
+                        id="mail"
+                        placeholder="Mail Here"
+                        {...register("mail", {
+                            required: {
+                                value: true,
+                                message: "THIS FIELD CAN'T BE EMPTY, ALSO INCLUDE '@'"
+                            }, validate: value => value.includes('@'),
+                        })}
+                    />
+                    {errors.mail && <p className={styles["navbar__login__form-container__error1"]}>{errors.mail.message}</p>}
 
-                <Link
-                    to="/login"
-                    className={styles["navbar__login__link"]}>
-                    {message}
-                </Link>
+                    <input
+                        className={styles["navbar__login__form-container__input-password"]}
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password Here"
+                        {...register("password", {
+                            required: {
+                                value: true,
+                                message: "THIS FIELD CAN'T BE EMPTY"
+                            }
+                        })}
+                    />
+                    {errors.password && <p className={styles["navbar__login__form-container__error2"]}>{errors.password.message}</p>}
+
+                    <button
+                        type="submit"
+                        className={styles["navbar__login__form-container__button"]}>
+                        {message}
+                    </button>
+                </form>
             </div>
         </nav>
     );

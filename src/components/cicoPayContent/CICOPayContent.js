@@ -1,9 +1,18 @@
 import React from "react";
 import styles from "./CICOPayContent.module.css";
+import { useForm } from "react-hook-form";
 
 function CICOPayContent() {
-    return(
-        <div className={styles["CICO-pay-content"]}>
+
+    const {register, handleSubmit, formState: {errors}} = useForm();
+
+    function onSubmit(data) {
+        //e.preventDefault();
+        console.log(data);
+    }
+
+    return (
+        <form className={styles["CICO-pay-content"]} onSubmit={handleSubmit(onSubmit)}>
             <h3 className={styles["CICO-pay-content__title"]}>YOU ARE ABOUT TO PAY ONE<br/>
                 COIN CREDIT TO GRANT<br/>
                 ACCESS TO THIS CLASS
@@ -15,8 +24,18 @@ function CICOPayContent() {
 
             <input
                 className={styles["CICO-pay-content__input-mail"]}
-                type="text"
-                placeholder="MAIL ADDRESS HERE"/>
+                type="mail"
+                placeholder="MAIL ADDRESS HERE"
+                name="mail"
+                id="mail"
+                {...register("mail", {
+                    required: {
+                        value: true,
+                        message: "THIS FIELD CAN'T BE EMPTY, ALSO INCLUDE '@'"
+                    }, validate: value => value.includes('@')
+                })}
+            />
+            {errors.mail && <p className={styles["CICO-pay-content__error1"]}>{errors.mail.message}</p>}
 
             <h3 className={styles["CICO-pay-content__enter-password"]}>
                 ENTER YOUR PASSWORD
@@ -26,7 +45,20 @@ function CICOPayContent() {
                 className={styles["CICO-pay-content__input-password"]}
                 type="text"
                 placeholder="PASSWORD HERE"
+                name="password"
+                id="password"
+                {...register("password", {
+                    required: {
+                        value: true,
+                        message: "THIS FIELD CAN'T BE EMPTY"
+                    },
+                    minLength: {
+                        value: 6,
+                        message: "USE AT LEAST 6 CHARACTERS"
+                    }
+                })}
             />
+            {errors.password && <p className={styles["CICO-pay-content__error2"]}>{errors.password.message}</p>}
 
             <h3 className={styles["CICO-pay-content__confirm"]}>
                 TO COMPLETE YOUR PAYMENT,<br/>
@@ -34,10 +66,11 @@ function CICOPayContent() {
             </h3>
 
             <button
-                className={styles["CICO-pay-content__confirm-button"]}>
-            CONFIRM
+                className={styles["CICO-pay-content__confirm-button"]}
+                type="submit">
+                CONFIRM
             </button>
-        </div>
+        </form>
     );
 }
 

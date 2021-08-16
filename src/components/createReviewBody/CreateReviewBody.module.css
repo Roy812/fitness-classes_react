@@ -1,18 +1,23 @@
+.create-review-body__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 22px;
+    margin-top: 30px;
+}
+
 .create-review-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-}
-
-.create-review-body__title {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 22px;
+    margin-top: 30px;
 }
 
 .create-review-body__dropdown {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 .create-review-body__input {
@@ -25,6 +30,13 @@
     -webkit-text-fill-color: #666161;
     border: solid 2px #000;
     margin-top: 30px;
+}
+
+.create-review-body__error1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #F62525;
 }
 
 .create-review-body__rating-message {

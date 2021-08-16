@@ -30,6 +30,13 @@
     -webkit-text-fill-color: #000;
 }
 
+.footer__form-container__form__label__error1 {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .footer__form-container__form__link {
     -webkit-text-fill-color: #fff;
     background-color: #000;
