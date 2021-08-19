@@ -14,12 +14,12 @@
     position: relative;
     top: 8px;
     width: 400px;
-    height: 130px;
+    height: 110px;
 }
 
 .login-banner__img-container-hitt {
     width: 655px;
-    height: 130px;
+    height: 110px;
     position: relative;
     left: 155px;
 }
@@ -30,11 +30,12 @@
     justify-content: center;
     align-items: center;
     width: 655px;
-    height: 30px;
-    background-color: black;
+    height: 25px;
+    background-color: #000;
     color: #69DD56;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
+    font-size: 12px;
     position: relative;
     left: 702px;
 }

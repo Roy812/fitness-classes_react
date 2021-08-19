@@ -3,7 +3,7 @@ import styles from "./LoginFooter.module.css";
 import {Link} from "react-router-dom";
 
 function LoginFooter() {
-    return(
+    return (
             <div className={styles["login__footer"]}>
                 <Link
                     className={styles["login__footer__link1"]}

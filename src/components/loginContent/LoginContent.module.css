@@ -3,7 +3,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .login-content__icon-container {
@@ -13,19 +14,9 @@
     right: 35px;
 }
 
-.login-content__icon-container-cup {
-    position: relative;
-    bottom: 74px;
-}
-
-.login-content__icon-container-lock {
-    position: relative;
-    bottom: 30px;
-}
-
 .login-content__icon-container-exclamation {
     position: relative;
-    top: 38px;
+    bottom: 50px;
 }
 
 .login-content__line-container {
@@ -33,6 +24,11 @@
     font-size: 22px;
     font-weight: 600;
     text-align: center;
+}
+
+.login-content__line-container__line1 {
+    color: #F62525;
+    font-size: 24px;
 }
 
 .login-content__line-container__line2 {
@@ -43,15 +39,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /*color: #000;*/
     text-decoration: none;
     margin-top: 15px;
 }
 
 .login-content__line-container__line2__link1__message1 {
-    width: 150px;
-    color: white;
-    background-color: black;
+    width: 125px;
     font-size: 18px;
+    color: #fff;
+    background-color: #F62525;
+    padding: 5px;
+}
+
+.login-content__line-container__line2__link1__message1:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
 }
 
 .login-content__line-container__line3 {
@@ -67,8 +70,14 @@
 }
 
 .login-content__line-container__link2__message2 {
-    width: 150px;
-    color: white;
-    background-color: black;
     font-size: 18px;
+    width: 110px;
+    color: #fff;
+    background-color: #F62525;
+    padding: 5px;
+}
+
+.login-content__line-container__link2__message2:hover {
+    color: #efbe11;
+    transition: all 0.2s ease-out;
 }

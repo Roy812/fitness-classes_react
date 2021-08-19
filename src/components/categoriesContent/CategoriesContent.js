@@ -10,7 +10,7 @@ function CategoriesContent( {message} ) {
     return(
         <div className={styles["categories-content"]}>
             <div className={styles["categories-content__title"]}>
-                <h1>{message}</h1>
+                <p>{message}</p>
             </div>
             <div className={styles["categories-content__nutrition"]}>
                 <img className={styles["categories-content__nutrition__icon"]} src={dietPicture} alt="diet-icon"/>

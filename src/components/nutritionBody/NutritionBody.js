@@ -9,9 +9,9 @@ function NutritionBody() {
             <h3 className={styles["nutrition-body__title"]}>BROWSE CLASSES ON NUTRITION</h3>
 
             <div className={styles["nutrition-body__subheader-container"]}>
-                <h3>CLASS</h3>
-                <h3>PLAYTIME</h3>
-                <h3>SUBCATEGORY</h3>
+                <p>CLASS</p>
+                <p>PLAYTIME</p>
+                <p>SUBCATEGORY</p>
             </div>
 
             <div className={styles["nutrition-body__CICO"]}>

@@ -15,11 +15,13 @@
 }
 
 .header__title {
-    color: #fff;
-    font-size: 20px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    flex-basis: 250px;
+    font-size: 20px;
     text-align: center;
+    color: #fff;
+    flex-basis: 250px;
+    position: relative;
+    left: 5px;
 }
 
 .header__login {

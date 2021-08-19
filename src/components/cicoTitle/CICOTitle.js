@@ -4,7 +4,7 @@ import styles from "./CICOTitle.module.css";
 function CICOTitle() {
     return (
         <div className={styles["CICO-title"]}>
-            <h3>1. "CICO, IT'S ALL YOU NEED"<br/> BY - GREG DOUCHETTE</h3>
+            <p>1. "CICO, IT'S ALL YOU NEED"<br/> BY - GREG DOUCHETTE</p>
         </div>
     );
 }

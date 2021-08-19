@@ -5,12 +5,18 @@
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
+    font-weight: 600;
     text-align: center;
     color: #efbe11;
-    width: 250px;
-    background-color: #666161;
+    width: 260px;
+    background-color: #000;
     position: relative;
     right: 340px;
+}
+
+.register-banner__container {
+    position: relative;
+    top: 44px;
 }
 
 .register-banner__message1 {
@@ -20,7 +26,7 @@
 .register-banner__fitflix {
     margin-top: 35px;
     width: 100%;
-    height: 110px;
+    height: 140px;
 }
 
 .register-banner__message2 {
@@ -31,5 +37,5 @@
 .register-banner__cheering {
     width: 100%;
     position: relative;
-    top: 47px;
+    top: 42px;
 }

@@ -10,7 +10,7 @@ function ReviewCreateContent() {
     return (
         <div className={styles["review-create-content"]}>
             <div className={styles["review-create-content__title"]}>
-                <h1>FIND REVIEWS FOR ALL YOU FAVOURITE CLASSES</h1>
+                <p>FIND REVIEWS FOR ALL YOU FAVOURITE CLASSES</p>
             </div>
 
             <div className={styles["review-create-content__nutrition"]}>

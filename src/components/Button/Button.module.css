@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 60px;
+    position: relative;
+    left: 26px;
 }
 
 .button__container {
@@ -17,8 +19,7 @@
 }
 
 .button__container__label {
-    /*-webkit-text-fill-color: white;*/
-    margin-top: 20px;
+    margin-top: 26px;
 }
 
 .button__container__label__link {
@@ -26,9 +27,9 @@
     background-color: black;
     font-weight: 600;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 .button__check {

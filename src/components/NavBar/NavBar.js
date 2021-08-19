@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 import { Link, useHistory } from "react-router-dom";
-//NB: Alt = useHistory -- destructure and use the .push method on a event handler -- place onClick event listener.
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
 import { useForm } from "react-hook-form";
@@ -70,24 +69,24 @@ function NavBar( {message} ) {
                     <input
                         className={styles["navbar__login__form-container__input-mail"]}
                         type="mail"
-                        name="mail"
-                        id="mail"
-                        placeholder="Mail Here"
-                        {...register("mail", {
+                        name="username"
+                        id="username"
+                        placeholder="USERNAME"
+                        {...register("username", {
                             required: {
                                 value: true,
                                 message: "THIS FIELD CAN'T BE EMPTY, ALSO INCLUDE '@'"
                             }, validate: value => value.includes('@'),
                         })}
                     />
-                    {errors.mail && <p className={styles["navbar__login__form-container__error1"]}>{errors.mail.message}</p>}
+                    {errors.username && <p className={styles["navbar__login__form-container__error1"]}>{errors.username.message}</p>}
 
                     <input
                         className={styles["navbar__login__form-container__input-password"]}
                         type="password"
                         name="password"
                         id="password"
-                        placeholder="Password Here"
+                        placeholder="PASSWORD"
                         {...register("password", {
                             required: {
                                 value: true,

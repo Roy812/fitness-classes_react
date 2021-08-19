@@ -6,15 +6,15 @@
     background-color: #F62525;
     color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    /*margin-top: 60px;*/
 }
 
 .register-footer__message {
     flex-basis: 250px;
-    font-size: 20px;
-    text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: center;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
     color: #fff;
 }
 

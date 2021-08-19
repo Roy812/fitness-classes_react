@@ -2,6 +2,7 @@ import React from "react";
 import RegisterHeader from "../components/registerHeader/RegisterHeader";
 import Footer from "../components/Footer/Footer";
 import NewsletterContent from "../components/newsletterContent/NewsletterContent";
+import RegisterFooter from "../components/registerFooter/RegisterFooter";
 
 function NewsletterPage() {
     return (
@@ -11,7 +12,9 @@ function NewsletterPage() {
                 message="LOGIN"
             />
             <NewsletterContent />
-            <Footer />
+            <RegisterFooter
+            message="STILL UNSURE, SIGN UP AN GET YOUR FIRST LESSON FREE!"
+            />
         </>
     );
 }

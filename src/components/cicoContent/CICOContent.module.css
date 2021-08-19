@@ -9,11 +9,11 @@
 
 .CICO-content__link {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     text-decoration: none;
     color: #F62525;
-    margin-bottom: 70px;
+    margin-bottom: 64px;
 }
 
 .CICO-content__link:hover {
@@ -22,13 +22,18 @@
 }
 
 .CICO-content__message {
-
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .CICO-content__button {
-    background-color: black;
-    color: white;
+    color: #fff;
+    background-color: #000;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     padding: 5px;
     margin-top: 20px;
 }

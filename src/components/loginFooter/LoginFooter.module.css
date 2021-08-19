@@ -5,15 +5,16 @@
     padding: 35px;
     margin-top: 45px;
     background-color: #F62525;
-    color: white;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
+    font-weight: 600;
     text-align: center;
 }
 
 .login__footer__link1 {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -24,7 +25,7 @@
 
 .login__footer__link2 {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 

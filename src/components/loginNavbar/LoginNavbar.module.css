@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*position: fixed;*/
     z-index: 999;
     background-color: #F62525;
     flex-basis: 150px;
@@ -22,13 +21,15 @@
     list-style: none;
     margin-left: -10px;
     margin-right: 35px;
+    position: relative;
+    left: 10px;
 }
 
 .login-navbar__item__link {
     color: #fff;
     font-size: 20px;
+    font-weight: 600;
     text-decoration: none;
-    /*border-bottom: 2px solid #fff;*/
 }
 
 .login-navbar__item__link:hover {

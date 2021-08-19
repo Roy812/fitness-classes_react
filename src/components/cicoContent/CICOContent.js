@@ -11,7 +11,7 @@ function CICOContent() {
             >
              SIGN UP FOR THIS CLASS HERE!
             </Link>
-            <h4 className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE</h4>
+            <p className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE</p>
             <button
                 className={styles["CICO-content__button"]}
                 type="text"
