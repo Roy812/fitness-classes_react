@@ -5,14 +5,20 @@ import { Link, useHistory } from "react-router-dom";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 function NavBar( {message} ) {
 
     const {register, handleSubmit, formState: {errors}} = useForm();
 
-    function onSubmit(data) {
-        //e.preventDefault();
+    async function onSubmit(data) {
         console.log(data);
+        try {
+            const result = await axios.post('http://localhost:3000/users/login', data);
+            console.log(result);
+        } catch (e) {
+            console.error(e);
+        }
         history.push("/login");
     }
 
@@ -93,7 +99,8 @@ function NavBar( {message} ) {
 
                     <button
                         type="submit"
-                        className={styles["navbar__login__form-container__button"]}>
+                        className={styles["navbar__login__form-container__button"]}
+                    >
                         {message}
                     </button>
                 </form>

@@ -1,15 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import styles from "./RegisterContent.module.css";
 import RegisterBanner from "../registerBanner/RegisterBanner";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import {useHistory} from "react-router-dom";
 
 function RegisterContent() {
 
+    const history = useHistory();
+    const [registerSuccess, toggleRegisterSuccess] = useState(false);
     const {register, handleSubmit, formState: {errors}} = useForm();
 
-    function onSubmit(data) {
-        //e.preventDefault();
+    async function onSubmit(data) {
         console.log(data);
+        try {
+            const result = await axios.post('http://localhost:8080/users/add', {
+                username: data.username,
+                password: data.password
+            })
+            console.log(result);
+            toggleRegisterSuccess(true);
+            history.push('/login');
+        } catch (e) {
+            console.error(e)
+        }
     }
 
     return (
@@ -66,10 +80,14 @@ function RegisterContent() {
                     <div className={styles["register-content__container__three"]}>
                         <p>STEP 3:</p>
                         <p>TO COMPLETE YOUR REGISTRATION, PRESS CONFIRM</p>
-                        <button className={styles["register-content__container__three__button"]} type="submit">
+                        <button
+                            className={styles["register-content__container__three__button"]}
+                            type="submit"
+                        >
                             CONFIRM
                         </button>
                     </div>
+                    {registerSuccess && <p>REGISTERED SUCCESSFULLY, YOU WILL BE REDIRECTED TO THE LOGIN PAGE</p>}
                 </form>
             </div>
         </div>
@@ -77,5 +95,3 @@ function RegisterContent() {
 }
 
 export default RegisterContent;
-
-//
