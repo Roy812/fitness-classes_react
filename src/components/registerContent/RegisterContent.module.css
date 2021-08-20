@@ -56,11 +56,13 @@
 }
 
 .register-content__container__three__button {
+    background-color: #FF285C;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    background-color: #33769C;
-    color: #fff;
+    border-radius: 10px;
+    border-color: #FF285C;
     padding: 10px;
     margin-top: 25px;
     margin-bottom: 45px;

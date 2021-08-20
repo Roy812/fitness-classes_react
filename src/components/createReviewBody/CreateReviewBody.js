@@ -76,7 +76,7 @@ function CreateReviewBody() {
                 </select>
 
                 <button
-                    className={styles["create-review-body__post"]}
+                    className={styles["create-review-body__post-button"]}
                     type="submit">
                     POST
                 </button>

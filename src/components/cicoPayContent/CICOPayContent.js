@@ -67,7 +67,8 @@ function CICOPayContent() {
 
             <button
                 className={styles["CICO-pay-content__confirm-button"]}
-                type="submit">
+                type="submit"
+            >
                 CONFIRM
             </button>
         </form>

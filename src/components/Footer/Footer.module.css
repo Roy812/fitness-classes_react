@@ -19,6 +19,9 @@
 }
 
 .footer__link:hover {
-    color: #efbe11;
+    /*color: #efbe11;*/
+    /*color: #83B4FD;*/
+    /*color: #9DC4FF;*/
+    color: #B8D4FF;
     transition: all 0.2s ease-out;
 }

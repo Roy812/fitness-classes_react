@@ -8,9 +8,9 @@
 }
 
 .CICO-pay-content__title {
+    color: #F62525;
     font-size: 22px;
     font-weight: 600;
-    color: #F62525;
     text-align: center;
     margin-top: 40px;
 }
@@ -67,10 +67,17 @@
     width: 125px;
     height: 50px;
     background-color: #33769C;
-    color: #fff;
     -webkit-text-fill-color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
     font-weight: 600;
+    border-color: #33769C;
+    border-radius: 10px;
     margin-top: 20px;
 }
+
+.CICO-pay-content__confirm-button:hover {
+    color: #FAFD83;
+    transition: all 0.2s ease-out;
+}
+

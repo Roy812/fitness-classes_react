@@ -84,11 +84,13 @@
 }
 
 .settings-content__container1__item1__label__form__button {
+    background-color: #FF285C;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    background-color: #F62525;
-    color: white;
+    border-color: #FF285C;
+    border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
 }
@@ -107,11 +109,13 @@
 }
 
 .settings-content__container2__button {
+    background-color: #FF285C;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    background-color: #F62525;
-    color: white;
+    border-color: #FF285C;
+    border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
 }
@@ -132,13 +136,20 @@
 }
 
 .settings-content__container3__button {
+    background-color: #33769C;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    background-color: white;
-    color: #31A12E;
+    border-color: #33769C;
+    border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
+}
+
+.settings-content__container3__button:hover {
+    color: #FAFD83;
+    transition: all 0.2s ease-out;
 }
 
 .settings-content__container4 {
@@ -157,11 +168,13 @@
 }
 
 .settings-content__container4__button {
+    background-color: #FF285C;
+    color: #fff;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
-    background-color: #F62525;
-    color: white;
+    border-color: #FF285C;
+    border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
     margin-bottom: 45px;

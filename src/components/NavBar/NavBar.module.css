@@ -92,13 +92,15 @@
 
 .navbar__login__form-container__button {
     color: #fff;
-    background-color: #F62525;
+    background-color: #33769C;
     font-weight: 600;
     text-decoration: none;
+    border-radius: 10px;
+    border-color: #33769C;
     margin-top: 5px;
 }
 
 .navbar__login__form-container__button:hover {
-    color: #efbe11;
+    color: #FAFD83;
     transition: all 0.2s ease-out;
 }
