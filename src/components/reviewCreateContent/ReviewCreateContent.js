@@ -22,19 +22,19 @@ function ReviewCreateContent() {
                 </Link>
             </div>
 
-            <div className={styles["review-create-content__buildmuscle"]}>
-                <img className={styles["review-create-content__buildmuscle__icon"]} src={dumbbellPicture} alt="dumbbell-icon"/>
+            <div className={styles["review-create-content__build-muscle"]}>
+                <img className={styles["review-create-content__build-muscle__icon"]} src={dumbbellPicture} alt="dumbbell-icon"/>
                 <Link
-                    className={styles["review-create-content__buildmuscle__link"]}
+                    className={styles["review-create-content__build-muscle__link"]}
                     to="/buildmusclereviews">
                     BUILD MUSCLE
                 </Link>
             </div>
 
-            <div className={styles["review-create-content__buildpower"]}>
-                <img className={styles["review-create-content__buildpower__icon"]} src={platePicture} alt="plate-icon"/>
+            <div className={styles["review-create-content__build-power"]}>
+                <img className={styles["review-create-content__build-power__icon"]} src={platePicture} alt="plate-icon"/>
                 <Link
-                    className={styles["review-create-content__buildpower__link"]}
+                    className={styles["review-create-content__build-power__link"]}
                     to="/buildpowerreviews">
                     BUILD POWER
                 </Link>

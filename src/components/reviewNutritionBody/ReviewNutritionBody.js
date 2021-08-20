@@ -8,9 +8,9 @@ function ReviewNutritionBody() {
             <h3 className={styles["review-nutrition-body__title"]}>NUTRITION RELATED REVIEWS</h3>
 
             <div className={styles["review-nutrition-body__subheader-container"]}>
-                <h3>CLASS</h3>
-                <h3>TEACHER</h3>
-                <h3>BY USER</h3>
+                <p>CLASS</p>
+                <p>TEACHER</p>
+                <p>BY USER</p>
             </div>
 
             <div className={styles["review-nutrition-body__CICO"]}>

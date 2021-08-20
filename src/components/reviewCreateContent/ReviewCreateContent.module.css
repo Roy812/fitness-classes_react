@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .review-create-content__title {
-    font-size: 16px;
+    color: #F62525;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .review-create-content__nutrition {
@@ -17,6 +19,7 @@
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    font-weight: 600;
     margin-top: 30px;
     position: relative;
     left: 10px;
@@ -29,7 +32,7 @@
 
 .review-create-content__nutrition__link {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .review-create-content__nutrition__link:hover {
@@ -37,54 +40,56 @@
     transition: all 0.2s ease-out;
 }
 
-.review-create-content__buildmuscle {
+.review-create-content__build-muscle {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    font-weight: 600;
     margin-top: 20px;
     position: relative;
     left: 18px;
 }
 
-.review-create-content__buildmuscle__icon {
+.review-create-content__build-muscle__icon {
     position: relative;
     right: 36px;
 }
 
-.review-create-content__buildmuscle__link {
+.review-create-content__build-muscle__link {
     text-decoration: none;
     color: black;
 }
 
-.review-create-content__buildmuscle__link:hover {
+.review-create-content__build-muscle__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-create-content__buildpower {
+.review-create-content__build-power {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    font-weight: 600;
     margin-top: 20px;
     position: relative;
     left: 22px;
 }
 
-.review-create-content__buildpower__icon {
+.review-create-content__build-power__icon {
     position: relative;
     right: 40px;
 }
 
-.review-create-content__buildpower__link {
+.review-create-content__build-power__link {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
-.review-create-content__buildpower__link:hover {
+.review-create-content__build-power__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
@@ -95,6 +100,7 @@
     justify-content: center;
     align-items: center;
     font-size: 22px;
+    font-weight: 600;
     margin-top: 20px;
     position: relative;
     left: 50px;
@@ -106,8 +112,8 @@
 }
 
 .review-create-content__build-a-homegym__link {
+    color: #000;
     text-decoration: none;
-    color: black;
 }
 
 .review-create-content__build-a-homegym__link:hover {

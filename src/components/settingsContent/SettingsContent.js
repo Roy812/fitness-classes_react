@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import styles from "./SettingsContent.module.css";
-import lockPicture from "../../assets/Lock(red).png"
-import photoPicture from "../../assets/Photo(red).png";
+import lockPicture from "../../assets/Lock-red(new).svg"
+import photoPicture from "../../assets/Camera-red(new).svg";
 import newsletterPicture from "../../assets/Newsletter(red).png";
 import deletePicture from "../../assets/Delete(red).png";
 
