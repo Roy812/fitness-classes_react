@@ -35,7 +35,7 @@
 
 .categories-content__nutrition__link {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .categories-content__nutrition__link:hover {
@@ -117,10 +117,44 @@
 
 .categories-content__buildahomegym__link {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .categories-content__buildahomegym__link:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
+}
+
+@media screen and (min-width: 1600px) {
+    .categories-content {
+        width: 1700px;
+    }
+    .categories-content__title {
+        font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .categories-content__nutrition {
+        font-size: 28px;
+        position: relative;
+        left: 6px;
+        margin-top: 30px;
+    }
+    .categories-content__buildmuscle {
+        font-size: 28px;
+        position: relative;
+        left: 20px;
+        margin-top: 30px;
+    }
+    .categories-content__buildpower {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    .categories-content__buildahomegym {
+        font-size: 28px;
+        position: relative;
+        left: 60px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 }

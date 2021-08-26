@@ -38,3 +38,18 @@
     width: 45px;
     height: 45px;
 }
+
+@media screen and (min-width: 1375px){
+    .button__container {
+        font-size: 28px;
+        position: relative;
+        left: 30px;
+    }
+    .button__container__label__link {
+        font-size: 20px;
+    }
+    .button__check {
+        position: relative;
+        left: 30px;
+    }
+}

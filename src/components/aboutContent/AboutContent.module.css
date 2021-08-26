@@ -11,13 +11,36 @@
 }
 
 .about-content__item1 {
-
+    width: 600px;
 }
 
 .about-content__item2 {
+    width: 600px;
     margin-top: 30px;
 }
 
 .about-content__item3 {
+    width: 600px;
     margin-top: 30px;
+}
+
+@media screen and (min-width: 1600px) {
+    .about-content {
+        font-size: 22px;
+        margin-top: 52px;
+        margin-bottom: 52px;
+    }
+    .about-content__item1 {
+        width: 775px;
+    }
+
+    .about-content__item2 {
+        width: 775px;
+        margin-top: 30px;
+    }
+
+    .about-content__item3 {
+        width: 775px;
+        margin-top: 30px;
+    }
 }

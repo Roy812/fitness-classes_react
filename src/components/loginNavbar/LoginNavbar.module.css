@@ -33,8 +33,11 @@
 }
 
 .login-navbar__item__link:hover {
-    border-bottom: 3px solid #efbe11;
-    transition: all 0.2s ease-out;
+    /*border-bottom: 3px solid #efbe11;*/
+    /*transition: all 0.2s ease-out;*/
+    /*color: #B8D4FF;*/
+    color: #CFE2FF;
+    transition: all 0.2s linear;
 }
 
 .login-navbar__login {
@@ -43,4 +46,23 @@
     color: #fff;
     font-weight: 100;
     text-decoration: none;
+}
+
+@media screen and (min-width: 1600px) {
+    .login-navbar {
+        width: 1750px;
+        height: 135px;
+    }
+    .login-navbar__menu {
+        position: relative;
+        left: 35px;
+    }
+    .login-navbar__item__link {
+        font-size: 24px;
+    }
+    .login-navbar__login {
+        flex-basis: 250px;
+        font-size: 18px;
+        font-weight: 400;
+    }
 }

@@ -34,8 +34,12 @@
 }
 
 .navbar__menu__item__link:hover {
-    border-bottom: 3px solid #efbe11;
-    transition: all 0.2s ease-out;
+    /*border-bottom: 3px solid #efbe11;*/
+    /*border-bottom: 3px solid #B8D4FF;*/
+    /*transition: all 0.2s ease-out;*/
+    /*color: #B8D4FF;*/
+    color: #CFE2FF;
+    transition: all 0.2s linear;
 }
 
 .navbar__login {
@@ -103,4 +107,23 @@
 .navbar__login__form-container__button:hover {
     color: #FAFD83;
     transition: all 0.2s ease-out;
+}
+
+@media screen and (min-width: 1600px) {
+    .navbar {
+        height: 125px;
+    }
+    .navbar__menu__item__link {
+        font-size: 24px;
+    }
+    .navbar__login__form-container__input-mail {
+        font-size: 12px;
+    }
+    .navbar__login__form-container__input-password {
+        font-size: 12px;
+    }
+    .navbar__login__form-container__button {
+        font-size: 16px;
+        margin-top: 6px;
+    }
 }

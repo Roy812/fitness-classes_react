@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: 10px;
+    left: 40px;
     padding: 22px;
 }
 
@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    left: 40px;
+    left: 160px;
     padding: 22px;
 }
 
@@ -29,6 +29,43 @@
     position: relative;
     left: 25px;
     padding: 22px;
+    margin-left: 175px;
+}
+
+/*@media screen and (min-width: 1375px) {*/
+/*    .quotes {*/
+/*        font-size: 22px;*/
+/*    }*/
+/*    .quote__one {*/
+/*        position: relative;*/
+/*        left: 66px;*/
+/*    }*/
+/*    .quote__two {*/
+/*        position: relative;*/
+/*        left: 215px;*/
+/*    }*/
+/*    .quote__three {*/
+/*        margin-left: 240px;*/
+
+/*    }*/
+/*}*/
+
+@media screen and (min-width: 1600px) {
+    .quotes {
+        font-size: 22px;
+    }
+    .quote__one {
+        position: relative;
+        left: 66px;
+    }
+    .quote__two {
+        position: relative;
+        left: 215px;
+    }
+    .quote__three {
+        margin-left: 240px;
+
+    }
 }
 
 

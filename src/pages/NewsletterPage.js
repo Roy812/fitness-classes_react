@@ -1,6 +1,5 @@
 import React from "react";
 import RegisterHeader from "../components/registerHeader/RegisterHeader";
-import Footer from "../components/Footer/Footer";
 import NewsletterContent from "../components/newsletterContent/NewsletterContent";
 import RegisterFooter from "../components/registerFooter/RegisterFooter";
 

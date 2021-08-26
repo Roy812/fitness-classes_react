@@ -25,3 +25,9 @@
     top: 40px;
     left: 182px;
 }
+
+@media screen and (min-width: 1600px) {
+    .review-create {
+        width: 1200px;
+    }
+}

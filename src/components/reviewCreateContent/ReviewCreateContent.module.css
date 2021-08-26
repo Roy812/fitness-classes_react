@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -120,3 +119,37 @@
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
+
+@media screen and (min-width: 1600px) {
+    .review-create-content {
+        width: 1670px;
+    }
+    .review-create-content__title {
+        font-size: 32px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .review-create-content__nutrition {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+    .review-create-content__build-muscle {
+        font-size: 28px;
+        position: relative;
+        left: 24px;
+        margin-bottom: 14px;
+    }
+    .review-create-content__build-power {
+        font-size: 28px;
+        position: relative;
+        left: 24px;
+        margin-bottom: 14px;
+    }
+    .review-create-content__build-a-homegym {
+        font-size: 28px;
+        position: relative;
+        left: 60px;
+        margin-bottom: 10px;
+    }
+}
+

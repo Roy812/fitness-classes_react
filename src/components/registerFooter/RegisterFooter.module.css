@@ -19,6 +19,15 @@
 }
 
 .register-footer__message:hover {
-    color: #efbe11;
-    transition: all 0.2s ease-out;
+    /*color: #B8D4FF;*/
+    /*transition: all 0.2s ease-out;*/
+    color: #CFE2FF;
+    transition: all 0.2s linear;
+}
+
+@media screen and (min-width: 1600px) {
+    .register-footer__message {
+        flex-basis: 300px;
+        font-size: 24px;
+    }
 }
