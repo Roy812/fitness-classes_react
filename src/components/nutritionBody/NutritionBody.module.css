@@ -125,3 +125,7 @@
     position: relative;
     left: 15px;
 }
+
+@media screen and (min-width: 1600px) {
+
+}

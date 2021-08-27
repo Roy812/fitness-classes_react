@@ -14,12 +14,12 @@
     position: relative;
     top: 8px;
     width: 400px;
-    height: 110px;
+    height: 130px;
 }
 
 .login-banner__img-container-hitt {
-    width: 655px;
-    height: 110px;
+    width: 638px;
+    height: 130px;
     position: relative;
     left: 155px;
 }
@@ -38,4 +38,22 @@
     font-size: 12px;
     position: relative;
     left: 702px;
+}
+
+@media screen and (min-width: 1600px) {
+    .login-banner__img-container-cookbook {
+        width: 666px;
+        height: 180px;
+    }
+    .login-banner__img-container-hitt {
+        width: 840px;
+        height: 180px;
+    }
+    .login-banner__podcast {
+        width: 840px;
+        height: 34px;
+        font-size: 18px;
+        position: relative;
+        left: 911px;
+    }
 }

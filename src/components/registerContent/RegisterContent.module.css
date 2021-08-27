@@ -68,3 +68,16 @@
     margin-bottom: 45px;
 }
 
+@media screen and (min-width: 1600px) {
+    .register-content {
+        position: relative;
+        right: 34px;
+    }
+    .register-content__container {
+        font-size: 24px;
+    }
+    .register-content__container__three__button {
+        font-size: 22px;
+    }
+}
+
