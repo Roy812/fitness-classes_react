@@ -55,6 +55,10 @@
     align-items: center;
 }
 
+.settings-content__container1__item1__change-password {
+    color: #F62525;
+}
+
 .settings-content__container1__item1__label {
     display: flex;
     flex-direction: column;
@@ -103,6 +107,10 @@
     margin-top: 30px;
 }
 
+.settings-content__container2__change-profile-picture {
+    color: #F62525;
+}
+
 .settings-content__container2__jpg-message {
     font-size: 18px;
     margin-top: 20px;
@@ -135,6 +143,10 @@
     margin-top: 30px;
 }
 
+.settings-content__container3__send-newsletter {
+    color: #F62525;
+}
+
 .settings-content__container3__button {
     background-color: #33769C;
     color: #fff;
@@ -160,10 +172,14 @@
     margin-top: 30px;
 }
 
+.settings-content__container4__delete-account {
+    color: #F62525;
+}
+
 .settings-content__container4__message {
+    width: 200px;
     font-size: 12px;
     text-align: center;
-    width: 200px;
     margin-top: 20px;
 }
 
@@ -178,4 +194,32 @@
     padding: 5px;
     margin-top: 20px;
     margin-bottom: 45px;
+}
+
+@media screen and (min-width: 1600px) {
+    .settings-content {
+        position: relative;
+        right: 50px;
+    }
+    .settings-content__container1__item1__change-password {
+        font-size: 24px;
+    }
+    .settings-content__container2__change-profile-picture {
+        font-size: 24px;
+    }
+    .settings-content__container2__jpg-message {
+        font-size: 20px;
+    }
+    .settings-content__container2__jpg-confirm {
+        font-size: 14px;
+    }
+    .settings-content__container3__send-newsletter {
+        font-size: 24px;
+    }
+    .settings-content__container4__delete-account {
+        font-size: 24px;
+    }
+    .settings-content__container4__message {
+        font-size: 14px;
+    }
 }

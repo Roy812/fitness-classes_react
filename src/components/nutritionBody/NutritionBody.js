@@ -32,14 +32,14 @@ function NutritionBody() {
                 <h4 className={styles["nutrition-body__workoutsnacks__subcategory"]} >TRAINING</h4>
             </div>
 
-            <div className={styles["nutrition-body__testlevelsanddiets"]}>
+            <div className={styles["nutrition-body__testlevels-and-diets"]}>
                 <Link
-                    className={styles["nutrition-body__testlevelsanddiets__title"]}
+                    className={styles["nutrition-body__testlevels-and-diets__title"]}
                     to="/testlevelsanddiets">
                     3. "TESTOSTERONE LEVELS & DIETS" BY - MIKE ISRATEL
                 </Link>
-                <h4 className={styles["nutrition-body__testlevelsanddiets__playtime"]} >100 MIN</h4>
-                <h4 className={styles["nutrition-body__testlevelsanddiets__subcategory"]} >HORMONAL BALANCE</h4>
+                <h4 className={styles["nutrition-body__testlevels-and-diets__playtime"]} >100 MIN</h4>
+                <h4 className={styles["nutrition-body__testlevels-and-diets__subcategory"]} >HORMONAL BALANCE</h4>
             </div>
 
         </div>

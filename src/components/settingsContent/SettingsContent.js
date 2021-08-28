@@ -25,7 +25,7 @@ function SettingsContent() {
 
             <div className={styles["settings-content__container1"]}>
                 <div className={styles["settings-content__container1__item1"]}>
-                    <p>CHANGE YOUR PASSWORD</p>
+                    <p className={styles["settings-content__container1__item1__change-password"]}>CHANGE YOUR PASSWORD</p>
 
                  <label className={styles["settings-content__container1__item1__label"]}>
                      <form
@@ -59,7 +59,7 @@ function SettingsContent() {
             </div>
 
             <div className={styles["settings-content__container2"]}>
-                <p>CHANGE YOUR PROFILE PICTURE</p>
+                <p className={styles["settings-content__container2__change-profile-picture"]}>CHANGE YOUR PROFILE PICTURE</p>
 
                 <p className={styles["settings-content__container2__jpg-message"]}>PLEASE SELECT A JPG FILE</p>
                 <button
@@ -78,7 +78,7 @@ function SettingsContent() {
             </div>
 
             <div className={styles["settings-content__container3"]}>
-                <p>SEND ME THE F.C. NEWSLETTER</p>
+                <p className={styles["settings-content__container3__send-newsletter"]}>SEND ME THE F.C. NEWSLETTER</p>
                 <button
                     className={styles["settings-content__container3__button"]} type="submit">
                     YES
@@ -86,7 +86,7 @@ function SettingsContent() {
             </div>
 
             <div className={styles["settings-content__container4"]}>
-                <p>DELETE ACCOUNT</p>
+                <p className={styles["settings-content__container4__delete-account"]}>DELETE ACCOUNT</p>
 
                 <p className={styles["settings-content__container4__message"]}>
                    IF YOU WISH TO DELETE YOUR ACCOUNT YOU MUST SEND A REQUEST TO ADMIN

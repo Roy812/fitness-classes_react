@@ -92,7 +92,7 @@
     left: 4px;
 }
 
-.nutrition-body__testlevelsanddiets {
+.nutrition-body__testlevels-and-diets {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -103,7 +103,7 @@
     right: 36px;
 }
 
-.nutrition-body__testlevelsanddiets__title {
+.nutrition-body__testlevels-and-diets__title {
     width: 230px;
     text-decoration: none;
     color: black;
@@ -111,21 +111,58 @@
     font-weight: 600;
 }
 
-.nutrition-body__testlevelsanddiets__title:hover {
+.nutrition-body__testlevels-and-diets__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.nutrition-body__testlevelsanddiets__playtime {
+.nutrition-body__testlevels-and-diets__playtime {
     position: relative;
     right: 32px;
 }
 
-.nutrition-body__testlevelsanddiets__subcategory {
+.nutrition-body__testlevels-and-diets__subcategory {
     position: relative;
     left: 15px;
 }
 
 @media screen and (min-width: 1600px) {
-
+    .nutrition-body__title {
+        font-size: 26px;
+        margin-top: 54px;
+    }
+    .nutrition-body__subheader-container {
+        font-size: 22px;
+        position: relative;
+        left: 15px;
+    }
+    .nutrition-body__CICO {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .nutrition-body__CICO__title {
+        width: 300px;
+        /*text-align: left;*/
+    }
+    .nutrition-body__workoutsnacks {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .nutrition-body__workoutsnacks__title {
+        width: 300px;
+        /*text-align: left;*/
+    }
+    .nutrition-body__workoutsnacks__playtime {
+        position: relative;
+        right: 66px;
+    }
+    .nutrition-body__testlevels-and-diets {
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .nutrition-body__testlevels-and-diets__title {
+        width: 300px;
+        /*text-align: left;*/
+    }
 }

@@ -22,3 +22,16 @@
 .review-cico-body__fourstars {
     margin-top: 35px;
 }
+
+@media screen and (min-width: 1600px) {
+    .review-cico-body__title {
+        font-size: 30px;
+    }
+    .review-cico-body__text {
+        font-size: 26px;
+    }
+    .review-cico-body__fourstars {
+        width: 250px;
+        height: 50px;
+    }
+}

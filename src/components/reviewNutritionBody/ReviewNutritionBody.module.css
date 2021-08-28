@@ -73,10 +73,10 @@
 
 .review-nutrition-body__workoutsnacks__title {
     width: 240px;
-    text-decoration: none;
-    color: black;
+    color: #000;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .review-nutrition-body__workoutsnacks__title:hover {
@@ -107,10 +107,10 @@
 
 .review-nutrition-body__testlevelsanddiets__title {
     width: 230px;
-    text-decoration: none;
-    color: black;
+    color: #000;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .review-nutrition-body__testlevelsanddiets__title:hover {
@@ -126,4 +126,44 @@
 .review-nutrition-body__testlevelsanddiets__user {
     position: relative;
     right: 10px;
+}
+
+@media screen and (min-width: 1600px) {
+    .review-nutrition-body__title {
+        font-size: 32px;
+    }
+    .review-nutrition-body__subheader-container {
+        font-size: 28px;
+        position: relative;
+        left: 25px;
+    }
+    .review-nutrition-body__CICO__title {
+        width: 350px;
+        font-size: 22px;
+    }
+    .review-nutrition-body__CICO__teacher {
+        font-size: 22px;
+        position: relative;
+        right: 96px;
+    }
+    .review-nutrition-body__workoutsnacks__title {
+        width: 350px;
+        font-size: 22px;
+        position: relative;
+        left: 16px;
+    }
+    .review-nutrition-body__workoutsnacks__teacher {
+        font-size: 22px;
+        position: relative;
+        right: 84px;
+    }
+    .review-nutrition-body__testlevelsanddiets__title {
+        width: 350px;
+        font-size: 22px;
+    }
+    .review-nutrition-body__testlevelsanddiets__teacher {
+        font-size: 22px;
+        position: relative;
+        right: 90px;
+    }
 }

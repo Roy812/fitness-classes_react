@@ -81,3 +81,24 @@
     transition: all 0.2s ease-out;
 }
 
+@media screen and (min-width: 1600px) {
+    .CICO-pay-content__title {
+        font-size: 24px;
+    }
+    .CICO-pay-content__enter-mail {
+        font-size: 22px;
+    }
+    .CICO-pay-content__input-mail {
+        margin-top: 12px;
+    }
+    .CICO-pay-content__enter-password {
+        font-size: 22px;
+    }
+    .CICO-pay-content__input-password {
+        margin-top: 12px;
+    }
+    .CICO-pay-content__confirm {
+        font-size: 22px;
+    }
+}
+

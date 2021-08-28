@@ -65,7 +65,7 @@
 }
 
 .create-review-body__post-button {
-    width: 150px;
+    width: 110px;
     height: 50px;
     background-color: #33769C;
     color: #fff;
@@ -80,4 +80,16 @@
 .create-review-body__post-button:hover {
     color: #FAFD83;
     transition: all 0.2s ease-out;
+}
+
+@media screen and (min-width: 1600px) {
+    .create-review-body__title {
+        font-size: 24px;
+    }
+    .create-review-body__rating-message {
+        font-size: 24px;
+    }
+    .create-review-body__post-button {
+        width: 110px;
+    }
 }
