@@ -10,7 +10,7 @@ function NutritionBody() {
 
             <div className={styles["nutrition-body__subheader-container"]}>
                 <p>CLASS</p>
-                <p>PLAYTIME</p>
+                <p className={styles["nutrition-body__subheader-container__playtime"]}>PLAYTIME</p>
                 <p>SUBCATEGORY</p>
             </div>
 
