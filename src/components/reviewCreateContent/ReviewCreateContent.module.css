@@ -1,15 +1,22 @@
 .review-create-content {
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    position: relative;
+    left: 340px;
 }
 
 .review-create-content__title {
+    width: 400px;
     color: #F62525;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 10px;
 }
 
 .review-create-content__nutrition {
@@ -17,7 +24,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     margin-top: 30px;
     position: relative;
@@ -30,6 +37,7 @@
 }
 
 .review-create-content__nutrition__link {
+    width: 130px;
     text-decoration: none;
     color: #000;
 }
@@ -44,9 +52,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 39px;
     position: relative;
     left: 18px;
 }
@@ -57,8 +65,9 @@
 }
 
 .review-create-content__build-muscle__link {
+    width: 180px;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .review-create-content__build-muscle__link:hover {
@@ -71,9 +80,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 39px;
     position: relative;
     left: 22px;
 }
@@ -84,6 +93,7 @@
 }
 
 .review-create-content__build-power__link {
+    width: 180px;
     text-decoration: none;
     color: #000;
 }
@@ -98,11 +108,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
-    margin-top: 20px;
     position: relative;
     left: 50px;
+    margin-top: 39px;
+    margin-bottom: 20px;
 }
 
 .review-create-content__build-a-homegym__icon {
@@ -111,6 +122,7 @@
 }
 
 .review-create-content__build-a-homegym__link {
+    width: 225px;
     color: #000;
     text-decoration: none;
 }
@@ -152,4 +164,6 @@
         margin-bottom: 10px;
     }
 }
+
+
 

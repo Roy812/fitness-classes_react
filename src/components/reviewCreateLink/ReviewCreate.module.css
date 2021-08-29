@@ -1,34 +1,29 @@
 .review-create {
-    width: 1100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
     position: relative;
-    bottom: 5px;
-    right: 5px;
+    top: 48px;
+    left: 55px;
 }
 
 .review-create__plus-icon {
+    width: 20px;
     position: relative;
-    top: 45px;
-    left: 168px;
+    bottom: 12px;
 }
 
 .review-create__link {
+    width: 170px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #69DD56;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    position: relative;
-    top: 40px;
-    left: 182px;
 }
 
-@media screen and (min-width: 1600px) {
-    .review-create {
-        width: 1100px;
-    }
-}

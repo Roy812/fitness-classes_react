@@ -11,8 +11,6 @@
     text-align: center;
     color: #efbe11;
     background-color: #000;
-    /*position: relative;*/
-    /*right: 150px;*/
 }
 
 .register-banner__container {
@@ -41,11 +39,11 @@
     top: 42px;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-width: 700px) {
     .register-banner {
-        width: 300px;
+        width: 45px;
         position: relative;
-        right: 450px;
+        right: 256px;
     }
 }
 
