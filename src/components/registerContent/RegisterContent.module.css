@@ -1,6 +1,11 @@
 .register-content {
     display: flex;
     flex-direction: row;
+}
+
+.register-content2 {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -14,7 +19,7 @@
     font-size: 22px;
     font-weight: 600;
     position: relative;
-    right: 120px;
+    left: 210px;
     margin-top: 45px;
 }
 
@@ -78,6 +83,22 @@
     }
     .register-content__container__three__button {
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .register-content__container {
+        font-size: 26px;
+    }
+    .register-content__container__three__button {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .register-content__container {
+        position: relative;
+        right: 100px;
     }
 }
 

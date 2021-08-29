@@ -8,11 +8,14 @@ function LoginBanner() {
         <div className={styles["login-banner"]}>
             <div className={styles["login-banner__img-container"]}>
                 <img className={styles["login-banner__img-container-cookbook"]} src={cookbookPicture} alt="cookbook-image"/>
-                <img className={styles["login-banner__img-container-hitt"]} src={hittPicture} alt="hitt-image"/>
+                <div className={styles["login-banner__phantom-div"]}>TESTBAR</div>
             </div>
 
-            <div className={styles["login-banner__podcast"]}>
-                <p>TODAY ON THE F.C. PODCAST</p>
+            <div className={styles["login-banner__container2"]}>
+                <img className={styles["login-banner__img-container-hitt"]} src={hittPicture} alt="hitt-image"/>
+                <div className={styles["login-banner__podcast"]}>
+                    <p>TODAY ON THE F.C. PODCAST</p>
+                </div>
             </div>
         </div>
     );

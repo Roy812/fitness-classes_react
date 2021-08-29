@@ -19,8 +19,10 @@
 }
 
 .login__footer__link1:hover {
-    color: #efbe11;
-    transition: all 0.2s ease-out;
+    /*color: #efbe11;*/
+    /*transition: all 0.2s ease-out;*/
+    color: #CFE2FF;
+    transition: all 0.2s linear;
 }
 
 .login__footer__link2 {
@@ -30,8 +32,10 @@
 }
 
 .login__footer__link2:hover {
-    color: #efbe11;
-    transition: all 0.2s ease-out;
+    /*color: #efbe11;*/
+    /*transition: all 0.2s ease-out;*/
+    color: #CFE2FF;
+    transition: all 0.2s linear;
 }
 
 @media screen and (min-width: 1600px) {

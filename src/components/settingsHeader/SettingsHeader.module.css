@@ -12,22 +12,27 @@
 
 .settings-header__logo {
     margin-left: -10px;
+    flex-shrink: 5;
 }
 
 .settings-header__title {
     color: #fff;
-    font-size: 22px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
     flex-basis: 425px;
+    flex-shrink: 3;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     text-align: center;
     position: relative;
     left: 65px;
 }
 
 .settings-header__user {
+    /*width: 250px;*/
+    flex-basis: 250px;
     display: flex;
     align-items: center;
-    width: 250px;
+    flex-shrink: 1;
 }
 
 .settings-header__user__icon {
@@ -54,7 +59,32 @@
         left: 70px;
     }
     .settings-header__user__message {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 600;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .settings-header__logo {
+        position: relative;
+        left: 20px;
+    }
+    .settings-header__title {
+        position: relative;
+        left: 20px;
+    }
+    .settings-header__user__message {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .settings-header__title {
+        position: relative;
+        left: 15px;
+    }
+    .settings-header__user__message {
+        font-size: 16px;
     }
 }

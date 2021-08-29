@@ -27,21 +27,33 @@
     flex-shrink: 0;
 }
 
-@media screen and (min-width: 1375px) {
+@media screen and (min-width: 1435px) {
     .banner {
-        /*width: 100%;*/
-        width: 1720px;
+        width: 100%;
+        /*width: 1720px;*/
     }
     .banner__picture-lifting {
-        width: 770px;
-        height: 275px;
+        height: 290px;
+        flex-basis: 588px;
     }
     .banner__picture-food {
-        width: 770px;
-        height: 275px;
+        height: 290px;
+        flex-basis: 588px;
     }
-    .banner__picture-homegym {
-        width: 770px;
-        height: 275px;
+    .banner__picture-home-gym {
+        height: 290px;
+        flex-basis: 588px;
+    }
+}
+
+@media screen and (max-width: 1435px) {
+    .banner__picture-lifting {
+        height: 260px;
+    }
+    .banner__picture-food {
+        height: 260px;
+    }
+    .banner__picture-home-gym {
+        height: 260px;
     }
 }

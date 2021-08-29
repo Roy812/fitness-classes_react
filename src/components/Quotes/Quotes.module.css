@@ -42,21 +42,27 @@
     padding: 22px;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1435px) {
     .quotes {
         font-size: 22px;
     }
     .quote__one {
         position: relative;
-        left: 66px;
+        right: 25px;
     }
     .quote__two {
         position: relative;
-        left: 215px;
+        left: 125px;
     }
     .quote__three {
         margin-left: 240px;
+    }
+}
 
+@media screen and (max-width: 1250px) {
+    .quote__one {
+        position: relative;
+        right: 75px;
     }
 }
 
