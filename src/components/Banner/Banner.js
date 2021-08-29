@@ -9,7 +9,7 @@ function Banner() {
         <div className={styles["banner"]}>
             <img className={styles["banner__picture-lifting"]} src={liftingPicture} alt="lifting-image"/>
             <img className={styles["banner__picture-food"]} src={foodPicture} alt="food-image"/>
-            <img className={styles["banner__picture-homegym"]} src={homegymPicture} alt="homegym-image"/>
+            <img className={styles["banner__picture-home-gym"]} src={homegymPicture} alt="homegym-image"/>
         </div>
     )
 }

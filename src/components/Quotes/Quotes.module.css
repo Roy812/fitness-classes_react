@@ -1,54 +1,46 @@
 .quotes {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    text-align: center;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(3, auto);*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
 }
 
 .quote__one {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-basis: 330px;
+    flex-shrink: 0;
     position: relative;
-    left: 40px;
+    right: 50px;
     padding: 22px;
 }
 
 .quote__two {
     display: flex;
     justify-content: center;
-    position: relative;
-    left: 160px;
+    align-items: center;
+    flex-basis: 330px;
+    flex-shrink: 0;
     padding: 22px;
 }
 
 .quote__three {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-basis: 330px;
+    flex-shrink: 0;
     position: relative;
-    left: 25px;
+    left: 50px;
     padding: 22px;
-    margin-left: 175px;
 }
-
-/*@media screen and (min-width: 1375px) {*/
-/*    .quotes {*/
-/*        font-size: 22px;*/
-/*    }*/
-/*    .quote__one {*/
-/*        position: relative;*/
-/*        left: 66px;*/
-/*    }*/
-/*    .quote__two {*/
-/*        position: relative;*/
-/*        left: 215px;*/
-/*    }*/
-/*    .quote__three {*/
-/*        margin-left: 240px;*/
-
-/*    }*/
-/*}*/
 
 @media screen and (min-width: 1600px) {
     .quotes {
