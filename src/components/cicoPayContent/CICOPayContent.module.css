@@ -9,23 +9,23 @@
 
 .CICO-pay-content__title {
     color: #F62525;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .CICO-pay-content__enter-mail {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .CICO-pay-content__input-mail {
     text-align: center;
     font-family: Roboto;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .CICO-pay-content__error1 {
@@ -37,7 +37,7 @@
 }
 
 .CICO-pay-content__enter-password {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     margin-top: 30px;
 }
@@ -46,7 +46,7 @@
     text-align: center;
     font-family: Roboto;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .CICO-pay-content__error2 {
@@ -58,7 +58,7 @@
 }
 
 .CICO-pay-content__confirm {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     margin-top: 30px;
 }
@@ -73,7 +73,8 @@
     font-weight: 600;
     border-color: #33769C;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .CICO-pay-content__confirm-button:hover {

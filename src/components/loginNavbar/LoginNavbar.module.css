@@ -6,7 +6,7 @@
     align-items: center;
     z-index: 999;
     background-color: #F62525;
-    flex-basis: 150px;
+    /*flex-basis: 150px;*/
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -103,4 +103,11 @@
     .login-navbar__item__link {
         font-size: 14px;
     }
+    .login-navbar__login {
+        color: #F62525;
+        font-size: 2px;
+        position: relative;
+        right: 20px;
+    }
 }
+
