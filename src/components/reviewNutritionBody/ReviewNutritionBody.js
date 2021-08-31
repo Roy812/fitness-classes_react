@@ -9,7 +9,7 @@ function ReviewNutritionBody() {
 
             <div className={styles["review-nutrition-body__subheader-container"]}>
                 <p>CLASS</p>
-                <p>TEACHER</p>
+                <p className={styles["review-nutrition-body__subheader-container__teacher-title"]}>TEACHER</p>
                 <p>BY USER</p>
             </div>
 
@@ -35,15 +35,15 @@ function ReviewNutritionBody() {
                 <h4 className={styles["review-nutrition-body__workoutsnacks__user"]} >-</h4>
             </div>
 
-            <div className={styles["review-nutrition-body__testlevelsanddiets"]}>
+            <div className={styles["review-nutrition-body__testlevels-and-diets"]}>
                 <Link
-                    className={styles["review-nutrition-body__testlevelsanddiets__title"]}
+                    className={styles["review-nutrition-body__testlevels-and-diets__title"]}
                     to="/testlevelsanddietsreview">
                     3. "TESTOSTERONE LEVELS & DIETS"
                 </Link>
 
-                <h4 className={styles["review-nutrition-body__testlevelsanddiets__teacher"]} >MIKE ISRATEL</h4>
-                <h4 className={styles["review-nutrition-body__testlevelsanddiets__user"]} >-</h4>
+                <h4 className={styles["review-nutrition-body__testlevels-and-diets__teacher"]} >MIKE ISRATEL</h4>
+                <h4 className={styles["review-nutrition-body__testlevels-and-diets__user"]} >-</h4>
             </div>
         </div>
     );

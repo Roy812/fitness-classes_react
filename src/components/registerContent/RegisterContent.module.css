@@ -14,27 +14,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
     position: relative;
     left: 210px;
     margin-top: 45px;
 }
 
 .register-content__container__one__input {
+    width: 166px;
     -webkit-text-fill-color: #000;
     font-size: 12px;
-    width: 166px;
     border-bottom: solid 3px #000;
 }
 
 .register-content__container__one__input__error1 {
+    color: #F62525;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #F62525;
 }
 
 .register-content__container__two {
@@ -42,9 +42,9 @@
 }
 
 .register-content__container__two__input {
+    width: 150px;
     -webkit-text-fill-color: #000;
     font-size: 12px;
-    width: 150px;
     border-bottom: solid 3px #000;
 }
 
@@ -61,8 +61,8 @@
 }
 
 .register-content__container__three__button {
-    background-color: #FF285C;
     color: #fff;
+    background-color: #FF285C;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -79,6 +79,7 @@
         position: relative;
         left: 320px;
     }
+
     .register-content__container__three__button {
         font-size: 22px;
     }
@@ -88,16 +89,18 @@
     .register-content__container {
         font-size: 26px;
     }
+
     .register-content__container__three__button {
         font-size: 24px;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 7000px) {
     .register-content__container {
         position: relative;
         left: 0px;
         right: 500px;
     }
 }
+
 

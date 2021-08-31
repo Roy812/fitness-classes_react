@@ -142,39 +142,44 @@
         font-size: 26px;
         margin-top: 54px;
     }
+
     .nutrition-body__subheader-container {
         font-size: 22px;
         position: relative;
         left: 15px;
     }
+
     .nutrition-body__CICO {
         font-size: 20px;
         margin-top: 40px;
     }
+
     .nutrition-body__CICO__title {
         width: 300px;
-        /*text-align: left;*/
     }
+
     .nutrition-body__workoutsnacks {
         font-size: 20px;
         margin-top: 40px;
     }
+
     .nutrition-body__workoutsnacks__title {
         width: 300px;
-        /*text-align: left;*/
     }
+
     .nutrition-body__workoutsnacks__playtime {
         position: relative;
         right: 66px;
     }
+
     .nutrition-body__testlevels-and-diets {
         font-size: 20px;
         margin-top: 40px;
         margin-bottom: 20px;
     }
+
     .nutrition-body__testlevels-and-diets__title {
         width: 300px;
-        /*text-align: left;*/
     }
 }
 
@@ -183,30 +188,39 @@
         font-size: 16px;
         margin-top: 85px;
     }
+
     .nutrition-body__CICO__playtime {
         font-size: 14px;
     }
+
     .nutrition-body__CICO__subcategory {
         font-size: 14px;
     }
+
     .nutrition-body__CICO__title {
         font-size: 14px;
     }
+
     .nutrition-body__workoutsnacks__title {
         font-size: 14px;
     }
+
     .nutrition-body__workoutsnacks__playtime {
         font-size: 14px;
     }
+
     .nutrition-body__workoutsnacks__subcategory {
         font-size: 14px;
     }
+
     .nutrition-body__testlevels-and-diets__title {
         font-size: 14px;
     }
+
     .nutrition-body__testlevels-and-diets__playtime {
         font-size: 14px;
     }
+
     .nutrition-body__testlevels-and-diets__subcategory {
         font-size: 14px;
     }
@@ -217,31 +231,46 @@
         position: relative;
         left: 25px;
     }
+
     .nutrition-body__subheader-container__playtime {
         color: #fff;
     }
+
     .nutrition-body__CICO {
         position: relative;
         right: 24px;
     }
+
     .nutrition-body__workoutsnacks {
         position: relative;
         right: 42px;
     }
+
     .nutrition-body__CICO__playtime {
         color: #fff;
         position: relative;
         left: 8px;
     }
+
     .nutrition-body__workoutsnacks__playtime {
         color: #fff;
     }
+
     .nutrition-body__testlevels-and-diets {
         position: relative;
-        right: 24px;
+        right: 70px;
+        width: 300px;
     }
+
     .nutrition-body__testlevels-and-diets__playtime {
         color: #fff;
+        position: relative;
+        left: 8px;
+    }
+
+    .nutrition-body__testlevels-and-diets__subcategory {
+        position: relative;
+        left: 110px;
     }
 }
 

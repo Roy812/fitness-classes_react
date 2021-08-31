@@ -97,7 +97,7 @@
     right: 4px;
 }
 
-.review-nutrition-body__testlevelsanddiets {
+.review-nutrition-body__testlevels-and-diets {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -110,7 +110,7 @@
     margin-bottom: 30px;
 }
 
-.review-nutrition-body__testlevelsanddiets__title {
+.review-nutrition-body__testlevels-and-diets__title {
     width: 230px;
     color: #000;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -118,17 +118,17 @@
     text-decoration: none;
 }
 
-.review-nutrition-body__testlevelsanddiets__title:hover {
+.review-nutrition-body__testlevels-and-diets__title:hover {
     color: #efbe11;
     transition: all 0.2s ease-out;
 }
 
-.review-nutrition-body__testlevelsanddiets__teacher {
+.review-nutrition-body__testlevels-and-diets__teacher {
     position: relative;
     right: 60px;
 }
 
-.review-nutrition-body__testlevelsanddiets__user {
+.review-nutrition-body__testlevels-and-diets__user {
     position: relative;
     right: 10px;
 }
@@ -162,11 +162,11 @@
         position: relative;
         right: 84px;
     }
-    .review-nutrition-body__testlevelsanddiets__title {
+    .review-nutrition-body__testlevels-and-diets__title {
         width: 350px;
         font-size: 22px;
     }
-    .review-nutrition-body__testlevelsanddiets__teacher {
+    .review-nutrition-body__testlevels-and-diets__teacher {
         font-size: 22px;
         position: relative;
         right: 90px;
@@ -179,32 +179,45 @@
         position: relative;
         left: 15px;
     }
+
+    .review-nutrition-body__subheader-container__teacher-title {
+        color: #fff;
+    }
+
     .review-nutrition-body__CICO {
         font-size: 16px;
         position: relative;
         right: 25px;
+        margin-top: 46px;
     }
+
     .review-nutrition-body__CICO__teacher {
         color: #fff;
         position: relative;
         right: 30px;
     }
+
     .review-nutrition-body__workoutsnacks {
         font-size: 16px;
         position: relative;
         right: 43px;
+        margin-top: 55px;
     }
+
     .review-nutrition-body__workoutsnacks__teacher {
         color: #fff;
         position: relative;
         right: 30px;
     }
-    .review-nutrition-body__testlevelsanddiets {
+
+    .review-nutrition-body__testlevels-and-diets {
         font-size: 16px;
         position: relative;
         right: 32px;
+        margin-top: 55px;
     }
-    .review-nutrition-body__testlevelsanddiets__teacher {
+
+    .review-nutrition-body__testlevels-and-diets__teacher {
         color: #fff;
         position: relative;
         right: 30px;
