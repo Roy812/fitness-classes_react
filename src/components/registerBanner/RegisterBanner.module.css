@@ -1,16 +1,18 @@
 .register-banner {
     width: 260px;
-    height: 594px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    color: #efbe11;
+    background-color: #000;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    color: #efbe11;
-    background-color: #000;
+    position: relative;
+    right: 190px;
 }
 
 .register-banner__container {
@@ -30,7 +32,6 @@
 
 .register-banner__message2 {
     margin-top: 35px;
-
 }
 
 .register-banner__cheering {
@@ -39,18 +40,27 @@
     top: 42px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 411px) {
     .register-banner {
-        width: 45px;
         position: relative;
-        right: 256px;
+        right: 200px;
     }
 }
 
-/*@media screen and (max-width: 1600px) {*/
-/*    .register-banner {*/
-/*        width: 300px;*/
-/*        position: relative;*/
-/*        right: 428px;*/
-/*    }*/
-/*}*/
+@media screen and (min-height: 1024px) {
+    .register-banner {
+        width: 210px;
+        height: 1118px;
+        font-size: 20px;
+        position: relative;
+        right: 34px;
+        bottom: 62px;
+    }
+    .register-banner__container {
+        position: relative;
+        top: 210px;
+    }
+    .register-banner__fitflix {
+        height: 120px;
+    }
+}

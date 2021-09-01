@@ -1,10 +1,10 @@
 .review-create {
-    width: 700px;
+    width: 300px;
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 48px;
-    left: 55px;
+    top: 70px;
+    left: 40px;
 }
 
 .review-create__plus-icon {
@@ -27,3 +27,52 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: 360px) {
+    .review-create {
+        position: relative;
+        left: 70px;
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .review-create {
+        position: relative;
+        left: 95px;
+    }
+}
+
+@media screen and (min-height: 812px) {
+    .review-create {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .review-create {
+        position: relative;
+        left: 232px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .review-create {
+        position: relative;
+        left: 200px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .review-create {
+        position: relative;
+        left: 390px;
+        margin-top: 90px;
+    }
+    .review-create__plus-icon {
+        width: 25px;
+    }
+    .review-create__link {
+        width: 250px;
+        font-size: 30px;
+    }
+}

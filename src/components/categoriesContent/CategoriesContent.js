@@ -39,10 +39,10 @@ function CategoriesContent( {message} ) {
                     BUILD POWER
                 </Link>
             </div>
-            <div className={styles["categories-content__buildahomegym"]}>
-                <img className={styles["categories-content__buildahomegym__icon"]} src={toolsPicture} alt="tools-icon"/>
+            <div className={styles["categories-content__build-a-homegym"]}>
+                <img className={styles["categories-content__build-a-homegym__icon"]} src={toolsPicture} alt="tools-icon"/>
                 <Link
-                    className={styles["categories-content__buildahomegym__link"]}
+                    className={styles["categories-content__build-a-homegym__link"]}
                     to="/buildahomegym"
                 >
                     BUILD A HOME GYM
