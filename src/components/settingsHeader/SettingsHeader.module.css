@@ -42,10 +42,11 @@
 }
 
 .settings-header__user__message {
-    text-decoration: none;
     color: #fff;
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
+    text-decoration: none;
     margin-left: 20px;
 }
 
@@ -81,10 +82,20 @@
 
 @media screen and (max-width: 775px) {
     .settings-header__title {
+        font-size: 16px;
         position: relative;
-        left: 15px;
+        left: 12px;
+    }
+    .settings-header__user__icon {
+        max-width: 16px;
+        max-height: 16px;
+        margin-right: 8px;
+        position: relative;
+        left: 16px;
     }
     .settings-header__user__message {
-        font-size: 16px;
+        font-size: 10px;
+        position: relative;
+        right: 5px;
     }
 }

@@ -82,6 +82,8 @@
     transition: all 0.2s ease-out;
 }
 
+
+
 @media screen and (min-width: 1600px) {
     .CICO-pay-content__title {
         font-size: 24px;

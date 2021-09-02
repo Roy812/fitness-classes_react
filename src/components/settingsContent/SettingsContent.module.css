@@ -1,4 +1,6 @@
 .settings-content {
+    /*width: 280px;*/
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -43,7 +45,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 600;
     margin-top: 45px;
 }
@@ -90,7 +92,7 @@
     color: #fff;
     background-color: #FF285C;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     border-color: #FF285C;
     border-radius: 10px;
@@ -111,7 +113,7 @@
 }
 
 .settings-content__container2__jpg-message {
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 20px;
 }
 
@@ -128,7 +130,7 @@
 }
 
 .settings-content__container2__jpg-confirm {
-    width: 380px;
+    width: 300px;
     text-align: center;
     font-size: 12px;
     margin-top: 20px;
@@ -195,6 +197,42 @@
     margin-bottom: 45px;
 }
 
+@media screen and (min-height: 1024px) {
+    .settings-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 25px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .settings-content {
+        position: relative;
+        right: 50px;
+    }
+
+    .settings-content__container1 {
+        font-size: 20px;
+    }
+
+    .settings-content__container2__jpg-message {
+        font-size: 18px;
+    }
+
+    .settings-content__container2__jpg-confirm {
+        font-size: 16px;
+    }
+
+    .settings-content__container4__message {
+        font-size: 16px;
+    }
+}
+
 @media screen and (min-width: 1600px) {
     .settings-content {
         position: relative;
@@ -227,13 +265,5 @@
 
     .settings-content__container4__message {
         font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 625px) {
-    .settings-content__icon-container {
-        position: relative;
-        right: 12px;
-        bottom: 260px;
     }
 }

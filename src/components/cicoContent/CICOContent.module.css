@@ -1,4 +1,5 @@
 .CICO-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +10,7 @@
 
 .CICO-content__link {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
     color: #F62525;
@@ -24,9 +25,9 @@
 
 .CICO-content__message {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 68px;
 }
 
 .CICO-content__button {
@@ -39,7 +40,37 @@
     border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 75px;
+}
+
+@media screen and (min-height: 812px) {
+    .CICO-content__link {
+        font-size: 20px;
+        margin-top: 55px;
+    }
+    .CICO-content__message {
+        font-size: 20px;
+        margin-top: 35px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .CICO-content__link {
+        font-size: 22px;
+    }
+    .CICO-content__message {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    .CICO-content__button {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .CICO-content__button {
+        margin-bottom: 275px;
+    }
 }
 
 @media screen and (min-width: 1600px) {
