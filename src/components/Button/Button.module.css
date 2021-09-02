@@ -39,17 +39,43 @@
     height: 45px;
 }
 
-@media screen and (min-width: 1375px){
+@media screen and (min-width: 768px){
+    .button__container {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px){
     .button__container {
         font-size: 28px;
-        position: relative;
-        left: 30px;
+        /*position: relative;*/
+        /*left: 30px;*/
     }
+
     .button__container__label__link {
         font-size: 20px;
     }
+}
+
+@media screen and (min-width: 1600px) {
+    .button__container {
+        font-size: 28px;
+        position: relative;
+        left: 25px;
+    }
+
+    .button__container__label__link {
+        font-size: 20px;
+    }
+
     .button__check {
         position: relative;
-        left: 30px;
+        left: 22px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .button__container {
+        margin-bottom: 258px;
     }
 }

@@ -5,7 +5,7 @@
     align-items: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 22px;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .create-review-body {
@@ -21,7 +21,7 @@
 }
 
 .create-review-body__input {
-    width: 500px;
+    width: 200px;
     height: 200px;
     -webkit-text-fill-color: #666161;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -44,7 +44,7 @@
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 20px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .create-review-body__rating-container {
@@ -53,6 +53,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .create-review-body__rating-container__icon {
@@ -75,6 +76,7 @@
     border-color: #33769C;
     border-radius: 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .create-review-body__post-button:hover {
@@ -82,13 +84,43 @@
     transition: all 0.2s ease-out;
 }
 
+@media screen and (min-height: 812px) {
+    .create-review-body__title {
+        margin-top: 102px;
+    }
+    .create-review-body__post-button {
+        margin-bottom: 65px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .create-review-body__input {
+        width: 300px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .create-review-body__title {
+        margin-top: 270px;
+    }
+    .create-review-body__post-button {
+        margin-bottom: 238px;
+    }
+}
+
 @media screen and (min-width: 1600px) {
     .create-review-body__title {
         font-size: 24px;
     }
+
+    .create-review-body__input {
+        width: 300px;
+    }
+
     .create-review-body__rating-message {
         font-size: 24px;
     }
+
     .create-review-body__post-button {
         width: 110px;
     }
