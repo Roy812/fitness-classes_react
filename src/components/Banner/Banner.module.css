@@ -1,45 +1,45 @@
 .banner {
     width: 100%;
-    /*width: 1378px;*/
     display: flex;
     justify-content: center;
-    /*flex-wrap: wrap;*/
 }
 
 .banner__picture-lifting {
     width: 400px;
-    flex-basis: 467px;
     height: 240px;
+    flex-basis: 467px;
     flex-shrink: 0;
 }
 
 .banner__picture-food {
     width: 400px;
-    flex-basis: 468px;
     height: 240px;
+    flex-basis: 468px;
     flex-shrink: 0;
 }
 
 .banner__picture-home-gym {
     width: 400px;
-    flex-basis: 468px;
     height: 240px;
+    flex-basis: 468px;
     flex-shrink: 0;
 }
 
 @media screen and (min-width: 1435px) {
     .banner {
         width: 100%;
-        /*width: 1720px;*/
     }
+
     .banner__picture-lifting {
         height: 290px;
         flex-basis: 588px;
     }
+
     .banner__picture-food {
         height: 290px;
         flex-basis: 588px;
     }
+
     .banner__picture-home-gym {
         height: 290px;
         flex-basis: 588px;
@@ -50,9 +50,11 @@
     .banner__picture-lifting {
         height: 260px;
     }
+
     .banner__picture-food {
         height: 260px;
     }
+
     .banner__picture-home-gym {
         height: 260px;
     }

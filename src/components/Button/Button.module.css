@@ -23,15 +23,14 @@
 }
 
 .button__container__label__link {
-    padding: 10px;
-    /*background-color: #f1356d;*/
+    color: #fff;
     background-color: #FF285C;
     border-radius: 10px;
-    font-weight: 600;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
-    color: #fff;
+    padding: 10px;
 }
 
 .button__check {
@@ -48,8 +47,6 @@
 @media screen and (min-width: 1200px){
     .button__container {
         font-size: 28px;
-        /*position: relative;*/
-        /*left: 30px;*/
     }
 
     .button__container__label__link {

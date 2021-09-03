@@ -17,6 +17,7 @@
 
 .login-content__icon-container-exclamation {
     position: relative;
+    right: 12px;
     bottom: 50px;
 }
 

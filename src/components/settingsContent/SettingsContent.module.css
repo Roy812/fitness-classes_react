@@ -21,7 +21,7 @@
 
 .settings-content__icon-container__lock {
     position: relative;
-    bottom: 50px;
+    bottom: 30px;
 }
 
 .settings-content__icon-container__photo {
@@ -31,12 +31,12 @@
 
 .settings-content__icon-container__newsletter {
     position: relative;
-    top: 338px;
+    top: 325px;
 }
 
 .settings-content__icon-container__delete {
     position: relative;
-    top: 432px;
+    top: 405px;
 }
 
 .settings-content__container1 {
@@ -237,6 +237,27 @@
     .settings-content {
         position: relative;
         right: 50px;
+    }
+
+
+    .settings-content__icon-container__lock {
+        position: relative;
+        bottom: 64px;
+    }
+
+    .settings-content__icon-container__photo {
+        position: relative;
+        top: 65px;
+    }
+
+    .settings-content__icon-container__newsletter {
+        position: relative;
+        top: 332px;
+    }
+
+    .settings-content__icon-container__delete {
+        position: relative;
+        top: 426px;
     }
 
     .settings-content__container1__item1__change-password {

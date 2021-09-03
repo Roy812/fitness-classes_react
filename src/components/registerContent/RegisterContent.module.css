@@ -105,21 +105,24 @@
 
 @media screen and (min-height: 1024px) {
     .register-content {
-        width: 735px;
+        width: 635px;
         height: 1055px;
         margin-bottom: 0px;
     }
+
     .register-content2 {
         position: relative;
-        left: 135px;
+        left: 0px;
         height: 900px;
     }
+
     .register-content__container {
         font-size: 24px;
     }
+
     .register-content__container__three {
         position: relative;
-        left: 45px;
+        left: 43px;
     }
 }
 
@@ -143,12 +146,14 @@
         width: 500px;
         font-size: 22px;
         position: relative;
-        left: 300px;
+        left: 288px;
     }
+
     .register-content__container__three {
         width: 500px;
         margin-top: 35px;
     }
+
     .register-content__container__three__button {
         font-size: 20px;
     }
@@ -159,12 +164,14 @@
         width: 500px;
         font-size: 26px;
         position: relative;
-        left: 430px;
+        left: 420px;
     }
+
     .register-content__container__three {
         width: 500px;
         margin-top: 35px;
     }
+
     .register-content__container__three__button {
         font-size: 24px;
     }

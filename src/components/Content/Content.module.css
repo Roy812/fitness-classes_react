@@ -4,8 +4,6 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 30px;
-    position: relative;
-    /*left: 10px;*/
 }
 
 .content__icon-container {
@@ -59,8 +57,6 @@
 .content__icon-container__line1 {
     width: 200px;
     text-align: center;
-    /*position: relative;*/
-    /*left: 35px;*/
 }
 
 .content__icon-container__line2 {
@@ -80,10 +76,17 @@
     }
 
     .content__icon-container__line1 {
-        width: 400px;
+        width: 270px;
         text-align: center;
         position: relative;
-        left: 30px;
+        left: 50px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .content__icon-container__line1 {
+        position: relative;
+        left: 85px;
     }
 }
 
@@ -102,6 +105,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .content {
+        position: relative;
+        right: 20px;
+    }
+
     .content__icon-container__line1 {
         width: 450px;
         font-size: 20px;
