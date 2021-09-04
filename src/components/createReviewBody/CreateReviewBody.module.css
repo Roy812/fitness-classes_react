@@ -16,10 +16,6 @@
     margin-top: 30px;
 }
 
-.create-review-body__dropdown {
-
-}
-
 .create-review-body__input {
     width: 200px;
     height: 200px;
@@ -88,6 +84,7 @@
     .create-review-body__title {
         margin-top: 102px;
     }
+
     .create-review-body__post-button {
         margin-bottom: 65px;
     }
@@ -103,6 +100,7 @@
     .create-review-body__title {
         margin-top: 270px;
     }
+
     .create-review-body__post-button {
         margin-bottom: 238px;
     }
@@ -110,7 +108,8 @@
 
 @media screen and (min-width: 1600px) {
     .create-review-body__title {
-        font-size: 24px;
+        font-size: 26px;
+        margin-top: 60px;
     }
 
     .create-review-body__input {

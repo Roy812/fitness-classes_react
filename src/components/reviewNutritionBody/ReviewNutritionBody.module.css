@@ -240,9 +240,10 @@
     }
 
     .review-nutrition-body__subheader-container {
+        width: 1600px;
         font-size: 28px;
         position: relative;
-        left: 25px;
+        left: 20px;
     }
 
     .review-nutrition-body__CICO__title {

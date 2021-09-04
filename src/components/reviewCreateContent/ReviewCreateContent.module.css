@@ -184,6 +184,7 @@
         position: relative;
         left: 490px;
     }
+
     .review-create-content__title {
         width: 360px;
         font-size: 28px;
@@ -199,10 +200,12 @@
         right: 0px;
         left: 185px;
     }
+
     .review-create-content__title {
         margin-top: 140px;
         margin-bottom: 30px;
     }
+
     .review-create-content__build-a-homegym {
         margin-bottom: 38px;
     }
@@ -214,32 +217,39 @@
         right: 0px;
         left: 360px;
     }
+
     .review-create-content__title {
         width: 450px;
         font-size: 30px;
         margin-top: 150px;
         margin-bottom: 50px;
     }
+
     .review-create-content__nutrition {
         font-size: 26px;
     }
+
     .review-create-content__nutrition__icon {
         position: relative;
         right: 140px;
     }
+
     .review-create-content__build-muscle {
         font-size: 26px;
         margin-top: 114px;
     }
+
     .review-create-content__build-power {
         font-size: 26px;
         margin-top: 112px;
     }
+
     .review-create-content__build-a-homegym {
         font-size: 26px;
         margin-top: 114px;
         margin-bottom: 80px;
     }
+
     .review-create-content__build-a-homegym__link {
         text-align: center;
     }
@@ -251,23 +261,29 @@
         bottom: 50px;
         left: 680px;
     }
+
     .review-create-content__nutrition__icon {
         position: relative;
         right: 145px;
     }
+
     .review-create-content__nutrition__link {
         font-size: 26px;
     }
+
     .review-create-content__build-muscle__link {
         font-size: 26px;
     }
+
     .review-create-content__build-power__link {
         font-size: 26px;
     }
+
     .review-create-content__build-a-homegym__icon {
         position: relative;
         right: 110px;
     }
+
     .review-create-content__build-a-homegym__link {
         font-size: 26px;
         text-align: center;
