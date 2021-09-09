@@ -14,9 +14,11 @@ function RegisterContent() {
     async function onSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/users/add', {
-                username: data.username,
-                password: data.password
+            const result = await axios.post('http://localhost:8080/api/auth/singup', {
+                username: data.email,
+                email: data.email,
+                password: data.password,
+                role: "USER"
             })
             console.log(result);
             toggleRegisterSuccess(true);
@@ -29,10 +31,8 @@ function RegisterContent() {
     return (
         <div className={styles["register-content"]}>
                 <RegisterBanner />
+
                 <div className={styles["register-content2"]}>
-
-
-
                     <div className={styles["register-content__container"]}>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className={styles["register-content__container__one"]}>
@@ -43,9 +43,9 @@ function RegisterContent() {
                                     className={styles["register-content__container__one__input"]}
                                     type="mail"
                                     placeholder="TYPE YOUR MAILADDRESS"
-                                    name="mail"
-                                    id="mail"
-                                    {...register("mail", {
+                                    name="email"
+                                    id="email"
+                                    {...register("email", {
                                         required: {
                                             value: true,
                                             message: "THIS FIELD CAN'T BE EMPTY, ALSO INCLUDE '@'"
