@@ -7,16 +7,30 @@ import axios from "axios";
 function CICOContent() {
 
     const [downloadGuideSuccess, toggleDownloadGuideSuccess] = useState(false);
+    const [downloadVideoSuccess, toggleDownloadVideoSuccess] = useState(false);
     const {handleSubmit} = useForm();
 
-    async function onSubmit() {
+    async function onSubmitGuide() {
         // console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/lesson/download/guid/id/{id}', {
-            //USE EFFECT TO GET USERID FOR PATH VARIABLE.
+            const result = await axios.get('http://localhost:8080/lesson/download/guide/id/{id}', {
+            //USE EFFECT TO GET LESSON ID FOR PATH VARIABLE.
             })
             console.log(result);
             toggleDownloadGuideSuccess(true);
+        } catch (e) {
+            console.error(e)
+        }
+    }
+
+    async function onSubmitVideo() {
+        // console.log(data);
+        try {
+            const result = await axios.get('http://localhost:8080/lesson/download/video/id/{id}', {
+                //USE EFFECT TO GET LESSON ID FOR PATH VARIABLE.
+            })
+            console.log(result);
+            toggleDownloadVideoSuccess(true);
         } catch (e) {
             console.error(e)
         }
@@ -30,16 +44,26 @@ function CICOContent() {
             >
              SIGN UP FOR THIS CLASS HERE!
             </Link>
-            <p className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE</p>
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <p className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE/VIDEO</p>
+            <form onSubmit={handleSubmit(onSubmitGuide)}>
                 <button
                     className={styles["CICO-content__button"]}
-                    type="text"
+                    type="submit"
                 >
                     DOWNLOAD GUIDE
                 </button>
                 {downloadGuideSuccess && <p>Your download will now start!</p>}
+            </form>
+
+            <form onSubmit={handleSubmit(onSubmitVideo)}>
+                <button
+                    className={styles["CICO-content__button"]}
+                    type="submit"
+                >
+                    DOWNLOAD VIDEO
+                </button>
+                {downloadVideoSuccess && <p>Your download will now start!</p>}
             </form>
         </div>
     );

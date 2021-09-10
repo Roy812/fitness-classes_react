@@ -61,12 +61,11 @@ function SettingsContent() {
         }
     }
 
-    async function onSubmitDelete() {
-        // console.log(data);
+    async function onSubmitDelete(data) {
+        console.log(data);
         try {
-            const result = await axios.patch('http://localhost:8080/users/delete/request/id/{id}', {
+            const result = await axios.delete('http://localhost:8080/users/delete/{id}', {
                 //USE EFFECT TO GET ID FROM USER.
-                Id: 1
             })
             console.log(result);
             toggleRequestDeleteSuccess(true);
@@ -165,7 +164,7 @@ function SettingsContent() {
                         >
                         DELETE MY ACCOUNT
                     </button>
-                    {requestDeleteSuccess && <p>Request is send to the Admin!</p>}
+                    {requestDeleteSuccess && <p>Account is deleted</p>}
                 </form>
             </div>
         </div>

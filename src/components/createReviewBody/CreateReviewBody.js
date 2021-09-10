@@ -6,16 +6,27 @@ import star2Picture from "../../assets/Star_two.svg";
 import star3Picture from "../../assets/Star_three.svg";
 import star4Picture from "../../assets/Star_four.svg";
 import star5Picture from "../../assets/Star_five.svg";
+import axios from "axios";
 
 function CreateReviewBody() {
 
-    const [choiceClass, setChoiceClass] = useState("");
+    const [createReviewSuccess, toggleCreateReviewSuccess] = useState();
 
     const {register, handleSubmit, formState: {errors}} = useForm();
 
-    function onSubmit(data) {
-        //e.preventDefault();
+    async function onSubmit(data) {
         console.log(data);
+        try {
+            const result = await axios.post('http://localhost:8080/users/review/add/id/{id}', {
+                title: data.title,
+                review: data.review,
+                rating: data.rating
+                //USE EFFECT TO GET USER ID FOR PATH VARIABLE.
+            })
+            console.log(result);
+        } catch (e) {
+            console.error(e)
+        }
     }
 
     return (
@@ -27,7 +38,7 @@ function CreateReviewBody() {
             <form className={styles["create-review-body"]} onSubmit={handleSubmit(onSubmit)}>
                 <select
                     className={styles["create-review-body__dropdown"]}
-                    {...register("choice")}>
+                    {...register("title")}>
                     <option value="CICO">"CICO, IT'S ALL YOU NEED"</option>
                     <option value="SNACKS">"THE PERFECT POST WORKOUT SNACKS"</option>
                     <option value="TESTOSTERON">"TESTOSTERON LEVES & DIETS"</option>
@@ -67,7 +78,7 @@ function CreateReviewBody() {
 
                 <select
                     className={styles["create-review-body__dropdown"]}
-                    {...register("stars")}>
+                    {...register("rating")}>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -80,6 +91,7 @@ function CreateReviewBody() {
                     type="submit">
                     POST
                 </button>
+                {createReviewSuccess && <p>Review is created!</p>}
             </form>
         </>
     );
