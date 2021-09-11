@@ -266,12 +266,14 @@
     .nutrition-body {
         height: 600px;
         position: relative;
-        left: 500px;
+        left: 545px;
     }
 
     .nutrition-body__title {
         width: 200px;
         font-size: 24px;
+        position: relative;
+        right: 38px;
         margin-top: 100px;
     }
 
@@ -364,7 +366,7 @@
 
 @media screen and (min-height: 1366px) {
     .nutrition-body {
-        height: 1110px;
+        height: 1112px;
         position: relative;
         left: 370px;
     }
@@ -373,12 +375,14 @@
 @media screen and (min-width: 1600px) {
     .nutrition-body {
         position: relative;
-        left: 625px;
+        left: 700px;
     }
 
     .nutrition-body__title {
         width: 300px;
         font-size: 26px;
+        position: relative;
+        right: 18px;
         margin-top: 54px;
     }
 

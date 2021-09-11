@@ -20,23 +20,23 @@
 }
 
 .settings-content__icon-container__lock {
-    position: relative;
-    bottom: 30px;
+    /*position: relative;*/
+    /*bottom: 0px;*/
 }
 
 .settings-content__icon-container__photo {
     position: relative;
-    top: 78px;
+    top: 112px;
 }
 
 .settings-content__icon-container__newsletter {
     position: relative;
-    top: 325px;
+    top: 294px;
 }
 
 .settings-content__icon-container__delete {
     position: relative;
-    top: 405px;
+    top: 380px;
 }
 
 .settings-content__container1 {
@@ -105,6 +105,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -141,6 +142,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-top: 30px;
 }
 
@@ -175,6 +177,7 @@
 
 .settings-content__container4__delete-account {
     color: #000;
+    text-align: center;
 }
 
 .settings-content__container4__message {
@@ -206,7 +209,16 @@
         align-items: center;
         position: relative;
         right: 25px;
-        margin-top: 40px;
+        margin-top: 80px;
+    }
+
+    .settings-content__icon-container {
+        position: relative;
+        bottom: 318px;
+    }
+
+    .settings-content__container4 {
+        margin-bottom: 120px;
     }
 }
 
@@ -214,6 +226,12 @@
     .settings-content {
         position: relative;
         right: 50px;
+        margin-top: 200px;
+    }
+
+    .settings-content__icon-container {
+        position: relative;
+        bottom: 420px;
     }
 
     .settings-content__container1 {
@@ -228,8 +246,8 @@
         font-size: 16px;
     }
 
-    .settings-content__container4__message {
-        font-size: 16px;
+    .settings-content__container4 {
+        margin-bottom: 275px;
     }
 }
 
@@ -239,25 +257,24 @@
         right: 50px;
     }
 
-
     .settings-content__icon-container__lock {
         position: relative;
-        bottom: 64px;
+        bottom: 36px;
     }
 
     .settings-content__icon-container__photo {
         position: relative;
-        top: 65px;
+        top: 94px;
     }
 
     .settings-content__icon-container__newsletter {
         position: relative;
-        top: 332px;
+        top: 306px;
     }
 
     .settings-content__icon-container__delete {
         position: relative;
-        top: 426px;
+        top: 400px;
     }
 
     .settings-content__container1__item1__change-password {
@@ -274,6 +291,8 @@
 
     .settings-content__container2__jpg-confirm {
         font-size: 14px;
+        position: relative;
+        left: 20px;
     }
 
     .settings-content__container3__send-newsletter {

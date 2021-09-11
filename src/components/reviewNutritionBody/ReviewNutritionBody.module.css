@@ -190,6 +190,8 @@
 
     .review-nutrition-body__subheader-container {
         font-size: 20px;
+        position: relative;
+        left: 18px;
     }
 
     .review-nutrition-body__CICO {

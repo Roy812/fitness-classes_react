@@ -75,7 +75,7 @@
 
 @media screen and (min-width: 1024px) {
     .about-content {
-        font-size: 26px;
+        font-size: 20px;
         margin-top: 112px;
         margin-bottom: 112px;
     }
@@ -98,8 +98,8 @@
 @media screen and (min-width: 1200px) {
     .about-content {
         font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 40px;
+        margin-top: 55px;
+        margin-bottom: 55px;
     }
 
     .about-content__item2 {
@@ -109,6 +109,21 @@
 
     .about-content__item3 {
         margin-top: 30px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .about-content {
+        margin-top: 270px;
+        margin-bottom: 270px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .about-content {
+        font-size: 20px;
+        margin-top: 45px;
+        margin-bottom: 45px;
     }
 }
 

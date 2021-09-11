@@ -123,12 +123,19 @@ function SettingsContent() {
                 <form onSubmit={handleSubmit(onSubmitPicture)}>
                     <p className={styles["settings-content__container2__change-profile-picture"]}>CHANGE YOUR PROFILE PICTURE</p>
                     <p className={styles["settings-content__container2__jpg-message"]}>PLEASE SELECT A JPG FILE</p>
-                    {/*<button*/}
-                    {/*    className={styles["settings-content__container2__button"]} type="submit">*/}
-                    {/*    SELECT*/}
-                    {/*</button>*/}
-
-                    {/*//INPUT FOR MULTIPART FILE.*/}
+                    <input
+                        ref={register}
+                        type="file"
+                        accept="image/*"
+                        multiple="false"
+                        {...register("profilePicture", {
+                            required: {
+                                value: true,
+                                message: "Please upload profile picture",
+                            }
+                        })}
+                    />
+                    {errors.profilePicture && <p>{errors.profilePicture.message}</p>}
 
                     <p className={styles["settings-content__container2__jpg-confirm"]}>
                     IF YOU ARE A 100% SURE THIS IS YOUR PERFECT
@@ -147,7 +154,7 @@ function SettingsContent() {
                     <p className={styles["settings-content__container3__send-newsletter"]}>SEND ME THE F.C. NEWSLETTER</p>
                     <button
                         className={styles["settings-content__container3__button"]} type="submit">
-                        YES
+                        YES/NO
                     </button>
                     {newsletterSuccess && <p>Preferences changed!</p>}
                 </form>

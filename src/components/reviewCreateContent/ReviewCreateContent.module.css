@@ -137,18 +137,22 @@
         right: 0px;
         left: 15px;
     }
+
     .review-create-content__nutrition__icon {
         position: relative;
         right: 105px;
     }
+
     .review-create-content__build-muscle__icon {
         position: relative;
         right: 90px;
     }
+
     .review-create-content__build-power__icon {
         position: relative;
         right: 105px;
     }
+
     .review-create-content__build-a-homegym__icon {
         position: relative;
         right: 78px;
@@ -161,36 +165,25 @@
         right: 0px;
         left: 40px;
     }
+
     .review-create-content__nutrition__icon {
         position: relative;
         right: 132px;
     }
+
     .review-create-content__build-muscle__icon {
         position: relative;
         right: 115px;
     }
+
     .review-create-content__build-power__icon {
         position: relative;
         right: 135px;
     }
+
     .review-create-content__build-a-homegym__icon {
         position: relative;
         right: 102px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .review-create-content {
-        position: relative;
-        left: 490px;
-    }
-
-    .review-create-content__title {
-        width: 360px;
-        font-size: 28px;
-        position: relative;
-        bottom: 25px;
-        margin-bottom: 0px;
     }
 }
 
@@ -208,6 +201,21 @@
 
     .review-create-content__build-a-homegym {
         margin-bottom: 38px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .review-create-content {
+        position: relative;
+        left: 520px;
+    }
+
+    .review-create-content__title {
+        width: 360px;
+        font-size: 28px;
+        position: relative;
+        bottom: 25px;
+        margin-bottom: 0px;
     }
 }
 
@@ -259,7 +267,7 @@
     .review-create-content {
         position: relative;
         bottom: 50px;
-        left: 680px;
+        left: 710px;
     }
 
     .review-create-content__nutrition__icon {

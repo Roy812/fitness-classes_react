@@ -91,6 +91,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .create-review-body__title {
+        margin-top: 102px;
+    }
+
     .create-review-body__input {
         width: 300px;
     }
@@ -98,7 +102,7 @@
 
 @media screen and (min-height: 1366px) {
     .create-review-body__title {
-        margin-top: 270px;
+        margin-top: 272px;
     }
 
     .create-review-body__post-button {
