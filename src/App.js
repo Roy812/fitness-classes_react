@@ -1,6 +1,7 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CategoriesPage from "./pages/CategoriesPage";
 import AboutPage from "./pages/AboutPage";
@@ -18,6 +19,9 @@ import ReviewPageCICO from "./pages/ReviewPageCICO";
 import CreateReviewPage from "./pages/CreateReviewPage";
 
 function App() {
+
+    const [loggedIn, toggleLoggedIn] = useState(true);
+
   return (
       <Router>
           <Switch>
@@ -31,10 +35,10 @@ function App() {
                   <NutritionPage />
               </Route>
               <Route path="/CICO">
-                  <CICOPage />
+                  {loggedIn ? <CICOPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/CICOpay">
-                  <CICOPay />
+                  {loggedIn ? <CICOPay /> : <Redirect to="/"/>}
               </Route>
               <Route path="/about">
                   <AboutPage />
@@ -52,13 +56,13 @@ function App() {
                   <ReviewPageCICO />
               </Route>
               <Route path="/createreview">
-                  <CreateReviewPage />
+                  {loggedIn ? <CreateReviewPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/login">
-                  <LoginPage />
+                  {loggedIn ? <LoginPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/myclasses">
-                  <MyClassesPage />
+                  {loggedIn ? <MyClassesPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/register">
                   <RegisterPage />

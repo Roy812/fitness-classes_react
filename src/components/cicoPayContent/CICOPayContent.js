@@ -5,7 +5,7 @@ import axios from "axios";
 
 function CICOPayContent() {
 
-    const [payCoinsSuccess, togglePayCoinsSuccess] = useState(false);
+    const [payCoinsSuccess, togglePayCoinsSuccess] = useState(true);
     const [completeBookingSuccess, toggleCompleteBookingSuccess] = useState(false);
     const {handleSubmit} = useForm();
 
@@ -56,6 +56,7 @@ function CICOPayContent() {
                 </button>
                 {payCoinsSuccess && <p>Coins are subtracted! Click on the button below to complete your booking!</p>}
             </form>
+            {payCoinsSuccess &&
             <form onSubmit={handleSubmit(onSubmitBook)}>
                 <button
                     className={styles["CICO-pay-content__confirm-button"]}
@@ -65,6 +66,7 @@ function CICOPayContent() {
                 </button>
                 {completeBookingSuccess && <p>Your Booking Is Confirmed!</p>}
             </form>
+            }
         </div>
     );
 }
