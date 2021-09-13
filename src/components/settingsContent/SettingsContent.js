@@ -20,9 +20,9 @@ function SettingsContent() {
     async function onSubmitPassword(data) {
         console.log(data);
         try {
-            const result = await axios.patch('http://localhost:8080/users/password/id/{id}', {
+            const result = await axios.patch('http://localhost:8080/users/password/id/1', {
                 newPassword: data.password,
-                //USE EFFECT TO GET ID FROM USER.
+                //USE EFFECT TO GET ID FROM USER
                 Id: 1
             })
             console.log(result);

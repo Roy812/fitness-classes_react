@@ -11,12 +11,13 @@ function NavBar( {message} ) {
     const {register, handleSubmit, formState: {errors}} = useForm();
 
     async function onSubmit(data) {
-        // console.log(data);
+        console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/api/auth/signin', data);
-            // console.log(result);
-            //USE EFFECT??
-            history.push("/login");
+            const result = await axios.post('http://localhost:8080/api/auth/signin', {
+            username: data.username,
+            password: data.password,
+            })
+            history.push("/login")
         } catch (e) {
             console.error(e);
         }

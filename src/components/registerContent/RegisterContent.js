@@ -14,11 +14,13 @@ function RegisterContent() {
     async function onSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/api/auth/singup', {
+            const result = await axios.post('http://localhost:8080/api/auth/signup', {
                 username: data.email,
-                email: data.email,
+                email: "test@novi.com",
                 password: data.password,
-                role: "USER"
+                subscribeToNewsletter: false,
+                coinBalance: 1,
+                role: ["user"]
             })
             console.log(result);
             toggleRegisterSuccess(true);
