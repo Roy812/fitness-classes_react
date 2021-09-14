@@ -17,7 +17,9 @@ function NavBar( {message} ) {
             username: data.username,
             password: data.password,
             })
-            history.push("/login")
+            console.log(result.data);
+            localStorage.setItem('token', result.data.accessToken)
+            history.push("/")
         } catch (e) {
             console.error(e);
         }
