@@ -23,7 +23,6 @@ function App() {
     const [loggedIn, toggleLoggedIn] = useState(true);
 
   return (
-      <Router>
           <Switch>
               <Route exact path="/">
                   <HomePage />
@@ -71,7 +70,6 @@ function App() {
                   <SettingsPage />
               </Route>
           </Switch>
-      </Router>
   );
 }
 

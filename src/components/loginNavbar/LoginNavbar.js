@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useContext} from "react";
 import styles from "./LoginNavbar.module.css";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
 import {Link} from "react-router-dom";
+import {AuthContext} from "../../context/AuthContext";
 
 function LoginNavbar() {
+
+    // const { user } = useContext(AuthContext);
+    // console.log(user.username);
+
+
+
     return (
         <nav className={styles["login-navbar"]}>
             <Link to="/">

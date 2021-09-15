@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./NavBar.module.css";
 import { Link, useHistory } from "react-router-dom";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { AuthContext } from "../../context/AuthContext";
 
 function NavBar( {message} ) {
 
+    // const history = useHistory();
+    // const { user, loginFunction } = useContext(AuthContext);
+    const alles = useContext(AuthContext);
+    console.log(alles);
     const {register, handleSubmit, formState: {errors}} = useForm();
 
     async function onSubmit(data) {
@@ -18,15 +23,13 @@ function NavBar( {message} ) {
             password: data.password,
             })
             console.log(result.data);
-            localStorage.setItem('token', result.data.accessToken)
-            history.push("/")
+            localStorage.setItem('token', result.data.accessToken);
+            localStorage.setItem('id', result.data.id);
+            alles.login(result.data.accessToken);
         } catch (e) {
             console.error(e);
         }
-
     }
-
-    const history = useHistory();
 
     return (
         <nav className={styles["navbar"]}>
