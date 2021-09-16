@@ -10,8 +10,6 @@ import { AuthContext } from "../../context/AuthContext";
 function NavBar( {message} ) {
 
     const [invalidInput, toggleInvalidInput] = useState(false);
-    // const history = useHistory();
-    // const { user, loginFunction } = useContext(AuthContext);
     const { login } = useContext(AuthContext);
     const {register, handleSubmit, formState: {errors}} = useForm();
 

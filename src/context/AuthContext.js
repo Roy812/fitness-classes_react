@@ -7,7 +7,6 @@ import axios from "axios";
 export const AuthContext = createContext({});
 
 function AuthContextProvider({ children }) {
-
     const [authState, setAuthState] = useState({
         user: null,
         status: 'pending',
@@ -26,9 +25,8 @@ function AuthContextProvider({ children }) {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${jwtToken}`,
-                }
-
-            })
+                },
+            });
             console.log(result);
             setAuthState({
                 user: {
@@ -45,7 +43,7 @@ function AuthContextProvider({ children }) {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        console.log(token);
+
         if (token && authState.user === null) {
             // === undefined
             // const decodedToken = jwt_decode(token);
@@ -60,13 +58,8 @@ function AuthContextProvider({ children }) {
         }
     }, []);
 
-    // async function loginFunction(jwtToken) {
-    //     // localStorage.setItem('token', jwtToken);
-    //     fetchUserData(jwtToken);
-    //     history.push('/login');
-    // }
-
     async function loginFunction(userData) {
+        // localStorage.setItem('token', jwtToken);
         setAuthState({
             user: {
                 username: userData.username,
@@ -79,12 +72,12 @@ function AuthContextProvider({ children }) {
     }
 
     function logoutFunction() {
-        const token = localStorage.getItem('token');
-        localStorage.removeItem(token);
+        localStorage.clear();
         setAuthState({
+            ...authState,
            user: null,
         });
-
+        history.push('/');
     }
 
     const data = {

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./LoginNavbar.module.css";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
@@ -10,24 +10,20 @@ import axios from "axios";
 function LoginNavbar() {
 
     const { user } = useContext(AuthContext);
-    // console.log(user.id);
-    // const nameOfUser = user.username;
-    // const profilePictureOfUser = user.;
 
-    async function loadUser() {
-        const userId = localStorage.getItem('id');
-        try {
-            const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
-
-            })
-            console.log(result);
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
-    const resultLoadUser = loadUser();
-    // const picture = resultLoadUser.profilePicture;
+    useEffect(() => {
+        // async function loadUser() {
+        //     const userId = localStorage.getItem('id');
+        //     try {
+        //         const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
+        //
+        //         })
+        //         console.log(result);
+        //     } catch (e) {
+        //         console.error(e);
+        //     }
+        // }
+    }, [])
 
     return (
         <nav className={styles["login-navbar"]}>
