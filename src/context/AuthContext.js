@@ -25,7 +25,7 @@ function AuthContextProvider({ children }) {
             const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: jwtToken,
+                    Authorization: `Bearer ${jwtToken}`,
                 }
 
             })
@@ -60,9 +60,21 @@ function AuthContextProvider({ children }) {
         }
     }, []);
 
-    async function loginFunction(jwtToken) {
-        // localStorage.setItem('token', jwtToken);
-        fetchUserData(jwtToken);
+    // async function loginFunction(jwtToken) {
+    //     // localStorage.setItem('token', jwtToken);
+    //     fetchUserData(jwtToken);
+    //     history.push('/login');
+    // }
+
+    async function loginFunction(userData) {
+        setAuthState({
+            user: {
+                username: userData.username,
+                email: userData.email,
+                id: userData.id,
+            },
+            status: 'done',
+        });
         history.push('/login');
     }
 

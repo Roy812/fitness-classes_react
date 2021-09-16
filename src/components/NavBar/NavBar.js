@@ -25,7 +25,7 @@ function NavBar( {message} ) {
             console.log(result.data);
             localStorage.setItem('token', result.data.accessToken);
             localStorage.setItem('id', result.data.id);
-            login(result.data.accessToken);
+            login(result.data);
         } catch (e) {
             console.error(e);
             toggleInvalidInput(true);
