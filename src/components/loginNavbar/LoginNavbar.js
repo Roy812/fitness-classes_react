@@ -4,13 +4,30 @@ import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
 import {Link} from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
+import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 function LoginNavbar() {
 
-    // const { user } = useContext(AuthContext);
-    // console.log(user.username);
+    const { user } = useContext(AuthContext);
+    // console.log(user.id);
+    // const nameOfUser = user.username;
+    // const profilePictureOfUser = user.;
 
+    async function loadUser() {
+        const userId = localStorage.getItem('id');
+        try {
+            const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
 
+            })
+            console.log(result);
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    const resultLoadUser = loadUser();
+    // const picture = resultLoadUser.profilePicture;
 
     return (
         <nav className={styles["login-navbar"]}>
@@ -54,7 +71,7 @@ function LoginNavbar() {
 
             <div className={styles["login-navbar__login"]}>
                 <img src={userIcon} alt="userIcon-image"/>
-                <p>YOU ARE CURRENTLY LOGGED IN AS USER</p>
+                <p>YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
             </div>
         </nav>
     );

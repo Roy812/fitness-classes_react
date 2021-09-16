@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./SettingsHeader.module.css";
 import {Link} from "react-router-dom";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
+import {AuthContext} from "../../context/AuthContext";
 
 function SettingsHeader() {
+
+    const { user } = useContext(AuthContext);
+    console.log(user);
+    const nameOfUser = user.username;
+
     return (
         <nav className={styles["settings-header"]}>
             <Link to="/">
@@ -17,7 +23,7 @@ function SettingsHeader() {
                 <img className={styles["settings-header__user__icon"]} src={userIcon} alt="login-icon"/>
                 <h1
                     className={styles["settings-header__user__message"]}>
-                    YOU ARE CURRENTLY LOGGED IN AS USER
+                    YOU ARE CURRENTLY LOGGED IN AS: {nameOfUser}
                 </h1>
             </div>
         </nav>

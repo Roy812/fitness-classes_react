@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./NavBar.module.css";
 import { Link, useHistory } from "react-router-dom";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
@@ -9,10 +9,10 @@ import { AuthContext } from "../../context/AuthContext";
 
 function NavBar( {message} ) {
 
+    const [invalidInput, toggleInvalidInput] = useState(false);
     // const history = useHistory();
     // const { user, loginFunction } = useContext(AuthContext);
-    const alles = useContext(AuthContext);
-    console.log(alles);
+    const { login } = useContext(AuthContext);
     const {register, handleSubmit, formState: {errors}} = useForm();
 
     async function onSubmit(data) {
@@ -25,9 +25,10 @@ function NavBar( {message} ) {
             console.log(result.data);
             localStorage.setItem('token', result.data.accessToken);
             localStorage.setItem('id', result.data.id);
-            alles.login(result.data.accessToken);
+            login(result.data.accessToken);
         } catch (e) {
             console.error(e);
+            toggleInvalidInput(true);
         }
     }
 
@@ -103,7 +104,7 @@ function NavBar( {message} ) {
                         })}
                     />
                     {errors.password && <p className={styles["navbar__login__form-container__error2"]}>{errors.password.message}</p>}
-
+                    {invalidInput && <p className={styles["navbar__login__form-container__invalid-input"]}>INVALID INPUT</p>}
                     <button
                         type="submit"
                         className={styles["navbar__login__form-container__button"]}

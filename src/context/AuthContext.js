@@ -15,15 +15,17 @@ function AuthContextProvider({ children }) {
     const history = useHistory();
 
     async function fetchUserData(jwtToken) {
-        const decodedToken = jwt_decode(jwtToken);
-        console.log(decodedToken);
+        // const decodedToken = jwt_decode(jwtToken);
+        // console.log(decodedToken);
         // const userId = decodedToken.sub;
         const userId = localStorage.getItem('id');
         try {
+            const decodedToken = jwt_decode(jwtToken);
+            console.log(decodedToken);
             const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: `Bearer ${jwtToken}`,
+                    Authorization: jwtToken,
                 }
 
             })
@@ -43,11 +45,14 @@ function AuthContextProvider({ children }) {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
-        if (token !== undefined && authState.user === null) {
+        console.log(token);
+        if (token && authState.user === null) {
+            // === undefined
             // const decodedToken = jwt_decode(token);
             // const userId = decodedToken.sub;
             fetchUserData(token);
         } else {
+            console.log('Hoi');
             setAuthState({
                 user: null,
                 status: 'done',
@@ -56,7 +61,7 @@ function AuthContextProvider({ children }) {
     }, []);
 
     async function loginFunction(jwtToken) {
-        localStorage.setItem('token', jwtToken);
+        // localStorage.setItem('token', jwtToken);
         fetchUserData(jwtToken);
         history.push('/login');
     }
@@ -74,6 +79,7 @@ function AuthContextProvider({ children }) {
         ...authState,
         login: loginFunction,
         logout: logoutFunction,
+        fetch: fetchUserData,
     }
 
     return (

@@ -1,22 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useForm } from "react-hook-form";
 import styles from "./LoginFooter.module.css";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import {AuthContext} from "../../context/AuthContext";
+import axios from "axios";
 
 function LoginFooter() {
+
+    const { logout } = useContext(AuthContext);
+    const { handleSubmit } = useForm();
+    const history = useHistory();
+
+    async function onSubmit() {
+        try {
+            logout();
+            history.push('/');
+        } catch (e) {
+            console.error(e)
+        }
+    }
+
     return (
-            <div className={styles["login__footer"]}>
+            <form
+                onSubmit={handleSubmit(onSubmit)}
+                className={styles["login__footer"]}>
                 <Link
                     className={styles["login__footer__link1"]}
-                    to="/settings">
+                    to="/settings"
+                >
                     GO TO SETTINGS
                 </Link>
 
-                <Link
-                    className={styles["login__footer__link2"]}
-                    to="/">
+                <button
+                    className={styles["login__footer__button"]}
+                    type="submit"
+                >
                     LOG OUT
-                </Link>
-            </div>
+                </button>
+            </form>
     );
 }
 

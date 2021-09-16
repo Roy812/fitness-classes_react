@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./CreateReviewBody.module.css";
 import star1Picture from "../../assets/Star_one.svg";
@@ -6,24 +6,27 @@ import star2Picture from "../../assets/Star_two.svg";
 import star3Picture from "../../assets/Star_three.svg";
 import star4Picture from "../../assets/Star_four.svg";
 import star5Picture from "../../assets/Star_five.svg";
+import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
+
 
 function CreateReviewBody() {
 
     const [createReviewSuccess, toggleCreateReviewSuccess] = useState();
-
     const {register, handleSubmit, formState: {errors}} = useForm();
+    const { user } = useContext(AuthContext);
 
     async function onSubmit(data) {
         console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/users/review/add/id/{id}', {
+            const userId = localStorage.getItem('id');
+            const result = await axios.post(`http://localhost:8080/users/review/add/id/${userId}`, {
                 title: data.title,
                 review: data.review,
                 rating: data.rating
-                //USE EFFECT TO GET USER ID FOR PATH VARIABLE.
             })
             console.log(result);
+            toggleCreateReviewSuccess(true);
         } catch (e) {
             console.error(e)
         }
@@ -39,7 +42,7 @@ function CreateReviewBody() {
                 <select
                     className={styles["create-review-body__dropdown"]}
                     {...register("title")}>
-                    <option value="CICO">"CICO, IT'S ALL YOU NEED"</option>
+                    <option value="CICO">"CICO, ITs ALL YOU NEED"</option>
                     <option value="SNACKS">"THE PERFECT POST WORKOUT SNACKS"</option>
                     <option value="TESTOSTERON">"TESTOSTERON LEVES & DIETS"</option>
                 </select>

@@ -25,13 +25,18 @@
     transition: all 0.2s linear;
 }
 
-.login__footer__link2 {
-    text-decoration: none;
+.login__footer__button {
     color: #fff;
+    background-color: #F62525;
+    border-color: #F62525;
+    border-radius: 8px;
+    text-decoration: none;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.login__footer__link2:hover {
+.login__footer__button:hover {
     /*color: #efbe11;*/
     /*transition: all 0.2s ease-out;*/
     color: #CFE2FF;

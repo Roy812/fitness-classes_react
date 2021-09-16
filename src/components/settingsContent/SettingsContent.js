@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import { useForm } from "react-hook-form";
 import styles from "./SettingsContent.module.css";
 import lockPicture from "../../assets/Lock-red(new).svg"
@@ -6,6 +6,7 @@ import photoPicture from "../../assets/Camera-red(new).svg";
 import newsletterPicture from "../../assets/Newsletter(red).png";
 import deletePicture from "../../assets/Delete(red).png";
 import axios from "axios";
+import {AuthContext} from "../../context/AuthContext";
 
 function SettingsContent() {
 
@@ -16,14 +17,17 @@ function SettingsContent() {
 
     const {register, handleSubmit, formState: {errors}} = useForm();
     // const {register, handleSubmit, formState: {errors}} = useForm();
+    const alles = useContext(AuthContext);
+    console.log(alles);
 
     async function onSubmitPassword(data) {
         console.log(data);
         try {
-            const result = await axios.patch('http://localhost:8080/users/password/id/1', {
-                newPassword: data.password,
-                //USE EFFECT TO GET ID FROM USER
-                Id: 1
+            const userId = localStorage.getItem('id');
+            // const jwtToken = localStorage.getItem('token');
+            // alles.fetch(jwtToken);
+            const result = await axios.patch(`http://localhost:8080/users/password/id/${userId}`, {
+                newPassword: data.newPassword,
             })
             console.log(result);
             toggleChangePasswordSuccess(true);
@@ -35,10 +39,12 @@ function SettingsContent() {
     async function onSubmitPicture(data) {
         console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/users/upload/id/{id}', {
-                // file: data.file,
-                //USE EFFECT TO GET ID FROM USER.
-                Id: 1
+            const userId = localStorage.getItem('id');
+            // const jwtToken = localStorage.getItem('token');
+            // alles.fetch(jwtToken);
+            const result = await axios.post(`http://localhost:8080/users/upload/id/${userId}`, {
+                profilePicture: data.profilePicture,
+
             })
             console.log(result);
             toggleUploadPictureSuccess(true);
@@ -50,9 +56,11 @@ function SettingsContent() {
     async function onSubmitNewsletter() {
         // console.log(data);
         try {
-            const result = await axios.patch('http://localhost:8080/users/newsletter/id/{id}', {
-                //USE EFFECT TO GET ID FROM USER.
-                Id: 1
+            const userId = localStorage.getItem('id');
+            // const jwtToken = localStorage.getItem('token');
+            // alles.fetch(jwtToken);
+            const result = await axios.patch(`http://localhost:8080/users/newsletter/id/${userId}`, {
+
             })
             console.log(result);
             toggleNewsletterSuccess(true);
@@ -61,11 +69,14 @@ function SettingsContent() {
         }
     }
 
-    async function onSubmitDelete(data) {
-        console.log(data);
+    async function onSubmitDelete() {
+        // console.log(data);
         try {
-            const result = await axios.delete('http://localhost:8080/users/delete/{id}', {
-                //USE EFFECT TO GET ID FROM USER.
+            const userId = localStorage.getItem('id');
+            // const jwtToken = localStorage.getItem('token');
+            // alles.fetch(jwtToken);
+            const result = await axios.delete(`http://localhost:8080/users/delete/${userId}`, {
+
             })
             console.log(result);
             toggleRequestDeleteSuccess(true);
@@ -95,9 +106,9 @@ function SettingsContent() {
                             className={styles["settings-content__container1__item1__label__form__password"]}
                             type="text"
                             placeholder="TYPE YOUR NEW PASSWORD"
-                            name="password"
-                            id="password"
-                            {...register("newpassword", {
+                            name="newPassword"
+                            id="newPassword"
+                            {...register("newPassword", {
                                 required: {
                                     value: true,
                                     message: "THIS FIELD CAN'T BE EMPTY"

@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import styles from "./CICOPayContent.module.css";
 import { useForm } from "react-hook-form";
+import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
 function CICOPayContent() {
 
+    const alles = useContext(AuthContext);
     const [payCoinsSuccess, togglePayCoinsSuccess] = useState(true);
     const [completeBookingSuccess, toggleCompleteBookingSuccess] = useState(false);
     const {handleSubmit} = useForm();
 
     async function onSubmitPay() {
-        // console.log(data);
         try {
-            const result = await axios.post('http://localhost:8080/users/subtract/coins/id/{id}', {
-                //USE EFFECT TO GET ID FROM USER.
+            const userId = localStorage.getItem('id');
+            const result = await axios.post(`http://localhost:8080/users/subtract/coins/id/${userId}`, {
+
             })
             console.log(result);
             togglePayCoinsSuccess(true);
@@ -22,11 +24,13 @@ function CICOPayContent() {
         }
     }
 
-    async function onSubmitBook(data) {
-        console.log(data);
+    async function onSubmitBook() {
         try {
+            const lessonId = 1;
+            const userId = localStorage.getItem('id');
             const result = await axios.post('http://localhost:8080/agenda/add', {
-                //USE EFFECT TO GET ID FROM USER AND LESSON.
+                userId: userId,
+                lessonId: lessonId,
             })
             console.log(result);
             toggleCompleteBookingSuccess(true);

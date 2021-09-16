@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import styles from "./CICOContent.module.css";
 import {Link} from "react-router-dom";
 import { useForm } from "react-hook-form";
+import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
 function CICOContent() {
 
+    const alles = useContext(AuthContext);
     const [downloadGuideSuccess, toggleDownloadGuideSuccess] = useState(false);
     const [downloadVideoSuccess, toggleDownloadVideoSuccess] = useState(false);
     const {handleSubmit} = useForm();
 
     async function onSubmitGuide() {
-        // console.log(data);
         try {
-            const result = await axios.get('http://localhost:8080/lesson/download/guide/id/{id}', {
-            //USE EFFECT TO GET LESSON ID FOR PATH VARIABLE.
+            const lessonId = 1;
+            const result = await axios.get(`http://localhost:8080/lesson/download/guide/id/${lessonId}`, {
+
             })
             console.log(result);
             toggleDownloadGuideSuccess(true);
@@ -24,10 +26,10 @@ function CICOContent() {
     }
 
     async function onSubmitVideo() {
-        // console.log(data);
         try {
-            const result = await axios.get('http://localhost:8080/lesson/download/video/id/{id}', {
-                //USE EFFECT TO GET LESSON ID FOR PATH VARIABLE.
+            const lessonId = 1;
+            const result = await axios.get(`http://localhost:8080/lesson/download/video/id/${lessonId}`, {
+
             })
             console.log(result);
             toggleDownloadVideoSuccess(true);

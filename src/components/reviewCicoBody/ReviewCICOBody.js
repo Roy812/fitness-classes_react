@@ -1,18 +1,20 @@
-import React, {useState} from "react";
+import React, { useState, useContext } from "react";
 import styles from "./ReviewCICOBody.module.css";
 import fourstars from "../../assets/Stars(4_5).svg";
 import { useForm } from "react-hook-form";
+import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
 function ReviewCICOBody() {
 
-    const {handleSubmit} = useForm();
+    // const { handleSubmit } = useForm();
+    const alles = useContext(AuthContext);
 
-    async function onSubmit(data) {
-        console.log(data);
+    async function loadReviews() {
         try {
-            const result = await axios.get('http://localhost:8080/review/findby/title', {
-                title: data.title
+            const title = 'CICO, ITs All YOU NEED';
+            const result = await axios.get(`http://localhost:8080/review/findby/${title}`, {
+
             })
             console.log(result);
         } catch (e) {
@@ -20,12 +22,13 @@ function ReviewCICOBody() {
         }
     }
 
+    loadReviews();
+
     return (
         <div className={styles["review-cico-body"]}>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                {/*//USE EFFECT!?*/}
-
-            </form>
+            <div>
+                {/*LOADREVIEWS*/}
+            </div>
             <h3
                 className={styles["review-cico-body__title"]}>
                 "CICO, IT's ALL YOU NEED"<br/>
