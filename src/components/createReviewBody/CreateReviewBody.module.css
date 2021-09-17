@@ -80,6 +80,15 @@
     transition: all 0.2s ease-out;
 }
 
+.create-review-body__review-created {
+    color: #F62525;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    bottom: 30px;
+}
+
 @media screen and (min-height: 812px) {
     .create-review-body__title {
         margin-top: 102px;

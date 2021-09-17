@@ -100,7 +100,10 @@ function CreateReviewBody() {
                     type="submit">
                     POST
                 </button>
-                {createReviewSuccess && <p>Review is created!</p>}
+                {createReviewSuccess && <p
+                    className={styles["create-review-body__review-created"]}
+                >
+                    REVIEW IS CREATED!</p>}
             </form>
         </>
     );

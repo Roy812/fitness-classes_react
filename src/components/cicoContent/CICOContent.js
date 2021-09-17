@@ -87,24 +87,36 @@ function CICOContent() {
             </Link>
 
             <p className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE/VIDEO</p>
-            <form onSubmit={handleSubmit(onSubmitGuide)}>
+            <form
+                onSubmit={handleSubmit(onSubmitGuide)}
+                className={styles["CICO-content__form1"]}
+            >
                 <button
-                    className={styles["CICO-content__button"]}
+                    className={styles["CICO-content__form1__button"]}
                     type="submit"
                 >
                     DOWNLOAD GUIDE
                 </button>
-                {downloadGuideSuccess && <p>Your download will now start!</p>}
+                {downloadGuideSuccess && <p
+                    className={styles["cico-content__form1__download-guide-success"]}
+                >
+                    YOUR DOWNLOAD WILL NOW START!</p>}
             </form>
 
-            <form onSubmit={handleSubmit(onSubmitVideo)}>
+            <form
+                onSubmit={handleSubmit(onSubmitVideo)}
+                className={styles["CICO-content__form2"]}
+            >
                 <button
-                    className={styles["CICO-content__button"]}
+                    className={styles["CICO-content__form2__button"]}
                     type="submit"
                 >
-                    DOWNLOAD VIDEO
+                    DOWNLOAD PREVIEW
                 </button>
-                {downloadVideoSuccess && <p>Your download will now start!</p>}
+                {downloadVideoSuccess && <p
+                    className={styles["CICO-content__form2__download-video-success"]}
+                >
+                    YOUR DOWNLOAD WILL NOW START!</p>}
             </form>
         </div>
     );

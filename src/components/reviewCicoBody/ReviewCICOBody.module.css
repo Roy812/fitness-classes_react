@@ -9,6 +9,26 @@
     margin-top: 40px;
 }
 
+.review-cico-body__form-button {
+    color: #fff;
+    background-color: #F62525;
+    border-color: #F62525;
+    border-radius: 8px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: 16px;
+}
+
+.review-cico-body__form__review-not-found {
+    color: #F62525;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: 32px;
+}
+
 .review-cico-body__title {
     color: #F62525;
     font-size: 22px;

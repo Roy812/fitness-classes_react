@@ -100,6 +100,12 @@
     margin-top: 20px;
 }
 
+.settings-content__container1__item1__label__form__success-message {
+    color: #F62525;
+    position: relative;
+    top: 5px;
+}
+
 .settings-content__container2 {
     display: flex;
     flex-direction: column;
@@ -167,6 +173,12 @@
     transition: all 0.2s ease-out;
 }
 
+.settings-content__container3__success-message {
+    color: #F62525;
+    position: relative;
+    top: 5px;
+}
+
 .settings-content__container4 {
     display: flex;
     flex-direction: column;
@@ -198,6 +210,12 @@
     padding: 5px;
     margin-top: 20px;
     margin-bottom: 45px;
+}
+
+.settings-content__container4__success-message {
+    color: #F62525;
+    position: relative;
+    top: 5px;
 }
 
 @media screen and (min-height: 1024px) {
@@ -293,6 +311,12 @@
         font-size: 14px;
         position: relative;
         left: 20px;
+    }
+
+    .settings-content__container2__success-message {
+        color: #F62525;
+        position: relative;
+        top: 5px;
     }
 
     .settings-content__container3__send-newsletter {

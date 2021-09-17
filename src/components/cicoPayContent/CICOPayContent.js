@@ -72,18 +72,30 @@ function CICOPayContent() {
                 >
                     PAY COINS
                 </button>
-                {payCoinsSuccess && <p>Coins are subtracted! Click on the button below to complete your booking!</p>}
-                {paymentError && <p>Your coinBalance is 0, update your Coins!</p>}
+                {payCoinsSuccess && <p
+                    className={styles["CICO-pay-content__payment-success"]}
+                >
+                    COINS ARE SUBTRACTED! CLICK ON THE BUTTON BELOW TO COMPLETE BOOKING!</p>}
+                {paymentError && <p
+                    className={styles["CICO-pay-content__payment-failed"]}
+                >
+                    YOUR COINBALANCE IS 0, UPDATE YOUR COINS!</p>}
             </form>
             {payCoinsSuccess &&
-            <form onSubmit={handleSubmit(onSubmitBook)}>
+            <form
+                onSubmit={handleSubmit(onSubmitBook)}
+                className={styles["CICO-pay-content__form2"]}
+            >
                 <button
-                    className={styles["CICO-pay-content__confirm-button"]}
+                    className={styles["CICO-pay-content__form2__confirm-button"]}
                     type="submit"
                 >
                     CONFIRM
                 </button>
-                {completeBookingSuccess && <p>Your Booking Is Confirmed!</p>}
+                {completeBookingSuccess && <p
+                    className={styles["CICO-pay-content__form2__booking-success"]}
+                >
+                    YOUR BOOKING IS CONFIRMED!</p>}
             </form>
             }
         </div>

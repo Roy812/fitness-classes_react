@@ -31,7 +31,14 @@
     margin-bottom: 68px;
 }
 
-.CICO-content__button {
+.CICO-content__form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CICO-content__form1__button {
     color: #fff;
     background-color: #FF285C;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -41,7 +48,41 @@
     border-radius: 10px;
     padding: 5px;
     margin-top: 20px;
-    margin-bottom: 75px;
+    margin-bottom: 25px;
+}
+
+.cico-content__form1__download-guide-success {
+    color: #F62525;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.CICO-content__form2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CICO-content__form2__button {
+    color: #fff;
+    background-color: #FF285C;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border-color: #FF285C;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.CICO-content__form2__download-video-success {
+    color: #F62525;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 @media screen and (min-height: 812px) {

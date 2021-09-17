@@ -11,21 +11,18 @@ import {AuthContext} from "../../context/AuthContext";
 function SettingsContent(url, config) {
 
     const [changePasswordSuccess, toggleChangePasswordSuccess] = useState(false);
+    // const [changePasswordError, toggleChangePasswordError] = useState(false);
     const [uploadPictureSuccess, toggleUploadPictureSuccess] = useState(false);
     const [newsletterSuccess, toggleNewsletterSuccess] = useState(false);
     const [requestDeleteSuccess, toggleRequestDeleteSuccess] = useState(false);
 
     const {register, handleSubmit, formState: {errors}} = useForm();
-    // const {register, handleSubmit, formState: {errors}} = useForm();
-    const alles = useContext(AuthContext);
-    console.log(alles);
+    // const alles = useContext(AuthContext);
 
     async function onSubmitPassword(data) {
-        console.log(data);
         try {
             const userId = localStorage.getItem('id');
             const jwtToken = localStorage.getItem('token');
-            // alles.fetch(jwtToken);
             const result = await axios.patch(`http://localhost:8080/users/password/id/${userId}`, {
                 newPassword: data.newPassword,
             }, {
@@ -38,6 +35,7 @@ function SettingsContent(url, config) {
             toggleChangePasswordSuccess(true);
         } catch (e) {
             console.error(e)
+            // toggleChangePasswordError(true);
         }
     }
 
@@ -48,9 +46,7 @@ function SettingsContent(url, config) {
             formData.append('file', data.profilePicture[0]);
             const userId = localStorage.getItem('id');
             const jwtToken = localStorage.getItem('token');
-            // alles.fetch(jwtToken);
             const result = await axios.patch(`http://localhost:8080/users/upload/id/${userId}`,
-                // profilePicture: data.profilePicture,
                 formData
             , {
                 headers: {
@@ -69,10 +65,7 @@ function SettingsContent(url, config) {
         try {
             const userId = localStorage.getItem('id');
             const jwtToken = localStorage.getItem('token');
-            // alles.fetch(jwtToken);
-            const result = await axios.patch(`http://localhost:8080/users/newsletter/id/${userId}`, {
-
-            }, {
+            const result = await axios.patch(`http://localhost:8080/users/newsletter/id/${userId}`, {}, {
                 headers: {
                     Authorization: `Bearer ${jwtToken}`,
                 }},)
@@ -84,11 +77,9 @@ function SettingsContent(url, config) {
     }
 
     async function onSubmitDelete() {
-        // console.log(data);
         try {
             const userId = localStorage.getItem('id');
             const jwtToken = localStorage.getItem('token');
-            // alles.fetch(jwtToken);
             const result = await axios.delete(`http://localhost:8080/users/delete/id/${userId}`, {
                 headers: {
                     "Content-Type": "application/json",
@@ -142,7 +133,14 @@ function SettingsContent(url, config) {
                              type="submit">
                              SUBMIT
                          </button>
-                         {changePasswordSuccess && <p>Password is changed!</p>}
+                         {changePasswordSuccess && <p
+                             className={styles["settings-content__container1__item1__label__form__success-message"]}
+                         >
+                             PASSWORD IS CHANGED!</p>}
+                         {/*{changePasswordError && <p*/}
+                         {/*    className={styles["settings-content__container1__item1__label__form__error-message"]}*/}
+                         {/*>*/}
+                         {/*    PASSWORD IS INVALID, USE AT LEAST 6 CHARACTERS!</p>}*/}
                      </form>
                  </label>
             </div>
@@ -173,7 +171,10 @@ function SettingsContent(url, config) {
                         className={styles["settings-content__container2__button"]} type="submit">
                         CONFIRM
                     </button>
-                    {uploadPictureSuccess && <p>Picture is uploaded</p>}
+                    {uploadPictureSuccess && <p
+                        className={styles["settings-content__container2__success-message"]}
+                        >
+                        PICTURE IS UPLOADED!</p>}
                 </form>
             </div>
 
@@ -184,7 +185,10 @@ function SettingsContent(url, config) {
                         className={styles["settings-content__container3__button"]} type="submit">
                         YES/NO
                     </button>
-                    {newsletterSuccess && <p>Preferences changed!</p>}
+                    {newsletterSuccess && <p
+                        className={styles["settings-content__container3__success-message"]}
+                    >
+                        PREFERENCES CHANGED!</p>}
                 </form>
             </div>
 
@@ -199,7 +203,10 @@ function SettingsContent(url, config) {
                         >
                         DELETE MY ACCOUNT
                     </button>
-                    {requestDeleteSuccess && <p>Account is deleted</p>}
+                    {requestDeleteSuccess && <p
+                        className={styles["settings-content__container4__success-message"]}
+                    >
+                        ACCOUNT IS DELETED!</p>}
                 </form>
             </div>
         </div>

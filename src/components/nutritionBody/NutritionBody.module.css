@@ -279,7 +279,7 @@
 
     .nutrition-body__subheader-container {
         width: 800px;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .nutrition-body__CICO {
@@ -387,13 +387,13 @@
     }
 
     .nutrition-body__subheader-container {
-        font-size: 22px;
+        font-size: 24px;
         position: relative;
         left: 15px;
     }
 
     .nutrition-body__CICO {
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 40px;
     }
 
@@ -414,7 +414,7 @@
     }
 
     .nutrition-body__workoutsnacks {
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 40px;
     }
 
@@ -429,7 +429,7 @@
     }
 
     .nutrition-body__testlevels-and-diets {
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 40px;
         margin-bottom: 20px;
     }
