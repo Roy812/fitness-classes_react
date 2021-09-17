@@ -19,11 +19,17 @@ function CreateReviewBody() {
     async function onSubmit(data) {
         console.log(data);
         try {
+            const jwtToken = localStorage.getItem('token');
             const userId = localStorage.getItem('id');
             const result = await axios.post(`http://localhost:8080/users/review/add/id/${userId}`, {
                 title: data.title,
                 review: data.review,
                 rating: data.rating
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${jwtToken}`,
+                }
             })
             console.log(result);
             toggleCreateReviewSuccess(true);

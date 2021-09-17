@@ -24,7 +24,7 @@ function RegisterContent() {
             })
             console.log(result);
             toggleRegisterSuccess(true);
-            history.push('/login');
+            history.push('/');
         } catch (e) {
             console.error(e)
         }

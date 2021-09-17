@@ -6,31 +6,45 @@ import axios from "axios";
 
 function CICOPayContent() {
 
-    const alles = useContext(AuthContext);
-    const [payCoinsSuccess, togglePayCoinsSuccess] = useState(true);
+    const { user } = useContext(AuthContext);
+    const [payCoinsSuccess, togglePayCoinsSuccess] = useState(false);
+    const [paymentError, togglePaymentError] = useState(false);
     const [completeBookingSuccess, toggleCompleteBookingSuccess] = useState(false);
     const {handleSubmit} = useForm();
 
+    const jwtToken = localStorage.getItem('token');
+    const userId = localStorage.getItem('id');
+
     async function onSubmitPay() {
         try {
-            const userId = localStorage.getItem('id');
-            const result = await axios.post(`http://localhost:8080/users/subtract/coins/id/${userId}`, {
+            const result = await axios.patch(`http://localhost:8080/users/subtract/coins/id/${userId}`, {
 
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${jwtToken}`,
+                }
             })
             console.log(result);
             togglePayCoinsSuccess(true);
         } catch (e) {
             console.error(e)
+            togglePaymentError(true);
         }
     }
 
     async function onSubmitBook() {
         try {
             const lessonId = 1;
-            const userId = localStorage.getItem('id');
             const result = await axios.post('http://localhost:8080/agenda/add', {
+                title: 'CICO, ITs ALL YOU NEED',
                 userId: userId,
                 lessonId: lessonId,
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${jwtToken}`,
+                }
             })
             console.log(result);
             toggleCompleteBookingSuccess(true);
@@ -59,6 +73,7 @@ function CICOPayContent() {
                     PAY COINS
                 </button>
                 {payCoinsSuccess && <p>Coins are subtracted! Click on the button below to complete your booking!</p>}
+                {paymentError && <p>Your coinBalance is 0, update your Coins!</p>}
             </form>
             {payCoinsSuccess &&
             <form onSubmit={handleSubmit(onSubmitBook)}>
