@@ -9,7 +9,6 @@ function SettingsHeader() {
 
     const { user } = useContext(AuthContext);
     console.log(user);
-    const nameOfUser = user.username;
 
     return (
         <nav className={styles["settings-header"]}>
@@ -23,7 +22,7 @@ function SettingsHeader() {
                 <img className={styles["settings-header__user__icon"]} src={userIcon} alt="login-icon"/>
                 <h1
                     className={styles["settings-header__user__message"]}>
-                    YOU ARE CURRENTLY LOGGED IN AS: {nameOfUser}
+                    YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}
                 </h1>
             </div>
         </nav>

@@ -8,7 +8,7 @@ import deletePicture from "../../assets/Delete(red).png";
 import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
 
-function SettingsContent() {
+function SettingsContent(url, config) {
 
     const [changePasswordSuccess, toggleChangePasswordSuccess] = useState(false);
     const [uploadPictureSuccess, toggleUploadPictureSuccess] = useState(false);
@@ -24,11 +24,16 @@ function SettingsContent() {
         console.log(data);
         try {
             const userId = localStorage.getItem('id');
-            // const jwtToken = localStorage.getItem('token');
+            const jwtToken = localStorage.getItem('token');
             // alles.fetch(jwtToken);
             const result = await axios.patch(`http://localhost:8080/users/password/id/${userId}`, {
                 newPassword: data.newPassword,
-            })
+            }, {
+                headers: {
+                "Content-Type": "application/json",
+                    Authorization: `Bearer ${jwtToken}`,
+            }},
+                )
             console.log(result);
             toggleChangePasswordSuccess(true);
         } catch (e) {
@@ -39,13 +44,19 @@ function SettingsContent() {
     async function onSubmitPicture(data) {
         console.log(data);
         try {
+            const formData = new FormData();
+            formData.append('file', data.profilePicture[0]);
             const userId = localStorage.getItem('id');
-            // const jwtToken = localStorage.getItem('token');
+            const jwtToken = localStorage.getItem('token');
             // alles.fetch(jwtToken);
-            const result = await axios.post(`http://localhost:8080/users/upload/id/${userId}`, {
-                profilePicture: data.profilePicture,
-
-            })
+            const result = await axios.patch(`http://localhost:8080/users/upload/id/${userId}`,
+                // profilePicture: data.profilePicture,
+                formData
+            , {
+                headers: {
+                    Authorization: `Bearer ${jwtToken}`,
+                }},
+                )
             console.log(result);
             toggleUploadPictureSuccess(true);
         } catch (e) {
@@ -57,11 +68,14 @@ function SettingsContent() {
         // console.log(data);
         try {
             const userId = localStorage.getItem('id');
-            // const jwtToken = localStorage.getItem('token');
+            const jwtToken = localStorage.getItem('token');
             // alles.fetch(jwtToken);
             const result = await axios.patch(`http://localhost:8080/users/newsletter/id/${userId}`, {
 
-            })
+            }, {
+                headers: {
+                    Authorization: `Bearer ${jwtToken}`,
+                }},)
             console.log(result);
             toggleNewsletterSuccess(true);
         } catch (e) {
@@ -73,11 +87,14 @@ function SettingsContent() {
         // console.log(data);
         try {
             const userId = localStorage.getItem('id');
-            // const jwtToken = localStorage.getItem('token');
+            const jwtToken = localStorage.getItem('token');
             // alles.fetch(jwtToken);
-            const result = await axios.delete(`http://localhost:8080/users/delete/${userId}`, {
-
-            })
+            const result = await axios.delete(`http://localhost:8080/users/delete/id/${userId}`, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${jwtToken}`,
+                }},
+                )
             console.log(result);
             toggleRequestDeleteSuccess(true);
         } catch (e) {
