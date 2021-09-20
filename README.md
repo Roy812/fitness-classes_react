@@ -3,6 +3,8 @@
 Dit bestand bevat instructies en voorbeelden voor het gebruik van de Front-end van de F.C. applicatie.
 Zorg ervoor dat je de gehele installatiehandleiding hebt gelezen voordat je begint te werken in dit project.
 
+**Link naar de Github Repository:** https://github.com/Roy812/fitness-classes_react-v1 
+
 ##Inhoud
 * [Home-page](#Home-page)
 * [Register-page](#Register-page)
@@ -106,6 +108,8 @@ Als de betalingen successvol is zal een button verschijnen waarmee de gebruiker 
 Zie onderstaand voorbeeld:
 
 ![img_8.png](img_8.png)
+
+Als de 'booking' geslaagd is zal hierover een melding in beeld verschijnen.
 
 **NB: Als de gebruiker niet genoeg Coins ter beschikking heeft zal hiervoer een foutmelding verschijnen!**
 

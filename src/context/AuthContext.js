@@ -1,4 +1,4 @@
-import React, {createContext, useEffect, useState} from "react";
+import React, {createContext, useContext, useEffect, useState} from "react";
 import {useHistory} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import axios from "axios";
@@ -86,6 +86,16 @@ function AuthContextProvider({ children }) {
         logout: logoutFunction,
         fetch: fetchUserData,
     }
+
+    // function useAuthState(){
+    //     const authState = useContext(AuthContext);
+    //     const isDone = authState.status === 'done';
+    //     const isAuthenticated = authState.user !== null && isDone;
+    //     return {
+    //         ...authState,
+    //         isAuthenticated: isAuthenticated,
+    //     }
+    // }
 
     return (
         <AuthContext.Provider value={data}>

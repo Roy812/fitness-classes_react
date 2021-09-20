@@ -1,5 +1,5 @@
 // import React from "react";
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -17,10 +17,11 @@ import CICOPay from "./pages/CICOPay";
 import ReviewPageNutrition from "./pages/ReviewPageNutrition";
 import ReviewPageCICO from "./pages/ReviewPageCICO";
 import CreateReviewPage from "./pages/CreateReviewPage";
+import {AuthContext} from "./context/AuthContext";
 
 function App() {
-
-    const [loggedIn, toggleLoggedIn] = useState(true);
+    // const [loggedIn, toggleLoggedIn] = useState(true);
+    const { user } = useContext(AuthContext);
 
   return (
           <Switch>
@@ -34,10 +35,10 @@ function App() {
                   <NutritionPage />
               </Route>
               <Route path="/CICO">
-                  {loggedIn ? <CICOPage /> : <Redirect to="/"/>}
+                  {user !== null ? <CICOPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/CICOpay">
-                  {loggedIn ? <CICOPay /> : <Redirect to="/"/>}
+                  {user !== null ? <CICOPay /> : <Redirect to="/"/>}
               </Route>
               <Route path="/about">
                   <AboutPage />
@@ -55,19 +56,19 @@ function App() {
                   <ReviewPageCICO />
               </Route>
               <Route path="/createreview">
-                  {loggedIn ? <CreateReviewPage /> : <Redirect to="/"/>}
+                  {user !== null ? <CreateReviewPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/login">
-                  {loggedIn ? <LoginPage /> : <Redirect to="/"/>}
+                  {user !== null ? <LoginPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/myclasses">
-                  {loggedIn ? <MyClassesPage /> : <Redirect to="/"/>}
+                  {user !== null ? <MyClassesPage /> : <Redirect to="/"/>}
               </Route>
               <Route path="/register">
                   <RegisterPage />
               </Route>
               <Route path="/settings">
-                  <SettingsPage />
+                  {user !== null ? <SettingsPage /> : <Redirect to="/"/>}
               </Route>
           </Switch>
   );

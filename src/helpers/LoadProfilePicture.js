@@ -4,8 +4,7 @@ import axios from "axios";
 const jwtToken = localStorage.getItem('token');
 const userId = localStorage.getItem('id');
 
-
-    async function LoadProfilePicture() {
+    async function loadProfilePicture() {
         try {
              const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
                  headers: {
@@ -16,10 +15,13 @@ const userId = localStorage.getItem('id');
              console.log(result);
              const profilePicture = result.data.profilePicture;
              console.log(profilePicture);
+             return profilePicture;
          } catch (e) {
              console.error(e);
          }
     }
 
 
-export default LoadProfilePicture;
+export {
+        loadProfilePicture
+};

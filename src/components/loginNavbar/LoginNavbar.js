@@ -4,17 +4,17 @@ import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
 import {Link} from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
-import LoadProfilePicture from "../../helpers/LoadProfilePicture";
+import {loadProfilePicture} from "../../helpers/LoadProfilePicture";
 
 function LoginNavbar() {
 
     const { user } = useContext(AuthContext);
-    const result = LoadProfilePicture();
-    console.log(result);
+    console.log(user);
 
-    // useEffect(() => {
-    //     LoadProfilePicture();
-    // }, [])
+    useEffect(() => {
+        const result = loadProfilePicture();
+        console.log(result);
+    }, [])
 
     return (
         <nav className={styles["login-navbar"]}>
@@ -58,7 +58,7 @@ function LoginNavbar() {
 
             <div className={styles["login-navbar__login"]}>
                 {/*<img src={userIcon} alt="userIcon-image"/>*/}
-                <img src={user.profilePicture} alt="userIcon-image"/>
+                {/*<img src={user.profilePicture} alt="userIcon-image"/>*/}
                 <p> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
             </div>
         </nav>
