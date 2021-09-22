@@ -1,42 +1,41 @@
 import React, { useState, useContext, useEffect } from "react";
-
 import styles from "./ReviewCICOBody.module.css";
+import axios from "axios";
 import fourstars from "../../assets/Stars(4_5).svg";
 import { useForm } from "react-hook-form";
-import {AuthContext} from "../../context/AuthContext";
-import axios from "axios";
+import FilterReviewsByRating4 from "../../helpers/FilterReviewsByRating4";
+
 
 function ReviewCICOBody() {
 
-    const [notFound, toggleNotFound] = useState(false);
-    const { handleSubmit } = useForm();
-    const { user } = useContext(AuthContext);
     const jwtToken = localStorage.getItem('token');
+    const [reviews, setReviews] = useState([]);
+    const [notFound, toggleNotFound] = useState(false);
+    // const { handleSubmit } = useForm();
 
-    async function onSubmitReviews() {
-        try {
-            // const title = 'CICO';
-            const result = await axios.get(`http://localhost:8080/users/review/findby/title`, {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${jwtToken}`,
-                }, title: 'CICO',
-            })
-            console.log(result);
-        } catch (e) {
-            console.error(e)
-            toggleNotFound(true);
+    useEffect(() => {
+        async function loadReviews() {
+            try {
+                const title = 'CICO';
+                const result = await axios.get(`http://localhost:8080/users/review/findby/title/${title}`, {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${jwtToken}`,
+                    }
+                })
+                console.log(result.data)
+                setReviews(result.data);
+            } catch (e) {
+                console.error(e)
+                toggleNotFound(true);
+            }
         }
-    }
-
-    // useEffect(() => {
-    //     loadReviews();
-    // }, [])
-
+        loadReviews();
+    }, [])
 
     return (
         <div className={styles["review-cico-body"]}>
-            <form onSubmit={handleSubmit(onSubmitReviews)}>
+            <form>
                 <button
                     className={styles["review-cico-body__form-button"]}
                     type="submit"
@@ -64,6 +63,13 @@ function ReviewCICOBody() {
             </p>
 
             <img className={styles["review-cico-body__fourstars"]} src={fourstars} alt="fourstars-image"/>
+
+            <div>
+                {/*{reviews && reviews.map((review) => {*/}
+                {/*    return <p key={review.id}>{review.title}</p>*/}
+                {/*})}*/}
+                {reviews}
+            </div>
         </div>
     );
 }

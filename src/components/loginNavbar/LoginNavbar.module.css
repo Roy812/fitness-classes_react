@@ -51,18 +51,33 @@
     text-decoration: none;
 }
 
+.login-navbar__login__profile-picture {
+    width: 55px;
+    height: 44px;
+    position: relative;
+    top: 6px;
+}
+
+.login-navbar__login__message {
+    font-size: 14px;
+    font-weight: 500;
+}
+
 @media screen and (min-width: 1600px) {
     .login-navbar {
         width: 1750px;
         height: 135px;
     }
+
     .login-navbar__menu {
         position: relative;
         left: 35px;
     }
+
     .login-navbar__item__link {
         font-size: 24px;
     }
+
     .login-navbar__login {
         flex-basis: 250px;
         font-size: 18px;
@@ -74,9 +89,11 @@
     .login-navbar__menu {
         grid-gap: 50px;
     }
+
     .login-navbar__item__link {
         font-size: 18px;
     }
+
     .login-navbar__login {
         width: 175px;
         font-size: 14px;
@@ -87,9 +104,11 @@
     .login-navbar__menu {
         grid-gap: 40px;
     }
+
     .login-navbar__item__link {
         font-size: 16px;
     }
+
     .login-navbar__login {
         width: 175px;
         font-size: 12px;
@@ -100,9 +119,11 @@
     .login-navbar__menu {
         grid-gap: 30px;
     }
+
     .login-navbar__item__link {
         font-size: 14px;
     }
+
     .login-navbar__login {
         color: #F62525;
         font-size: 2px;

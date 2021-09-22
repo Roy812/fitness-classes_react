@@ -1,20 +1,41 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./LoginNavbar.module.css";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import userIcon from "../../assets/User(Icon).png";
 import {Link} from "react-router-dom";
 import {AuthContext} from "../../context/AuthContext";
-import {loadProfilePicture} from "../../helpers/LoadProfilePicture";
+import axios from "axios";
+
 
 function LoginNavbar() {
 
     const { user } = useContext(AuthContext);
-    console.log(user);
+    const [userPicture, setUserPicture] = useState();
+    const jwtToken = localStorage.getItem('token');
+    const userId = localStorage.getItem('id');
 
     useEffect(() => {
-        const result = loadProfilePicture();
-        console.log(result);
+        async function loadProfile() {
+            try {
+                const result = await axios.get(`http://localhost:8080/users/picture/id/${userId}`, {
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${jwtToken}`,
+                    }
+                    , responseType: "blob",
+                });
+                console.log(result);
+                setUserPicture(URL.createObjectURL(result.data));
+                // var decodedStringAtoB = atob(result.data);
+                // console.log(decodedStringAtoB);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        loadProfile();
     }, [])
+
+
 
     return (
         <nav className={styles["login-navbar"]}>
@@ -57,9 +78,8 @@ function LoginNavbar() {
             </ul>
 
             <div className={styles["login-navbar__login"]}>
-                {/*<img src={userIcon} alt="userIcon-image"/>*/}
-                {/*<img src={user.profilePicture} alt="userIcon-image"/>*/}
-                <p> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
+                <img className={styles["login-navbar__login__profile-picture"]} src={userPicture} alt="userIcon-image"/>
+                <p className={styles["login-navbar__login__message"]}> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
             </div>
         </nav>
     );

@@ -17,7 +17,7 @@ function SettingsContent(url, config) {
     const [requestDeleteSuccess, toggleRequestDeleteSuccess] = useState(false);
 
     const {register, handleSubmit, formState: {errors}} = useForm();
-    // const alles = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     async function onSubmitPassword(data) {
         try {
