@@ -29,6 +29,7 @@ function MyClassesContent() {
     }
 
     return (
+        <>
         <form
             onSubmit={handleSubmit(onSubmit)}
             className={styles["my-classes-content"]}
@@ -43,8 +44,14 @@ function MyClassesContent() {
                 className={styles["my-classes-content__bookings-not-found"]}
             >
                 BOOKINGS NOT FOUND..</p>}
-            <div>{bookings}</div>
         </form>
+    <div>
+        {/*{bookings}*/}
+        {bookings && bookings.map((booking) => {
+            return <p key={booking.id}>{booking.title}</p>
+        })}
+    </div>
+    </>
     );
 }
 

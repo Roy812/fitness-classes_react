@@ -9,7 +9,8 @@ import FilterReviewsByRating4 from "../../helpers/FilterReviewsByRating4";
 function ReviewCICOBody() {
 
     const jwtToken = localStorage.getItem('token');
-    const [reviews, setReviews] = useState([]);
+    const [reviews, setReviews] = useState();
+    const [rating, setRating] = useState();
     const [notFound, toggleNotFound] = useState(false);
     // const { handleSubmit } = useForm();
 
@@ -17,20 +18,30 @@ function ReviewCICOBody() {
         async function loadReviews() {
             try {
                 const title = 'CICO';
-                const result = await axios.get(`http://localhost:8080/users/review/findby/title/${title}`, {
+                const result = await axios.get(`http://localhost:8080/users/review/findby/title/${title}`,
+                    {
                     headers: {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${jwtToken}`,
                     }
                 })
                 console.log(result.data)
+                // setReviews(result.data.title);
                 setReviews(result.data);
+                const reviewsFiltered = FilterReviewsByRating4(result.data);
+                console.log(reviewsFiltered.rating);
+                setRating(reviewsFiltered.rating);
             } catch (e) {
                 console.error(e)
                 toggleNotFound(true);
             }
         }
-        loadReviews();
+        loadReviews()
+        //     .then(data => {
+        //     console.log('Promise Resolved', data);
+        //     setReviews(data);
+        // })
+        ;
     }, [])
 
     return (
@@ -65,10 +76,13 @@ function ReviewCICOBody() {
             <img className={styles["review-cico-body__fourstars"]} src={fourstars} alt="fourstars-image"/>
 
             <div>
-                {/*{reviews && reviews.map((review) => {*/}
-                {/*    return <p key={review.id}>{review.title}</p>*/}
+                {reviews && reviews.map((review) => {
+                    return <p key={review.id}>{review.title}</p>
+                })}
+                {rating}
+                {/*{filteredReviews && filteredReviews.map((filteredReview) => {*/}
+                {/*    return <p key={filteredReview.id}>{filteredReview.rating}</p>*/}
                 {/*})}*/}
-                {reviews}
             </div>
         </div>
     );
