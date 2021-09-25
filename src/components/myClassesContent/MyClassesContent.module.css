@@ -5,13 +5,6 @@
     align-items: center;
 }
 
-.my-classes-content__message {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 20px;
-    color: #F62525;
-    margin-top: 40px;
-}
-
 .my-classes-content__button {
     color: #fff;
     background-color: #F62525;
@@ -21,8 +14,14 @@
     font-size: 20px;
     font-weight: 600;
     padding: 5px;
-    position: relative;
-    top: 20px;
+    margin-top: 60px;
+}
+
+.my-classes-content__message {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    color: #F62525;
+    margin-top: 40px;
 }
 
 .my-classes-content__bookings-not-found {
@@ -32,4 +31,12 @@
     font-weight: 600;
     position: relative;
     top: 28px;
+}
+
+.my-classes-content__bookings {
+    color: #F62525;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 50px;
 }

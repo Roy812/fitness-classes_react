@@ -29,23 +29,34 @@
     top: 32px;
 }
 
-.review-cico-body__title {
+.review-CICO-body__title {
     color: #F62525;
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 35px;
     margin-bottom: 20px;
 }
 
-.review-cico-body__text {
-    width: 200px;
+.review-CICO-body__username {
+    margin-top: 10px;
     font-size: 20px;
+}
+
+.review-CICO-body__review {
+    width: 280px;
+    font-size: 22px;
     font-weight: 600;
     margin-top: 30px;
 }
 
-.review-cico-body__fourstars {
+.review-CICO-body__stars {
     margin-top: 50px;
     margin-bottom: 72px;
+}
+
+.review-CICO-body__total-reviews {
+    color: #33769C;
+    position: relative;
+    bottom: 14px;
 }
 
 @media screen and (min-height: 812px) {

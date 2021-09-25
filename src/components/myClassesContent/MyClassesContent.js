@@ -3,7 +3,7 @@ import styles from "./MyClassesContent.module.css";
 import axios from "axios";
 import {useForm} from "react-hook-form";
 import FilterBookingsByUserId from "../../helpers/FilterBookingsByUserId";
-import CountLessons from "../../helpers/CountLessons";
+import CountReviews from "../../helpers/CountReviews";
 
 function MyClassesContent() {
 
@@ -45,11 +45,14 @@ function MyClassesContent() {
             >
                 BOOKINGS NOT FOUND..</p>}
         </form>
-    <div>
+    <div className={styles["my-classes-content__bookings"]}>
         {/*{bookings}*/}
         {bookings && bookings.map((booking) => {
-            return <p key={booking.id}>{booking.title}</p>
+            return <li key={booking.id}>{booking.title}</li>
         })}
+        {/*{bookings && bookings.map((booking) => {*/}
+        {/*    return <li key={booking.id}>{booking.user.id}</li>*/}
+        {/*})}*/}
     </div>
     </>
     );
