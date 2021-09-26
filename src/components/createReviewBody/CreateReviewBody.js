@@ -48,7 +48,7 @@ function CreateReviewBody() {
                 <select
                     className={styles["create-review-body__dropdown"]}
                     {...register("title")}>
-                    <option value="CICO">"CICO, ITs ALL YOU NEED"</option>
+                    <option value="CICO, ITs ALL YOU NEED">"CICO, ITs ALL YOU NEED"</option>
                     <option value="SNACKS">"THE PERFECT POST WORKOUT SNACKS"</option>
                     <option value="TESTOSTERON">"TESTOSTERON LEVES & DIETS"</option>
                 </select>

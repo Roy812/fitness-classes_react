@@ -143,6 +143,10 @@
     margin-top: 20px;
 }
 
+.settings-content__container2__success-message {
+    color: #F62525;
+}
+
 .settings-content__container3 {
     display: flex;
     flex-direction: column;

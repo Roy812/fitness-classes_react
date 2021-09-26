@@ -1,9 +1,8 @@
 import CountReviews from "../helpers/CountReviews";
 import FilterReviewsByRating from "../helpers/FilterReviewsByRating";
-import FilterBookingsByUserIdTest from "../helpers/FilterBookingsByUserIdTest";
-import FilterBookingsByLessonIdCICO from "../helpers/FilterBookingsByLessonIdCICO";
-import FilterBookingsByLessonIdSNACKS from "../helpers/FilterBookingsByLessonIdSNACKS";
-import FilterBookingsByLessonIdTESTOSTERON from "../helpers/FilterBookingsByLessonIdTESTOSTERON";
+import FilterBookingsByTitleCICO from "../helpers/FilterBookingsByTitleCICO";
+import FilterBookingsByTitleSNACKS from "../helpers/FilterBookingsByTitleSNACKS";
+import FilterBookingsByTitleTESTOSTERON from "../helpers/FilterBookingsByTitleTESTOSTERON";
 
 test('Count the total reviews', () => {
     //ARRANGE
@@ -55,45 +54,15 @@ test('Return an array of ratings', () => {
     expect(result).toStrictEqual([2, 4, 5]);
 })
 
-test('Filter bookings by userId', () => {
+test('Count bookings by title CICO', () => {
     //ARRANGE
-    const userId = 1;
-    const list = [
-        {
-            userId: 1,
-            title: 'CICO'
-        }, {
-            userId: 1,
-            title: 'SNACKS'
-        }, {
-            userId: 3,
-            title: 'TESTOSTERON'
-        }
-    ];
-
-    //ACT
-    const result = FilterBookingsByUserIdTest(list, userId);
-
-    //ASSERT
-    expect(result).toEqual([{
-        userId: 1,
-        title: 'CICO'
-    }, {
-        userId: 1,
-        title: 'SNACKS'
-    }]);
-})
-
-test('Count bookings by lessonId CICO', () => {
-    //ARRANGE
-    const lessonId = 1;
     const bookings = [
         {
             lessonId: 1,
-            title: "CICO"
+            title: "CICO, ITs ALL YOU NEED"
         }, {
             lessonId: 1,
-            title: "CICO"
+            title: "CICO, ITs ALL YOU NEED"
         }, {
             lessonId: 2,
             title: "SNACKS"
@@ -101,15 +70,14 @@ test('Count bookings by lessonId CICO', () => {
     ]
 
     //ACT
-    const result = FilterBookingsByLessonIdCICO(bookings, lessonId);
+    const result = FilterBookingsByTitleCICO(bookings);
 
     //ASSERT
     expect(result).toBe(2);
 })
 
-test('Count bookings by lessonId SNACKS', () => {
+test('Count bookings by title SNACKS', () => {
     //ARRANGE
-    const lessonId = 2;
     const bookings = [
         {
             lessonId: 1,
@@ -121,15 +89,14 @@ test('Count bookings by lessonId SNACKS', () => {
     ]
 
     //ACT
-    const result = FilterBookingsByLessonIdSNACKS(bookings, lessonId);
+    const result = FilterBookingsByTitleSNACKS(bookings);
 
     //ASSERT
     expect(result).toBe(1);
 })
 
-test('Count bookings by lessonId TESTOSTERON', () => {
+test('Count bookings by title TESTOSTERON', () => {
     //ARRANGE
-    const lessonId = 3;
     const bookings = [
         {
             lessonId: 1,
@@ -144,7 +111,7 @@ test('Count bookings by lessonId TESTOSTERON', () => {
     ]
 
     //ACT
-    const result = FilterBookingsByLessonIdTESTOSTERON(bookings, lessonId);
+    const result = FilterBookingsByTitleTESTOSTERON(bookings);
 
     //ASSERT
     expect(result).toBe(2);

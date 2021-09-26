@@ -37,7 +37,7 @@ function CICOPayContent() {
         try {
             const lessonId = 1;
             const result = await axios.post('http://localhost:8080/agenda/add', {
-                title: 'CICO, ITs ALL YOU NEED',
+                title: "CICO, ITs ALL YOU NEED",
                 userId: userId,
                 lessonId: lessonId,
             }, {

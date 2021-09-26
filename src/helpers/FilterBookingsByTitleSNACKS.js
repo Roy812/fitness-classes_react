@@ -1,14 +1,14 @@
 import React from "react";
 
-function FilterBookingsByLessonIdTESTOSTERON(bookings, lessonId) {
+function FilterBookingsByTitleSNACKS(bookings) {
     let count = 0;
     for (let i = 0; i < bookings.length; i++) {
         const booking = bookings[i];
-        if (booking.lessonId === lessonId) {
+        if (booking.title === "SNACKS") {
             count++;
         }
     }
     return count;
 }
 
-export default FilterBookingsByLessonIdTESTOSTERON;
+export default FilterBookingsByTitleSNACKS;

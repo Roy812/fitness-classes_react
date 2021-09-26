@@ -1,4 +1,4 @@
-.review-cico-body {
+.review-CICO-body {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,24 +9,17 @@
     margin-top: 40px;
 }
 
-.review-cico-body__form-button {
-    color: #fff;
-    background-color: #F62525;
-    border-color: #F62525;
-    border-radius: 8px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    position: relative;
-    top: 16px;
+.review-CICO-body__total-reviews {
+    color: #33769C;
+    font-size: 22px;
+    margin-top: 25px;
 }
 
-.review-cico-body__form__review-not-found {
-    color: #F62525;
-    font-size: 20px;
+.review-CICO-body__review {
+    width: 280px;
+    font-size: 22px;
     font-weight: 600;
-    position: relative;
-    top: 32px;
+    margin-top: 30px;
 }
 
 .review-CICO-body__title {
@@ -37,26 +30,19 @@
 }
 
 .review-CICO-body__username {
-    margin-top: 10px;
     font-size: 20px;
-}
-
-.review-CICO-body__review {
-    width: 280px;
-    font-size: 22px;
-    font-weight: 600;
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .review-CICO-body__stars {
     margin-top: 50px;
-    margin-bottom: 72px;
+    margin-bottom: 50px;
 }
 
-.review-CICO-body__total-reviews {
-    color: #33769C;
-    position: relative;
-    bottom: 14px;
+.review-CICO-body__not-found {
+    color: #F62525;
+    font-size: 22px;
+    margin-top: 15px;
 }
 
 @media screen and (min-height: 812px) {

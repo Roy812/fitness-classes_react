@@ -1,14 +1,14 @@
 import React from "react";
 
-function FilterBookingsByLessonIdCICO(bookings, lessonId) {
+function FilterBookingsByTitleTESTOSTERON(bookings) {
     let count = 0;
     for (let i = 0; i < bookings.length; i++) {
         const booking = bookings[i];
-        if (booking.lessonId === lessonId) {
+        if (booking.title === "TESTOSTERON") {
             count++;
         }
     }
     return count;
 }
 
-export default FilterBookingsByLessonIdCICO;
+export default FilterBookingsByTitleTESTOSTERON;

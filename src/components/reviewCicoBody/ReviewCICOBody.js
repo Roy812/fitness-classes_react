@@ -15,7 +15,7 @@ function ReviewCICOBody() {
 
     const jwtToken = localStorage.getItem('token');
     const [reviews, setReviews] = useState([]);
-    const [rating, setRating] = useState();
+    const [ratings, setRatings] = useState([]);
     const [totalReviews, setTotalReviews] = useState();
     const [notFound, toggleNotFound] = useState(false);
 
@@ -30,12 +30,12 @@ function ReviewCICOBody() {
                         Authorization: `Bearer ${jwtToken}`,
                     }
                 })
-                // console.log(result);
                 console.log(result.data)
                 setReviews(result.data);
-                const filter = FilterReviewsByRating(result.data);
-                console.log(filter.rating);
-                setRating(filter.rating);
+
+                const arrayOfRatings = FilterReviewsByRating(result.data);
+                console.log(arrayOfRatings);
+                setRatings(arrayOfRatings);
 
                 const totalReviews = CountReviews(result.data);
                 setTotalReviews(totalReviews);
@@ -48,35 +48,26 @@ function ReviewCICOBody() {
     }, [])
 
     return (
-        <div className={styles["review-cico-body"]}>
-            <h3 className={styles["review-CICO-body__title"]}>
-                CICO, IT's ALL YOU NEED
-                {reviews && reviews.map((review) => {
-                    return <p className={styles["review-CICO-body__username"]} key={review.id}>BY USER: {review.review}</p>
-                })}
-                {/*{review.user.username}*/}
-            </h3>
+        <div className={styles["review-CICO-body"]}>
+            <h3 className={styles["review-CICO-body__total-reviews"]}>TOTAL REVIEWS ON THIS CLASS: {totalReviews}</h3>
 
             <p className={styles["review-CICO-body__review"]}>
                 {reviews && reviews.map((review) => {
-                    // return <p key={review.id}>{review.review}</p>
-                    return <li key={review.id}>{review.review}</li>
+                    return <div key={review.id}>
+                                <p className={styles["review-CICO-body__title"]}>{review.title}</p>
+                                <p className={styles["review-CICO-body__username"]}>BY USER: {review.user.username}</p>
+                                <p>{review.review}</p>
+                                <p>{review.rating === 1 ? <img className={styles["review-CICO-body__stars"]} src={oneStar} alt="stars1-image"/> :
+                                    review.rating === 2 ? <img className={styles["review-CICO-body__stars"]} src={twoStars} alt="stars2-image"/> :
+                                    review.rating === 3 ? <img className={styles["review-CICO-body__stars"]} src={threeStars} alt="stars3-image"/> :
+                                    review.rating === 4 ? <img className={styles["review-CICO-body__stars"]} src={fourstars} alt="stars4-image"/> :
+                                    review.rating === 5 ? <img className={styles["review-CICO-body__stars"]} src={fiveStars} alt="stars5-image"/> :
+                                        <p></p>}</p>
+                            </div>
                 })}
             </p>
 
-            <div>
-                {rating === 1 ? <img className={styles["review-CICO-body__stars"]} src={oneStar} alt="fourstars-image"/> :
-                <p></p>}
-                {rating === 2 ? <img className={styles["review-CICO-body__stars"]} src={twoStars} alt="fourstars-image"/> :
-                <p></p>}
-                {rating === 3 ? <img className={styles["review-CICO-body__stars"]} src={threeStars} alt="fourstars-image"/> :
-                <p></p>}
-                {rating === 4 ? <img className={styles["review-CICO-body__stars"]} src={fourstars} alt="fourstars-image"/> :
-                <p></p>}
-                {rating === 5 ? <img className={styles["review-CICO-body__stars"]} src={fiveStars} alt="fourstars-image"/> :
-                <p></p>}
-            </div>
-            <h3 className={styles["review-CICO-body__total-reviews"]}>TOTAL REVIEWS ON THIS CLASS: {totalReviews}</h3>
+            {notFound && <p className={styles["review-CICO-body__not-found"]}>REVIEWS NOT FOUND</p>}
         </div>
     );
 }

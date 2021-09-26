@@ -37,6 +37,8 @@ function AuthContextProvider({ children }) {
                 status: 'done',
             });
         } catch (e) {
+            localStorage.clear();
+            history.push("/");
             console.error(e);
         }
     }
@@ -50,7 +52,6 @@ function AuthContextProvider({ children }) {
             // const userId = decodedToken.sub;
             fetchUserData(token);
         } else {
-            console.log('Hoi');
             setAuthState({
                 user: null,
                 status: 'done',
@@ -99,7 +100,7 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={data}>
-            {authState.status === 'done' ? children : <p>Loading...</p>}
+            {authState.status === 'done' ? children : <p>LOADING...REFRESH THE PAGE TO RETURN TO THE HOME</p>}
         </AuthContext.Provider>
     );
 }

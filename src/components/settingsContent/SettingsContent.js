@@ -7,9 +7,11 @@ import newsletterPicture from "../../assets/Newsletter(red).png";
 import deletePicture from "../../assets/Delete(red).png";
 import axios from "axios";
 import {AuthContext} from "../../context/AuthContext";
+import {useHistory} from "react-router-dom";
 
 function SettingsContent(url, config) {
 
+    const history = useHistory();
     const [changePasswordSuccess, toggleChangePasswordSuccess] = useState(false);
     // const [changePasswordError, toggleChangePasswordError] = useState(false);
     const [uploadPictureSuccess, toggleUploadPictureSuccess] = useState(false);
@@ -55,6 +57,7 @@ function SettingsContent(url, config) {
                 )
             console.log(result);
             toggleUploadPictureSuccess(true);
+            history.push("/login")
         } catch (e) {
             console.error(e)
         }
@@ -196,7 +199,7 @@ function SettingsContent(url, config) {
                 <form onSubmit={handleSubmit(onSubmitDelete)}>
                     <p className={styles["settings-content__container4__delete-account"]}>DELETE ACCOUNT</p>
                     <p className={styles["settings-content__container4__message"]}>
-                       IF YOU WISH TO DELETE YOUR ACCOUNT YOU MUST SEND A REQUEST TO ADMIN
+                       IF YOU WISH TO DELETE YOUR ACCOUNT YOU MUST PRESS THE BUTTON BELOW
                     </p>
                     <button
                         className={styles["settings-content__container4__button"]} type="submit"
