@@ -1,13 +1,12 @@
 import React from "react";
 
-const id = localStorage.getItem('id');
 
-function FilterBookingsByUserId(bookings) {
+function FilterBookingsByUserIdTest(bookings, userId) {
     //ADD AN EXTRA ARRAY TO THIS FUNCTION.
     const listOfBookings = [];
     for (let i = 0; i < bookings.length; i++) {
         const booking = bookings[i];
-        if (booking.id === id) {
+        if (booking.userId === userId) {
             listOfBookings.push(booking)
             // return bookings[i];
         }
@@ -15,4 +14,4 @@ function FilterBookingsByUserId(bookings) {
     return listOfBookings;
 }
 
-export default FilterBookingsByUserId;
+export default FilterBookingsByUserIdTest;

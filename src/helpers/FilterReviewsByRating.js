@@ -1,38 +1,50 @@
 import React from "react";
-import styles from "../components/reviewCicoBody/ReviewCICOBody.module.css";
-import fourstars from "../assets/Stars(4_5).svg";
+
 
 function FilterReviewsByRating(reviews) {
+    const listOfRatings = [];
     for (let i = 0; i < reviews.length; i++) {
         const review = reviews[i];
-        if (review.rating === 1) {
-            return reviews[i];
-        }
+        listOfRatings.push(review.rating);
     }
-    for (let i = 0; i < reviews.length; i++) {
-        const review = reviews[i];
-        if (review.rating === 2) {
-            return reviews[i];
-        }
-    }
-    for (let i = 0; i < reviews.length; i++) {
-        const review = reviews[i];
-        if (review.rating === 3) {
-            return reviews[i];
-        }
-    }
-    for (let i = 0; i < reviews.length; i++) {
-        const review = reviews[i];
-        if (review.rating === 4) {
-            return reviews[i];
-        }
-    }
-    for (let i = 0; i < reviews.length; i++) {
-        const review = reviews[i];
-        if (review.rating === 5) {
-            return reviews[i];
-        }
-    }
+    return listOfRatings;
+
+    // for (let i = 0; i < reviews.length; i++) {
+    //     const review = reviews[i];
+    //     if (review.rating === 1) {
+    //         listOfRatings.push(review[i]);
+    //         // return reviews[i];
+    //     }
+    // }
+    // for (let i = 0; i < reviews.length; i++) {
+    //     const review = reviews[i];
+    //     if (review.rating === 2) {
+    //         listOfRatings.push(review[i]);
+    //         // return reviews[i];
+    //     }
+    // }
+    // for (let i = 0; i < reviews.length; i++) {
+    //     const review = reviews[i];
+    //     if (review.rating === 3) {
+    //         listOfRatings.push(review[i]);
+    //         // return reviews[i];
+    //     }
+    // }
+    // for (let i = 0; i < reviews.length; i++) {
+    //     const review = reviews[i];
+    //     if (review.rating === 4) {
+    //         listOfRatings.push(review[i]);
+    //         // return reviews[i];
+    //     }
+    // }
+    // for (let i = 0; i < reviews.length; i++) {
+    //     const review = reviews[i];
+    //     if (review.rating === 5) {
+    //         listOfRatings.push(review[i]);
+    //         // return reviews[i];
+    //     }
+    // }
+    // return listOfRatings;
 }
 
 export default FilterReviewsByRating;
