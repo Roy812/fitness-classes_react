@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
-function CICOContent() {
+function CICOContent({ payLink }) {
 
     const alles = useContext(AuthContext);
     const [downloadGuideSuccess, toggleDownloadGuideSuccess] = useState(false);
@@ -81,7 +81,8 @@ function CICOContent() {
         <div className={styles["CICO-content"]}>
             <Link
              className={styles["CICO-content__link"]}
-             to="/CICOpay"
+             // to="/CICOpay"
+             to={payLink}
             >
              SIGN UP FOR THIS CLASS HERE!
             </Link>

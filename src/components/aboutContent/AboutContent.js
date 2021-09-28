@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./AboutContent.module.css";
+import styles from "./AboutContent.module.scss";
 
 function AboutContent() {
-    return(
+
+    return (
         <div className={styles["about-content"]}>
             <div className={styles["about-content__item1"]}>
                 <h3>

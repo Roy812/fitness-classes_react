@@ -16,7 +16,7 @@
     align-items: center;
     position: relative;
     right: 25px;
-    bottom: 256px;
+    bottom: 194px;
 }
 
 .settings-content__icon-container__lock {
@@ -31,12 +31,12 @@
 
 .settings-content__icon-container__newsletter {
     position: relative;
-    top: 294px;
+    top: 312px;
 }
 
 .settings-content__icon-container__delete {
     position: relative;
-    top: 380px;
+    top: 394px;
 }
 
 .settings-content__container1 {
@@ -48,6 +48,14 @@
     font-size: 16px;
     font-weight: 600;
     margin-top: 45px;
+}
+
+.settings-content-_container1__required-fields {
+    width: 250px;
+    color: #33769C;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 36px;
 }
 
 .settings-content__container1__item1 {
@@ -122,6 +130,13 @@
 .settings-content__container2__jpg-message {
     font-size: 14px;
     margin-top: 20px;
+}
+
+.settings-content__container2__required-message {
+    width: 300px;
+    color: #F62525;
+    text-align: center;
+    margin-top: 8px;
 }
 
 .settings-content__container2__button {
@@ -218,8 +233,14 @@
 
 .settings-content__container4__success-message {
     color: #F62525;
+    font-weight: 600;
+    text-align: center;
     position: relative;
-    top: 5px;
+    bottom: 18px;
+}
+
+.settings-content__container4__request-failed {
+    color: #F62525;
 }
 
 @media screen and (min-height: 1024px) {

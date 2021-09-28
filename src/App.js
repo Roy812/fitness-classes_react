@@ -1,5 +1,5 @@
 // import React from "react";
-import React, {useContext, useState} from "react";
+import React, { useContext } from "react";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -18,9 +18,14 @@ import ReviewPageNutrition from "./pages/ReviewPageNutrition";
 import ReviewPageCICO from "./pages/ReviewPageCICO";
 import CreateReviewPage from "./pages/CreateReviewPage";
 import {AuthContext} from "./context/AuthContext";
+import ReviewPageSNACKS from "./pages/ReviewPageSNACKS";
+import ReviewPageTESTOSTERON from "./pages/ReviewPageTESTOSTERON";
+import SNACKSPage from "./pages/SNACKSPage";
+import TESTOSTERONEPage from "./pages/TESTOSTERONEPage";
+import SNACKSPayPage from "./pages/SNACKSPayPage";
+import TESTOSTERONEPayPage from "./pages/TESTOSTERONEPayPage";
 
 function App() {
-    // const [loggedIn, toggleLoggedIn] = useState(true);
     const { user } = useContext(AuthContext);
 
   return (
@@ -40,6 +45,18 @@ function App() {
               <Route path="/CICOpay">
                   {user !== null ? <CICOPay /> : <Redirect to="/"/>}
               </Route>
+              <Route path="/SNACKS">
+                  {user !== null ? <SNACKSPage /> : <Redirect to="/"/>}
+              </Route>
+              <Route path="/SNACKSpay">
+                  {user !== null ? <SNACKSPayPage /> : <Redirect to="/"/>}
+              </Route>
+              <Route path="/TESTOSTERONE">
+                  {user !== null ? <TESTOSTERONEPage /> : <Redirect to="/"/>}
+              </Route>
+              <Route path="/TESTOSTERONEpay">
+                  {user !== null ? <TESTOSTERONEPayPage /> : <Redirect to="/"/>}
+              </Route>
               <Route path="/about">
                   <AboutPage />
               </Route>
@@ -54,6 +71,12 @@ function App() {
               </Route>
               <Route path="/CICOreview">
                   <ReviewPageCICO />
+              </Route>
+              <Route path="/SNACKSreview">
+                  <ReviewPageSNACKS />
+              </Route>
+              <Route path="/TESTOSTERONreview">
+                  <ReviewPageTESTOSTERON />
               </Route>
               <Route path="/createreview">
                   {user !== null ? <CreateReviewPage /> : <Redirect to="/"/>}

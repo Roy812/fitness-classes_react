@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./CICOTitle.module.css";
 
-function CICOTitle() {
+function CICOTitle({ title, teacher }) {
     return (
         <div className={styles["CICO-title"]}>
-            <p>1. "CICO, IT'S ALL YOU NEED"<br/> BY - GREG DOUCHETTE</p>
+            <p>{title}<br/>{teacher}</p>
         </div>
     );
 }

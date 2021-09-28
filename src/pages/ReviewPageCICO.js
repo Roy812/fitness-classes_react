@@ -7,7 +7,9 @@ function ReviewPageCICO() {
     return(
         <>
             <LoginNavbar />
-            <ReviewCICOBody />
+            <ReviewCICOBody
+            title={'CICO, ITs ALL YOU NEED'}
+            />
             <LoginFooter />
         </>
     );

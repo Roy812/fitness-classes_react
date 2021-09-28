@@ -1,0 +1,82 @@
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__picture-lifting {
+        width: 400px;
+        height: 240px;
+        flex-basis: 467px;
+        flex-shrink: 0;
+    }
+
+    &__picture-food {
+        width: 400px;
+        height: 240px;
+        flex-basis: 468px;
+        flex-shrink: 0;
+    }
+
+    &__picture-home-gym {
+        width: 400px;
+        height: 240px;
+        flex-basis: 468px;
+        flex-shrink: 0;
+    }
+}
+
+//.banner__picture-lifting {
+//    width: 400px;
+//    height: 240px;
+//    flex-basis: 467px;
+//    flex-shrink: 0;
+//}
+
+//.banner__picture-food {
+//    width: 400px;
+//    height: 240px;
+//    flex-basis: 468px;
+//    flex-shrink: 0;
+//}
+
+//.banner__picture-home-gym {
+//    width: 400px;
+//    height: 240px;
+//    flex-basis: 468px;
+//    flex-shrink: 0;
+//}
+
+@media screen and (min-width: 1435px) {
+    .banner {
+        width: 100%;
+    }
+
+    .banner__picture-lifting {
+        height: 290px;
+        flex-basis: 588px;
+    }
+
+    .banner__picture-food {
+        height: 290px;
+        flex-basis: 588px;
+    }
+
+    .banner__picture-home-gym {
+        height: 290px;
+        flex-basis: 588px;
+    }
+}
+
+@media screen and (max-width: 1435px) {
+    .banner__picture-lifting {
+        height: 260px;
+    }
+
+    .banner__picture-food {
+        height: 260px;
+    }
+
+    .banner__picture-home-gym {
+        height: 260px;
+    }
+}

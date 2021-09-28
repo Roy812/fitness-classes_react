@@ -1,0 +1,55 @@
+.my-classes-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+        color: #fff;
+        background-color: #F62525;
+        border-color: #F62525;
+        border-radius: 8px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px;
+        margin-top: 60px;
+    }
+
+    h1 {
+        color: #F62525;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__bookings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #33769C;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+
+    &__search-result {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        h1 {
+            color: #000;
+        }
+    }
+
+        h2 {
+            color: #F62525;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+}

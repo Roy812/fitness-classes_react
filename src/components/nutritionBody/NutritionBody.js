@@ -26,7 +26,7 @@ function NutritionBody() {
             <div className={styles["nutrition-body__workoutsnacks"]}>
                 <Link
                     className={styles["nutrition-body__workoutsnacks__title"]}
-                    to="/workoutsnacks">
+                    to="/SNACKS">
                     2. "THE PERFECT WORKOUT SNACKS" BY - JIM STOPPANI</Link>
                 <h4 className={styles["nutrition-body__workoutsnacks__playtime"]} >120 MIN</h4>
                 <h4 className={styles["nutrition-body__workoutsnacks__subcategory"]} >TRAINING</h4>
@@ -35,7 +35,7 @@ function NutritionBody() {
             <div className={styles["nutrition-body__testlevels-and-diets"]}>
                 <Link
                     className={styles["nutrition-body__testlevels-and-diets__title"]}
-                    to="/testlevelsanddiets">
+                    to="/TESTOSTERONE">
                     3. "TESTOSTERONE LEVELS & DIETS" BY - MIKE ISRATEL
                 </Link>
                 <h4 className={styles["nutrition-body__testlevels-and-diets__playtime"]} >100 MIN</h4>

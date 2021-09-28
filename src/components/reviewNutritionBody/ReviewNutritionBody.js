@@ -10,7 +10,6 @@ function ReviewNutritionBody() {
             <div className={styles["review-nutrition-body__subheader-container"]}>
                 <p>CLASS</p>
                 <p className={styles["review-nutrition-body__subheader-container__teacher-title"]}>TEACHER</p>
-                <p>BY USER</p>
             </div>
 
             <div className={styles["review-nutrition-body__CICO"]}>
@@ -21,29 +20,26 @@ function ReviewNutritionBody() {
                 </Link>
 
                 <h4 className={styles["review-nutrition-body__CICO__teacher"]} >GREG DOUCHETTE</h4>
-                <h4 className={styles["review-nutrition-body__CICO__user"]} >-</h4>
             </div>
 
             <div className={styles["review-nutrition-body__workoutsnacks"]}>
                 <Link
                     className={styles["review-nutrition-body__workoutsnacks__title"]}
-                    to="/workoutsnacksreview">
+                    to="/SNACKSreview">
                     2. "THE PERFECT WORKOUT SNACKS"
                 </Link>
 
                 <h4 className={styles["review-nutrition-body__workoutsnacks__teacher"]} >JIM STOPPANI</h4>
-                <h4 className={styles["review-nutrition-body__workoutsnacks__user"]} >-</h4>
             </div>
 
             <div className={styles["review-nutrition-body__testlevels-and-diets"]}>
                 <Link
                     className={styles["review-nutrition-body__testlevels-and-diets__title"]}
-                    to="/testlevelsanddietsreview">
+                    to="/TESTOSTERONreview">
                     3. "TESTOSTERONE LEVELS & DIETS"
                 </Link>
 
                 <h4 className={styles["review-nutrition-body__testlevels-and-diets__teacher"]} >MIKE ISRATEL</h4>
-                <h4 className={styles["review-nutrition-body__testlevels-and-diets__user"]} >-</h4>
             </div>
         </div>
     );

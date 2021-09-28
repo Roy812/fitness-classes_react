@@ -4,7 +4,7 @@ function FilterBookingsByTitleTESTOSTERON(bookings) {
     let count = 0;
     for (let i = 0; i < bookings.length; i++) {
         const booking = bookings[i];
-        if (booking.title === "TESTOSTERON") {
+        if (booking.title === "TESTOSTERONE") {
             count++;
         }
     }

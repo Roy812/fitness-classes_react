@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
-function CICOPayContent() {
+function CICOPayContent({ classTitle, lessonId }) {
 
     const { user } = useContext(AuthContext);
     const [payCoinsSuccess, togglePayCoinsSuccess] = useState(false);
@@ -35,9 +35,10 @@ function CICOPayContent() {
 
     async function onSubmitBook() {
         try {
-            const lessonId = 1;
+            // const lessonId = 1;
             const result = await axios.post('http://localhost:8080/agenda/add', {
-                title: "CICO, ITs ALL YOU NEED",
+                // title: "CICO, ITs ALL YOU NEED",
+                title: classTitle,
                 userId: userId,
                 lessonId: lessonId,
             }, {

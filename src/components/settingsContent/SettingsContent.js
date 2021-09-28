@@ -6,20 +6,18 @@ import photoPicture from "../../assets/Camera-red(new).svg";
 import newsletterPicture from "../../assets/Newsletter(red).png";
 import deletePicture from "../../assets/Delete(red).png";
 import axios from "axios";
-import {AuthContext} from "../../context/AuthContext";
 import {useHistory} from "react-router-dom";
 
-function SettingsContent(url, config) {
+function SettingsContent() {
 
     const history = useHistory();
     const [changePasswordSuccess, toggleChangePasswordSuccess] = useState(false);
-    // const [changePasswordError, toggleChangePasswordError] = useState(false);
     const [uploadPictureSuccess, toggleUploadPictureSuccess] = useState(false);
     const [newsletterSuccess, toggleNewsletterSuccess] = useState(false);
     const [requestDeleteSuccess, toggleRequestDeleteSuccess] = useState(false);
+    const [requestDeleteFailed, toggleRequestDeleteFailed] = useState(false);
 
     const {register, handleSubmit, formState: {errors}} = useForm();
-    const { user } = useContext(AuthContext);
 
     async function onSubmitPassword(data) {
         try {
@@ -93,6 +91,7 @@ function SettingsContent(url, config) {
             toggleRequestDeleteSuccess(true);
         } catch (e) {
             console.error(e)
+            toggleRequestDeleteFailed(true);
         }
     }
 
@@ -106,6 +105,7 @@ function SettingsContent(url, config) {
             </div>
 
             <div className={styles["settings-content__container1"]}>
+                <p className={styles["settings-content-_container1__required-fields"]}>DEAR USER: ALL FIELD ARE REQUIRED TO BE FULFILLED BEFORE ANY REQUEST CAN BE MADE</p>
                 <div className={styles["settings-content__container1__item1"]}>
                     <p className={styles["settings-content__container1__item1__change-password"]}>CHANGE YOUR PASSWORD</p>
 
@@ -140,10 +140,6 @@ function SettingsContent(url, config) {
                              className={styles["settings-content__container1__item1__label__form__success-message"]}
                          >
                              PASSWORD IS CHANGED!</p>}
-                         {/*{changePasswordError && <p*/}
-                         {/*    className={styles["settings-content__container1__item1__label__form__error-message"]}*/}
-                         {/*>*/}
-                         {/*    PASSWORD IS INVALID, USE AT LEAST 6 CHARACTERS!</p>}*/}
                      </form>
                  </label>
             </div>
@@ -160,11 +156,11 @@ function SettingsContent(url, config) {
                         {...register("profilePicture", {
                             required: {
                                 value: true,
-                                message: "Please upload profile picture",
+                                message: "Please upload profile picture, also make sure your new password is minimal 6 characters",
                             }
                         })}
                     />
-                    {errors.profilePicture && <p>{errors.profilePicture.message}</p>}
+                    {errors.profilePicture && <p className={styles["settings-content__container2__required-message"]}>{errors.profilePicture.message}</p>}
 
                     <p className={styles["settings-content__container2__jpg-confirm"]}>
                     IF YOU ARE A 100% SURE THIS IS YOUR PERFECT
@@ -210,6 +206,7 @@ function SettingsContent(url, config) {
                         className={styles["settings-content__container4__success-message"]}
                     >
                         ACCOUNT IS DELETED!</p>}
+                    {requestDeleteFailed && <p className={styles["settings-content__container4__request-failed"]}>SOMETHING WENT WRONG..</p>}
                 </form>
             </div>
         </div>

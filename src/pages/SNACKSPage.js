@@ -4,20 +4,20 @@ import CICOTitle from "../components/cicoTitle/CICOTitle";
 import CICOContent from "../components/cicoContent/CICOContent";
 import CICOFooter from "../components/cicoFooter/CICOFooter";
 
-function CICOPage() {
+function SNACKSPage() {
     return(
         <>
             <LoginNavbar />
             <CICOTitle
-            title={"CICO, IT's ALL YOU NEED"}
-            teacher={"BY - GREG DOUCHETTE"}
+                title={"THE PERFECT WORKOUT SNACKS"}
+                teacher={"BY - JIM STOPPANI"}
             />
             <CICOContent
-            payLink={"/CICOpay"}
+            payLink={"/SNACKSpay"}
             />
             <CICOFooter />
         </>
     );
 }
 
-export default CICOPage;
+export default SNACKSPage;
