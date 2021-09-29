@@ -1,17 +1,17 @@
 import React from "react";
-import styles from "./ReviewCreateContent.module.css";
+import styles from "./ReviewCreateContent.module.scss";
+import { Link } from "react-router-dom";
 import dietPicture from "../../assets/Diet(icon).png";
-import {Link} from "react-router-dom";
 import dumbbellPicture from "../../assets/Dumbbell(icon).png";
 import platePicture from "../../assets/Plate(icon).png";
 import toolsPicture from "../../assets/Tools(icon).png";
 
+
 function ReviewCreateContent() {
+
     return (
         <div className={styles["review-create-content"]}>
-            <div className={styles["review-create-content__title"]}>
-                <p>FIND REVIEWS FOR ALL YOUR FAVOURITE CLASSES</p>
-            </div>
+            <h3>FIND REVIEWS FOR ALL YOUR FAVOURITE CLASSES</h3>
 
             <div className={styles["review-create-content__nutrition"]}>
                 <img className={styles["review-create-content__nutrition__icon"]} src={dietPicture} alt="diet-icon"/>

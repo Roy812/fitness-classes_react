@@ -3,7 +3,9 @@ import RegisterFooter from "../components/registerFooter/RegisterFooter";
 import RegisterHeader from "../components/registerHeader/RegisterHeader";
 import AboutContent from "../components/aboutContent/AboutContent";
 
+
 function AboutPage() {
+
     return (
         <>
             <RegisterHeader

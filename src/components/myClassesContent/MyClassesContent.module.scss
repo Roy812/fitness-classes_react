@@ -1,3 +1,8 @@
+$light-red: #F62525;
+$white: #fff;
+$light-blue: #33769C;
+$black: #000;
+
 .my-classes-content {
     display: flex;
     flex-direction: column;
@@ -5,9 +10,9 @@
     align-items: center;
 
     &__button {
-        color: #fff;
-        background-color: #F62525;
-        border-color: #F62525;
+        color: $white;
+        background-color: $light-red;
+        border-color: $light-red;
         border-radius: 8px;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-size: 20px;
@@ -17,7 +22,7 @@
     }
 
     h1 {
-        color: #F62525;
+        color: $light-red;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-size: 20px;
         font-weight: 600;
@@ -28,7 +33,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #33769C;
+        color: $light-blue;
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-size: 24px;
         font-weight: 600;
@@ -42,14 +47,48 @@
         margin-bottom: 20px;
 
         h1 {
-            color: #000;
+            color: $black;
         }
     }
 
         h2 {
-            color: #F62525;
+            color: $light-red;
             font-size: 20px;
             margin-top: 20px;
         }
+}
 
+@media Screen and (min-width: 375px) {
+    .my-classes-content {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media Screen and (min-height: 1024px) {
+    .my-classes-content {
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+}
+
+@media Screen and (min-width: 1200px) {
+    .my-classes-content {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media Screen and (min-height: 1366px) {
+    .my-classes-content {
+        margin-top: 360px;
+        margin-bottom: 360px;
+    }
+}
+
+@media Screen and (min-width: 1600px) {
+    .my-classes-content {
+        margin-top: 160px;
+        margin-bottom: 160px;
+    }
 }

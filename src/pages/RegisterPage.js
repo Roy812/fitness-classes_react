@@ -5,7 +5,8 @@ import RegisterContent from "../components/registerContent/RegisterContent";
 
 
 function RegisterPage() {
-    return(
+
+    return (
         <>
             <RegisterHeader
             title="REGISTER YOUR ACCOUNT BY FOLLOWING THESE SIMPLE STEPS"

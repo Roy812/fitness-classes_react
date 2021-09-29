@@ -1,7 +1,7 @@
-// import React from "react";
 import React, { useContext } from "react";
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {AuthContext} from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import CategoriesPage from "./pages/CategoriesPage";
 import AboutPage from "./pages/AboutPage";
@@ -17,7 +17,6 @@ import CICOPay from "./pages/CICOPay";
 import ReviewPageNutrition from "./pages/ReviewPageNutrition";
 import ReviewPageCICO from "./pages/ReviewPageCICO";
 import CreateReviewPage from "./pages/CreateReviewPage";
-import {AuthContext} from "./context/AuthContext";
 import ReviewPageSNACKS from "./pages/ReviewPageSNACKS";
 import ReviewPageTESTOSTERON from "./pages/ReviewPageTESTOSTERON";
 import SNACKSPage from "./pages/SNACKSPage";
@@ -25,7 +24,9 @@ import TESTOSTERONEPage from "./pages/TESTOSTERONEPage";
 import SNACKSPayPage from "./pages/SNACKSPayPage";
 import TESTOSTERONEPayPage from "./pages/TESTOSTERONEPayPage";
 
+
 function App() {
+
     const { user } = useContext(AuthContext);
 
   return (

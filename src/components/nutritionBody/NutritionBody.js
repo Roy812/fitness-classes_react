@@ -1,26 +1,27 @@
 import React from "react";
-import styles from "./NutritionBody.module.css";
-import {Link} from "react-router-dom";
+import styles from "./NutritionBody.module.scss";
+import { Link } from "react-router-dom";
+
 
 function NutritionBody() {
+
     return (
         <div className={styles["nutrition-body"]}>
-
-            <h3 className={styles["nutrition-body__title"]}>BROWSE CLASSES ON NUTRITION</h3>
+            <h3>BROWSE CLASSES ON NUTRITION</h3>
 
             <div className={styles["nutrition-body__subheader-container"]}>
                 <p>CLASS</p>
-                <p className={styles["nutrition-body__subheader-container__playtime"]}>PLAYTIME</p>
+                <p>PLAYTIME</p>
                 <p>SUBCATEGORY</p>
             </div>
 
-            <div className={styles["nutrition-body__CICO"]}>
+            <div className={styles["nutrition-body__cico"]}>
                 <Link
-                    className={styles["nutrition-body__CICO__title"]}
+                    className={styles["nutrition-body__cico__title"]}
                     to="/CICO">
                     1. "CICO, IT"s ALL YOU NEED" BY - GREG DOUCHETTE</Link>
-                <h4 className={styles["nutrition-body__CICO__playtime"]} >90 MIN</h4>
-                <h4 className={styles["nutrition-body__CICO__subcategory"]} >MACRONUTRIENTS</h4>
+                <h4 className={styles["nutrition-body__cico__playtime"]} >90 MIN</h4>
+                <h4 className={styles["nutrition-body__cico__subcategory"]} >MACRONUTRIENTS</h4>
             </div>
 
             <div className={styles["nutrition-body__workoutsnacks"]}>

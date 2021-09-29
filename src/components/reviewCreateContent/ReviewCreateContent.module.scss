@@ -1,0 +1,340 @@
+$light-red: #F62525;
+$black: #000;
+$yellow-gold: #efbe11;
+
+.review-create-content {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    position: relative;
+    right: 10px;
+
+    h3 {
+        width: 300px;
+        color: $light-red;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+
+    &__nutrition {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+
+        &__icon {
+            position: relative;
+            right: 80px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                color: $yellow-gold;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+
+    &__build-muscle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 60px;
+        position: relative;
+        right: 30px;
+
+        &__icon {
+            position: relative;
+            right: 65px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                color: $yellow-gold;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+
+    &__build-power {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 60px;
+        position: relative;
+        right: 25px;
+
+        &__icon {
+            position: relative;
+            right: 78px;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                color: $yellow-gold;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+
+    &__build-a-homegym {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 600;
+        position: relative;
+        right: 20px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+
+        &__icon {
+            position: relative;
+            right: 55px;
+        }
+
+        &__link {
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                color: $yellow-gold;
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .review-create-content {
+        position: relative;
+        right: 0px;
+        left: 15px;
+
+        &__nutrition {
+
+            &__icon {
+                position: relative;
+                right: 105px;
+            }
+        }
+
+        &build-muscle {
+
+            &__icon {
+                position: relative;
+                right: 90px;
+            }
+        }
+
+        &__buildpower {
+
+            &__icon {
+                position: relative;
+                right: 105px;
+            }
+        }
+
+        &__build-a-homegym {
+
+            &__icon {
+                position: relative;
+                right: 78px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 411px) {
+    .review-create-content {
+        position: relative;
+        right: 0px;
+        left: 40px;
+
+        &__nutrition {
+
+            &__icon {
+                position: relative;
+                right: 132px;
+            }
+        }
+
+        &__build-muscle {
+
+            &__icon {
+                position: relative;
+                right: 115px;
+            }
+        }
+
+        &__build-power {
+
+            &__icon {
+                position: relative;
+                right: 135px;
+            }
+        }
+
+        &__build-a-homegym {
+
+            &__icon {
+                position: relative;
+                right: 102px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .review-create-content {
+        position: relative;
+        right: 0px;
+        left: 185px;
+
+        h3 {
+            margin-top: 140px;
+            margin-bottom: 30px;
+        }
+
+        &__build-a-homegym {
+            margin-bottom: 38px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .review-create-content {
+        position: relative;
+        left: 520px;
+
+        h3 {
+            width: 360px;
+            font-size: 28px;
+            position: relative;
+            bottom: 25px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .review-create-content {
+        position: relative;
+        right: 0px;
+        left: 360px;
+
+        h3 {
+            width: 450px;
+            font-size: 30px;
+            margin-top: 150px;
+            margin-bottom: 50px;
+        }
+
+        &__nutrition {
+            font-size: 26px;
+
+            &__icon {
+                position: relative;
+                right: 140px;
+            }
+        }
+
+        &__build-muscle {
+            font-size: 26px;
+            margin-top: 114px;
+        }
+
+        &__build-power {
+            font-size: 26px;
+            margin-top: 112px;
+        }
+
+        &__build-a-homegym {
+            font-size: 26px;
+            margin-top: 114px;
+            margin-bottom: 80px;
+
+            &__link {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .review-create-content {
+        position: relative;
+        bottom: 50px;
+        left: 710px;
+        margin-top: 52px;
+        margin-bottom: 52px;
+
+        &__nutrition {
+
+            &__icon {
+                position: relative;
+                right: 145px;
+            }
+
+            &__link {
+                font-size: 26px;
+            }
+        }
+
+        &__build-muscle {
+
+            &__link {
+                font-size: 26px;
+            }
+        }
+
+        &__build-power {
+
+            &__link {
+                font-size: 26px;
+            }
+        }
+
+        &__build-a-homegym {
+
+            &__icon {
+                position: relative;
+                right: 110px;
+            }
+
+            &__link {
+                font-size: 26px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+

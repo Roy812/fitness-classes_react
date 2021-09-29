@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
-import styles from "./LoginFooter.module.css";
-import {Link } from "react-router-dom";
-import {AuthContext} from "../../context/AuthContext";
+import styles from "./LoginFooter.module.scss";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+
 
 function LoginFooter() {
+
     const { logout } = useContext(AuthContext);
 
      function onSubmit() {
@@ -13,7 +15,7 @@ function LoginFooter() {
     return (
             <div className={styles["login__footer"]}>
                 <Link
-                    className={styles["login__footer__link1"]}
+                    className={styles["login__footer__link"]}
                     to="/settings"
                 >
                     GO TO SETTINGS

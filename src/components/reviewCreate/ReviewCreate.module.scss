@@ -1,3 +1,5 @@
+$light-green: #69DD56;
+
 .review-create {
     width: 300px;
     display: flex;
@@ -5,26 +7,26 @@
     position: relative;
     top: 70px;
     left: 40px;
-}
 
-.review-create__plus-icon {
-    width: 20px;
-    position: relative;
-    bottom: 12px;
-}
+    &__plus-icon {
+        width: 20px;
+        position: relative;
+        bottom: 12px;
+    }
 
-.review-create__link {
-    width: 170px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    color: #69DD56;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
+    &__link {
+        width: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        color: $light-green;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+    }
 }
 
 @media screen and (min-width: 360px) {
@@ -67,12 +69,14 @@
         position: relative;
         left: 390px;
         margin-top: 90px;
-    }
-    .review-create__plus-icon {
-        width: 25px;
-    }
-    .review-create__link {
-        width: 250px;
-        font-size: 30px;
+
+        &__plus-icon {
+            width: 25px;
+        }
+
+        &__link {
+            width: 250px;
+            font-size: 30px;
+        }
     }
 }

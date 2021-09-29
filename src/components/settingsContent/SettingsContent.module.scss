@@ -1,0 +1,308 @@
+$light-red: #F62525;
+$pink-neon: #FF285C;
+$black: #000;
+$yellow-gold: #efbe11;
+$yellow-neon: #FAFD83;
+$light-blue: #33769C;
+$white: #fff;
+
+.settings-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 16px;
+
+    &__icon-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 25px;
+        bottom: 270px;
+
+        &__lock {
+
+        }
+
+        &__photo {
+            position: relative;
+            top: 128px;
+        }
+
+        &__newsletter {
+            position: relative;
+            top: 370px;
+        }
+
+        &__delete {
+            position: relative;
+            top: 490px;
+        }
+    }
+
+    &__container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 45px;
+
+        p1 {
+            width: 250px;
+            color: $light-blue;
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p2 {
+            color: $black;
+            margin-bottom: 6px;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
+            &__input {
+                width: 200px;
+                -webkit-text-fill-color: $black;
+                border-bottom: solid 3px $black;
+            }
+
+            &__error {
+                color: $light-red;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            &__button {
+                color: $white;
+                background-color: $pink-neon;
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                border-color: $pink-neon;
+                border-radius: 10px;
+                padding: 5px;
+                margin-top: 20px;
+            }
+
+            p {
+                color: $light-red;
+                position: relative;
+                top: 5px;
+            }
+        }
+    }
+
+    &__form2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+
+        p1 {
+            color: $black;
+        }
+
+        p2 {
+            font-size: 14px;
+        }
+
+        p3 {
+            width: 300px;
+            color: $light-red;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        p4 {
+            width: 300px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        &__button {
+            background-color: $pink-neon;
+            color: $white;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border-color: $pink-neon;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        p5 {
+            color: $light-red;
+        }
+    }
+
+    &__form3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+
+        p1 {
+            color: $black;
+        }
+
+        &__button {
+            color: $white;
+            background-color: $light-blue;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border-color: $light-blue;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+
+            &:hover {
+                color: $yellow-neon;
+                transition: all 0.2s ease-out;
+            }
+        }
+
+        p2 {
+            color: $light-red;
+            position: relative;
+            top: 5px;
+        }
+    }
+
+    &__form4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        p1 {
+            color: $black;
+            text-align: center;
+        }
+
+        p2 {
+            width: 200px;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        &__button {
+            color: $white;
+            background-color: $pink-neon;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border-color: $pink-neon;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-bottom: 45px;
+        }
+
+        p3 {
+            color: $light-red;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            bottom: 18px;
+        }
+
+        p4 {
+            color: $light-red;
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .settings-content {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 25px;
+        margin-top: 80px;
+
+        &__icon-container {
+            position: relative;
+            bottom: 318px;
+        }
+
+        &__form4 {
+            margin-bottom: 120px;
+        }
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .settings-content {
+        position: relative;
+        right: 50px;
+        margin-top: 200px;
+
+        &__icon-container {
+            position: relative;
+            bottom: 420px;
+        }
+
+        &__container1 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .settings-content {
+        position: relative;
+        right: 50px;
+
+        &__icon-container {
+
+            position: relative;
+            bottom: 230px;
+
+            &__lock {
+                position: relative;
+                bottom: 36px;
+            }
+
+            &__photo {
+                position: relative;
+                top: 94px;
+            }
+
+            &__newsletter {
+                position: relative;
+                top: 330px;
+            }
+
+            &__delete {
+                position: relative;
+                top: 454px;
+            }
+        }
+    }
+}

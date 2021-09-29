@@ -1,0 +1,52 @@
+$light-red: #F62525;
+$white: #fff;
+$blue-sky: #CFE2FF;
+
+.login__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px;
+    margin-top: 45px;
+    background-color: $light-red;
+    color: $white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    &__link {
+        text-decoration: none;
+        color: $white;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+
+        &:hover {
+            color: $blue-sky;
+            transition: all 0.2s linear;
+        }
+    }
+
+    &__button {
+        color: $white;
+        background-color: $light-red;
+        border-color: $light-red;
+        border-radius: 8px;
+        text-decoration: none;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+
+        &:hover {
+            color: $blue-sky;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .login__footer {
+        width: 1750px;
+        font-size: 24px;
+        padding: 50px;
+    }
+}

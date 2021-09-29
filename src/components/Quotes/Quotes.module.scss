@@ -1,0 +1,41 @@
+.quotes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+
+    &__one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 250px;
+        flex-shrink: 0;
+        position: relative;
+        right: 50px;
+        padding: 22px;
+    }
+
+    &__two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 250px;
+        flex-shrink: 0;
+        padding: 22px;
+    }
+
+    &__three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 250px;
+        flex-shrink: 0;
+        position: relative;
+        left: 60px;
+        padding: 22px;
+    }
+}

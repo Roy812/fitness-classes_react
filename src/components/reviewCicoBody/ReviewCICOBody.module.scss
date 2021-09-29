@@ -58,6 +58,30 @@ $light-blue: #33769C;
   }
 }
 
-@media Screen and (min-width: 1200px){
+@media Screen and (min-width: 375px) {
+  .review-cico-body {
+    margin-top: 110px;
+    margin-bottom: 110px;
+  }
+}
 
+@media Screen and (min-height: 1024px) {
+  .review-cico-body {
+    margin-top: 230px;
+    margin-bottom: 230px;
+  }
+}
+
+@media Screen and (min-height: 1366px) {
+  .review-cico-body {
+    margin-top: 360px;
+    margin-bottom: 360px;
+  }
+}
+
+@media Screen and (min-width: 1600px) {
+  .review-cico-body {
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
 }

@@ -1,0 +1,103 @@
+$light-red: #F62525;
+$white: #fff;
+$light-blue: #33769C;
+
+.login-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+
+    &__container1 {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 35px;
+        bottom: 15px;
+
+        &__icon {
+            position: relative;
+            right: 12px;
+            bottom: 50px;
+        }
+    }
+
+    &__container2 {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+
+        &__line1 {
+            color: $light-red;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        &__line2 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__link1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 15px;
+
+            &-name {
+                width: 125px;
+                color: $white;
+                background-color: $light-blue;
+                font-size: 18px;
+                border-radius: 10px;
+                padding: 5px;
+            }
+        }
+
+        &__line3 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        &__link2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-top: 15px;
+
+            &-name {
+                width: 110px;
+                color: $white;
+                background-color: $light-blue;
+                font-size: 18px;
+                border-radius: 10px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .login-content {
+        margin-top: 180px;
+        margin-bottom: 184px;
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .login-content {
+        height: 648px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .login-content {
+        margin-top: 145px;
+        margin-bottom: 145px;
+    }
+}

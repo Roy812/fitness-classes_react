@@ -1,0 +1,29 @@
+$grey-limbo: #666161;
+$yellow-gold: #efbe11;
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $grey-limbo;
+    padding: 20px;
+
+    &__icon {
+        color: $yellow-gold;
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+    }
+
+    &__text-container {
+        text-align: center;
+        color: $yellow-gold;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+    }
+
+    &__form-button {
+        margin: 15px;
+    }
+}

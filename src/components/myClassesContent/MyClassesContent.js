@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import styles from "./MyClassesContent.module.scss";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import {AuthContext} from "../../context/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import FilterBookingsByTitleCICO from "../../helpers/FilterBookingsByTitleCICO";
 import FilterBookingsByTitleSNACKS from "../../helpers/FilterBookingsByTitleSNACKS";
 import FilterBookingsByTitleTESTOSTERON from "../../helpers/FilterBookingsByTitleTESTOSTERON";

@@ -1,8 +1,10 @@
 import React from "react";
-import styles from "./NewsletterContent.module.css";
-import {Link} from "react-router-dom";
+import styles from "./NewsletterContent.module.scss";
+import { Link } from "react-router-dom";
+
 
 function NewsletterContent() {
+
     return (
         <div className={styles["newsletter-content"]}>
             <Link

@@ -3,8 +3,10 @@ import LoginNavbar from "../components/loginNavbar/LoginNavbar";
 import LoginFooter from "../components/loginFooter/LoginFooter";
 import CICOPayContent from "../components/cicoPayContent/CICOPayContent";
 
+
 function TESTOSTERONEPayPage() {
-    return(
+
+    return (
         <>
             <LoginNavbar />
             <CICOPayContent

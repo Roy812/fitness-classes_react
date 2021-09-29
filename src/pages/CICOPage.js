@@ -4,8 +4,10 @@ import CICOTitle from "../components/cicoTitle/CICOTitle";
 import CICOContent from "../components/cicoContent/CICOContent";
 import CICOFooter from "../components/cicoFooter/CICOFooter";
 
+
 function CICOPage() {
-    return(
+
+    return (
         <>
             <LoginNavbar />
             <CICOTitle

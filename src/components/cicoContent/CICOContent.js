@@ -1,16 +1,15 @@
-import React, {useContext, useState} from "react";
-import styles from "./CICOContent.module.css";
-import {Link} from "react-router-dom";
-import { useForm } from "react-hook-form";
-import {AuthContext} from "../../context/AuthContext";
+import React, { useState } from "react";
+import styles from "./CICOContent.module.scss";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+
 
 function CICOContent({ payLink }) {
 
-    const alles = useContext(AuthContext);
+    const { handleSubmit } = useForm();
     const [downloadGuideSuccess, toggleDownloadGuideSuccess] = useState(false);
     const [downloadVideoSuccess, toggleDownloadVideoSuccess] = useState(false);
-    const {handleSubmit} = useForm();
     const jwtToken = localStorage.getItem('token');
 
     async function onSubmitGuide() {
@@ -61,63 +60,41 @@ function CICOContent({ payLink }) {
         }
     }
 
-    //     try {
-    //         const lessonId = 1;
-    //         const jwtToken = localStorage.getItem('token');
-    //         const result = await axios.get(`http://localhost:8080/lesson/download/video/id/${lessonId}`, {
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 Authorization: `Bearer ${jwtToken}`,
-    //             }, responseType: "blob"
-    //         })
-    //         console.log(result);
-    //         toggleDownloadVideoSuccess(true);
-    //     } catch (e) {
-    //         console.error(e)
-    //     }
-    // }
-
     return (
-        <div className={styles["CICO-content"]}>
+        <div className={styles["cico-content"]}>
             <Link
-             className={styles["CICO-content__link"]}
-             // to="/CICOpay"
+             className={styles["cico-content__link"]}
              to={payLink}
             >
              SIGN UP FOR THIS CLASS HERE!
             </Link>
 
-            <p className={styles["CICO-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE/VIDEO</p>
+            <p className={styles["cico-content__message"]}>PREPARATION MAKES PERFECT <br/> DOWNLOAD YOUR CLASS GUIDE/VIDEO</p>
+
             <form
                 onSubmit={handleSubmit(onSubmitGuide)}
-                className={styles["CICO-content__form1"]}
+                className={styles["cico-content__form1"]}
             >
                 <button
-                    className={styles["CICO-content__form1__button"]}
+                    className={styles["cico-content__form1__button"]}
                     type="submit"
                 >
                     DOWNLOAD GUIDE
                 </button>
-                {downloadGuideSuccess && <p
-                    className={styles["cico-content__form1__download-guide-success"]}
-                >
-                    YOUR DOWNLOAD WILL NOW START!</p>}
+                {downloadGuideSuccess && <p>YOUR DOWNLOAD WILL NOW START!</p>}
             </form>
 
             <form
                 onSubmit={handleSubmit(onSubmitVideo)}
-                className={styles["CICO-content__form2"]}
+                className={styles["cico-content__form2"]}
             >
                 <button
-                    className={styles["CICO-content__form2__button"]}
+                    className={styles["cico-content__form2__button"]}
                     type="submit"
                 >
                     DOWNLOAD PREVIEW
                 </button>
-                {downloadVideoSuccess && <p
-                    className={styles["CICO-content__form2__download-video-success"]}
-                >
-                    YOUR DOWNLOAD WILL NOW START!</p>}
+                {downloadVideoSuccess && <p>YOUR DOWNLOAD WILL NOW START!</p>}
             </form>
         </div>
     );

@@ -1,0 +1,39 @@
+$light-red: #F62525;
+$white: #fff;
+$blue-sky: #CFE2FF;
+
+.register-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    background-color: $light-red;
+    color: $white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+    &__message {
+        flex-basis: 250px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: $white;
+
+        &:hover {
+            color: $blue-sky;
+            transition: all 0.2s linear;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .register-footer {
+
+        &__message {
+            flex-basis: 300px;
+            font-size: 24px;
+        }
+    }
+}

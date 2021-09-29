@@ -1,28 +1,29 @@
-import React, {useState, useContext} from "react";
+import React, { useState } from "react";
+import styles from "./SettingsContent.module.scss";
+import axios from "axios";
 import { useForm } from "react-hook-form";
-import styles from "./SettingsContent.module.css";
+import { useHistory } from "react-router-dom";
 import lockPicture from "../../assets/Lock-red(new).svg"
 import photoPicture from "../../assets/Camera-red(new).svg";
 import newsletterPicture from "../../assets/Newsletter(red).png";
 import deletePicture from "../../assets/Delete(red).png";
-import axios from "axios";
-import {useHistory} from "react-router-dom";
+
 
 function SettingsContent() {
 
-    const history = useHistory();
     const [changePasswordSuccess, toggleChangePasswordSuccess] = useState(false);
     const [uploadPictureSuccess, toggleUploadPictureSuccess] = useState(false);
     const [newsletterSuccess, toggleNewsletterSuccess] = useState(false);
     const [requestDeleteSuccess, toggleRequestDeleteSuccess] = useState(false);
     const [requestDeleteFailed, toggleRequestDeleteFailed] = useState(false);
 
-    const {register, handleSubmit, formState: {errors}} = useForm();
+    const { register, handleSubmit, formState: {errors} } = useForm();
+    const history = useHistory();
+    const userId = localStorage.getItem('id');
+    const jwtToken = localStorage.getItem('token');
 
     async function onSubmitPassword(data) {
         try {
-            const userId = localStorage.getItem('id');
-            const jwtToken = localStorage.getItem('token');
             const result = await axios.patch(`http://localhost:8080/users/password/id/${userId}`, {
                 newPassword: data.newPassword,
             }, {
@@ -35,17 +36,14 @@ function SettingsContent() {
             toggleChangePasswordSuccess(true);
         } catch (e) {
             console.error(e)
-            // toggleChangePasswordError(true);
         }
     }
 
     async function onSubmitPicture(data) {
-        console.log(data);
         try {
             const formData = new FormData();
             formData.append('file', data.profilePicture[0]);
-            const userId = localStorage.getItem('id');
-            const jwtToken = localStorage.getItem('token');
+
             const result = await axios.patch(`http://localhost:8080/users/upload/id/${userId}`,
                 formData
             , {
@@ -62,10 +60,7 @@ function SettingsContent() {
     }
 
     async function onSubmitNewsletter() {
-        // console.log(data);
         try {
-            const userId = localStorage.getItem('id');
-            const jwtToken = localStorage.getItem('token');
             const result = await axios.patch(`http://localhost:8080/users/newsletter/id/${userId}`, {}, {
                 headers: {
                     Authorization: `Bearer ${jwtToken}`,
@@ -79,8 +74,6 @@ function SettingsContent() {
 
     async function onSubmitDelete() {
         try {
-            const userId = localStorage.getItem('id');
-            const jwtToken = localStorage.getItem('token');
             const result = await axios.delete(`http://localhost:8080/users/delete/id/${userId}`, {
                 headers: {
                     "Content-Type": "application/json",
@@ -105,49 +98,44 @@ function SettingsContent() {
             </div>
 
             <div className={styles["settings-content__container1"]}>
-                <p className={styles["settings-content-_container1__required-fields"]}>DEAR USER: ALL FIELD ARE REQUIRED TO BE FULFILLED BEFORE ANY REQUEST CAN BE MADE</p>
-                <div className={styles["settings-content__container1__item1"]}>
-                    <p className={styles["settings-content__container1__item1__change-password"]}>CHANGE YOUR PASSWORD</p>
+                <p1>DEAR USER: ALL FIELD ARE REQUIRED TO BE FULFILLED BEFORE ANY REQUEST CAN BE MADE</p1>
+                <p2>CHANGE YOUR PASSWORD</p2>
+                <form
+                    className={styles["settings-content__container1__form"]}
+                    onSubmit={handleSubmit(onSubmitPassword)}
+                >
+                    <input
+                        className={styles["settings-content__container1__form__input"]}
+                        type="text"
+                        placeholder="TYPE YOUR NEW PASSWORD"
+                        name="newPassword"
+                        id="newPassword"
+                        {...register("newPassword", {
+                            required: {
+                                value: true,
+                                message: "THIS FIELD CAN'T BE EMPTY"
+                            }, minLength: {
+                                value: 6,
+                                message: "MIN LENGTH IS 6 CHARACTERS"
+                            }
+                        })}
+                    />
+                    {errors.newpassword && <p className={styles["settings-content__container1__form__error"]}>{errors.newpassword.message}</p>}
 
-                 <label className={styles["settings-content__container1__item1__label"]}>
-                     <form
-                         className={styles["settings-content__container1__item1__label__form"]}
-                         onSubmit={handleSubmit(onSubmitPassword)}>
-                         <input
-                            className={styles["settings-content__container1__item1__label__form__password"]}
-                            type="text"
-                            placeholder="TYPE YOUR NEW PASSWORD"
-                            name="newPassword"
-                            id="newPassword"
-                            {...register("newPassword", {
-                                required: {
-                                    value: true,
-                                    message: "THIS FIELD CAN'T BE EMPTY"
-                                }, minLength: {
-                                    value: 6,
-                                    message: "MIN LENGTH IS 6 CHARACTERS"
-                                }
-                            })}
-                         />
-                         {errors.newpassword && <p className={styles["settings-content__container1__item1__label__form__error1"]}>{errors.newpassword.message}</p>}
+                    <button
+                        className={styles["settings-content__container1__form__button"]}
+                        type="submit">
+                        SUBMIT
+                    </button>
+                    {changePasswordSuccess && <p>PASSWORD IS CHANGED!</p>}
+                </form>
 
-                         <button
-                             className={styles["settings-content__container1__item1__label__form__button"]}
-                             type="submit">
-                             SUBMIT
-                         </button>
-                         {changePasswordSuccess && <p
-                             className={styles["settings-content__container1__item1__label__form__success-message"]}
-                         >
-                             PASSWORD IS CHANGED!</p>}
-                     </form>
-                 </label>
-            </div>
-
-            <div className={styles["settings-content__container2"]}>
-                <form onSubmit={handleSubmit(onSubmitPicture)}>
-                    <p className={styles["settings-content__container2__change-profile-picture"]}>CHANGE YOUR PROFILE PICTURE</p>
-                    <p className={styles["settings-content__container2__jpg-message"]}>PLEASE SELECT A JPG FILE</p>
+                <form
+                    onSubmit={handleSubmit(onSubmitPicture)}
+                    className={styles["settings-content__form2"]}
+                >
+                    <p1>CHANGE YOUR PROFILE PICTURE</p1>
+                    <p2>PLEASE SELECT A JPG FILE</p2>
                     <input
                         ref={register}
                         type="file"
@@ -160,57 +148,45 @@ function SettingsContent() {
                             }
                         })}
                     />
-                    {errors.profilePicture && <p className={styles["settings-content__container2__required-message"]}>{errors.profilePicture.message}</p>}
+                    {errors.profilePicture && <p3>{errors.profilePicture.message}</p3>}
 
-                    <p className={styles["settings-content__container2__jpg-confirm"]}>
-                    IF YOU ARE A 100% SURE THIS IS YOUR PERFECT
-                    PROFILE PICTURE, PRESS CONFIRM
-                    </p>
+                    <p4>IF YOU ARE A 100% SURE THIS IS YOUR PERFECT PROFILE PICTURE, PRESS CONFIRM</p4>
+
                     <button
-                        className={styles["settings-content__container2__button"]} type="submit">
+                        className={styles["settings-content__form2__button"]} type="submit">
                         CONFIRM
                     </button>
-                    {uploadPictureSuccess && <p
-                        className={styles["settings-content__container2__success-message"]}
-                        >
-                        PICTURE IS UPLOADED!</p>}
+                    {uploadPictureSuccess && <p5>PICTURE IS UPLOADED!</p5>}
                 </form>
-            </div>
 
-            <div className={styles["settings-content__container3"]}>
-                <form onSubmit={handleSubmit(onSubmitNewsletter)}>
-                    <p className={styles["settings-content__container3__send-newsletter"]}>SEND ME THE F.C. NEWSLETTER</p>
+                <form
+                    onSubmit={handleSubmit(onSubmitNewsletter)}
+                    className={styles["settings-content__form3"]}
+                >
+                    <p1>SEND ME THE F.C. NEWSLETTER</p1>
                     <button
-                        className={styles["settings-content__container3__button"]} type="submit">
+                        className={styles["settings-content__form3__button"]} type="submit">
                         YES/NO
                     </button>
-                    {newsletterSuccess && <p
-                        className={styles["settings-content__container3__success-message"]}
-                    >
-                        PREFERENCES CHANGED!</p>}
+                    {newsletterSuccess && <p2>PREFERENCES CHANGED!</p2>}
                 </form>
-            </div>
 
-            <div className={styles["settings-content__container4"]}>
-                <form onSubmit={handleSubmit(onSubmitDelete)}>
-                    <p className={styles["settings-content__container4__delete-account"]}>DELETE ACCOUNT</p>
-                    <p className={styles["settings-content__container4__message"]}>
-                       IF YOU WISH TO DELETE YOUR ACCOUNT YOU MUST PRESS THE BUTTON BELOW
-                    </p>
+                <form
+                    onSubmit={handleSubmit(onSubmitDelete)}
+                    className={styles["settings-content__form4"]}
+                >
+                    <p1>DELETE ACCOUNT</p1>
+                    <p2>IF YOU WISH TO DELETE YOUR ACCOUNT YOU MUST PRESS THE BUTTON BELOW</p2>
                     <button
-                        className={styles["settings-content__container4__button"]} type="submit"
-                        >
+                        className={styles["settings-content__form4__button"]} type="submit"
+                    >
                         DELETE MY ACCOUNT
                     </button>
-                    {requestDeleteSuccess && <p
-                        className={styles["settings-content__container4__success-message"]}
-                    >
-                        ACCOUNT IS DELETED!</p>}
-                    {requestDeleteFailed && <p className={styles["settings-content__container4__request-failed"]}>SOMETHING WENT WRONG..</p>}
+                    {requestDeleteSuccess && <p3>ACCOUNT IS DELETED!</p3>}
+                    {requestDeleteFailed && <p4>SOMETHING WENT WRONG..</p4>}
                 </form>
             </div>
         </div>
-      </div>
     );
 }
 

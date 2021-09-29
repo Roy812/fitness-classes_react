@@ -3,7 +3,9 @@ import LoginNavbar from "../components/loginNavbar/LoginNavbar";
 import LoginFooter from "../components/loginFooter/LoginFooter";
 import CategoriesContent from "../components/categoriesContent/CategoriesContent";
 
+
 function CategoriesPage() {
+
     return (
         <>
             <LoginNavbar />

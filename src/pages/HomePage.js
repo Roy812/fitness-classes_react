@@ -6,7 +6,9 @@ import Content from "../components/Content/Content";
 import Footer from "../components/Footer/Footer";
 import Button from "../components/Button/Button";
 
+
 function HomePage() {
+
     return (
         <>
             <NavBar

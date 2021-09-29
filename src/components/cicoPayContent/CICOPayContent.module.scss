@@ -1,0 +1,221 @@
+$light-red: #F62525;
+$white: #fff;
+$yellow-neon: #FAFD83;
+$light-blue: #33769C;
+
+.cico-pay-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+    h3 {
+        color: $light-red;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    h4 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+    &__pay-button {
+        width: 125px;
+        height: 50px;
+        background-color: $light-blue;
+        -webkit-text-fill-color: $white;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        border-color: $light-blue;
+        border-radius: 10px;
+        margin-top: 35px;
+        margin-bottom: 25px;
+
+        &:hover {
+            color: $yellow-neon;
+            transition: all 0.2s ease-out;
+        }
+    }
+
+    &__payment-success {
+        width: 500px;
+        color: $light-red;
+        font-size: 20px;
+        font-weight: 600;
+        position: relative;
+        bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    &__payment-failed {
+        color: $light-red;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        position: relative;
+        bottom: 12px;
+    }
+
+    &__form2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__confirm-button {
+            width: 125px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $light-blue;
+            -webkit-text-fill-color: $white;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            border-color: $light-blue;
+            border-radius: 10px;
+            margin-bottom: 35px;
+
+            &:hover {
+                color: $yellow-neon;
+                transition: all 0.2s ease-out;
+            }
+        }
+
+        &__booking-success {
+            color: $light-red;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        &__booking-failed {
+            color: $light-red;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            bottom: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .cico-pay-content {
+
+        h3 {
+            margin-top: 78px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                margin-bottom: 80px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 812px) {
+    .cico-pay-content {
+
+        h3 {
+            margin-top: 100px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                margin-top: 30px;
+                margin-bottom: 44px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .cico-pay-content {
+
+        h3 {
+            margin-top: 165px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                margin-top: 40px;
+                margin-bottom: 180px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cico-pay-content {
+
+        h3 {
+            margin-top: 78px;
+        }
+
+        &__pay-button {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1366px) {
+    .cico-pay-content {
+
+        h3 {
+            margin-top: 344px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                margin-bottom: 344px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .cico-pay-content {
+        margin-top: 130px;
+
+        h3 {
+            margin-top: 100px;
+            font-size: 24px;
+        }
+
+        &__pay-button {
+            margin-bottom: 58px;
+        }
+
+        &__form2 {
+
+            &__confirm-button {
+                font-size: 22px;
+                margin-bottom: 180px;
+            }
+        }
+    }
+}
+

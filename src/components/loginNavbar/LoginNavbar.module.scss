@@ -1,0 +1,127 @@
+$light-red: #F62525;
+$white: #fff;
+$blue-sky: #CFE2FF;
+
+.login-navbar {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+    background-color: $light-red;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+    &__fc-logo {
+        flex-shrink: 1;
+        margin-left: -10px;
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 60px;
+        list-style: none;
+        margin-left: -10px;
+        margin-right: 35px;
+        position: relative;
+        left: 10px;
+
+        &__link {
+            color: $white;
+            flex-shrink: 4;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: $blue-sky;
+            transition: all 0.2s linear;
+        }
+    }
+
+    &__login {
+        width: 175px;
+        text-align: center;
+        color: $white;
+        flex-shrink: 1;
+        font-weight: 100;
+        text-decoration: none;
+
+        &__profile-picture {
+            width: 55px;
+            height: 44px;
+            position: relative;
+            top: 6px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .login-navbar {
+
+        &__menu {
+            grid-gap: 30px;
+        }
+
+        &__login {
+            color: #F62525;
+            font-size: 2px;
+            position: relative;
+            right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .login-navbar {
+
+        &__menu {
+            grid-gap: 40px;
+        }
+
+        &__login {
+            width: 175px;
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .login-navbar {
+
+        &__menu {
+            grid-gap: 50px;
+        }
+
+        &__login {
+            width: 175px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .login-navbar {
+        width: 1750px;
+        height: 135px;
+
+        &__menu {
+            position: relative;
+            left: 35px;
+        }
+
+        &__login {
+            flex-basis: 250px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+

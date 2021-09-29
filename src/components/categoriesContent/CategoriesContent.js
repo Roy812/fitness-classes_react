@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CategoriesContent.module.css";
+import styles from "./CategoriesContent.module.scss";
 import { Link } from "react-router-dom";
 import dietPicture from "../../assets/Diet(icon).png";
 import dumbbellPicture from "../../assets/Dumbbell(icon).png";
@@ -11,7 +11,7 @@ function CategoriesContent( {message} ) {
     return (
         <div className={styles["categories-content"]}>
             <div className={styles["categories-content__title"]}>
-                <p>{message}</p>
+                <div>{message}</div>
             </div>
 
             <div className={styles["categories-content__nutrition"]}>

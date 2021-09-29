@@ -1,0 +1,83 @@
+$black: #000;
+$white: #fff;
+$light-green: #69DD56;
+
+.login-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &__container1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+
+        &__img {
+            width: 400px;
+            height: 130px;
+            position: relative;
+            top: 8px;
+        }
+
+        &__testbar {
+            color: $white;
+            width: 710px;
+            background-color: $white;
+        }
+    }
+
+    &__container2 {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+
+        &__img {
+            width: 638px;
+            height: 130px;
+        }
+
+        &__podcast {
+            width: 636px;
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: $black;
+            color: $light-green;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .login-banner {
+
+        &__container1 {
+
+            &__img {
+                width: 666px;
+                height: 180px;
+            }
+        }
+
+        &__container2 {
+
+            &__img {
+                width: 840px;
+                height: 180px;
+            }
+
+            &__podcast {
+                width: 840px;
+                height: 34px;
+                font-size: 18px;
+            }
+        }
+    }
+}

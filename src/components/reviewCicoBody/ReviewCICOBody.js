@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ReviewCICOBody.module.scss";
 import axios from "axios";
+import CountReviews from "../../helpers/CountReviews";
 import fourstars from "../../assets/Stars(4_5).svg";
 import oneStar from "../../assets/Stars_1_5.svg";
 import twoStars from "../../assets/Stars_2_5.svg";
 import threeStars from "../../assets/Stars_3_5.svg";
 import fourStars from "../../assets/Stars(4_5).svg";
 import fiveStars from "../../assets/Stars_5_5.svg";
-import CountReviews from "../../helpers/CountReviews";
 
 
 function ReviewCICOBody({ title }) {
 
-    const jwtToken = localStorage.getItem('token');
     const [reviews, setReviews] = useState([]);
     const [totalReviews, setTotalReviews] = useState();
     const [notFound, toggleNotFound] = useState(false);
+    const jwtToken = localStorage.getItem('token');
 
     useEffect(() => {
         async function loadReviews() {
             try {
-                // const title = 'CICO, ITs ALL YOU NEED';
                 const result = await axios.get(`http://localhost:8080/users/review/findby/title/${title}`,
                     {
                     headers: {

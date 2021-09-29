@@ -1,16 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import styles from "./LoginNavbar.module.css";
-import logoPicture from "../../assets/Logo F.C. (1).svg";
-import userIcon from "../../assets/User(Icon).png";
-import {Link} from "react-router-dom";
-import {AuthContext} from "../../context/AuthContext";
+import styles from "./LoginNavbar.module.scss";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import logoPicture from "../../assets/Logo F.C. (1).svg";
 
 
 function LoginNavbar() {
 
-    const { user } = useContext(AuthContext);
     const [userPicture, setUserPicture] = useState();
+    const { user } = useContext(AuthContext);
     const jwtToken = localStorage.getItem('token');
     const userId = localStorage.getItem('id');
 
@@ -26,8 +25,6 @@ function LoginNavbar() {
                 });
                 console.log(result);
                 setUserPicture(URL.createObjectURL(result.data));
-                // var decodedStringAtoB = atob(result.data);
-                // console.log(decodedStringAtoB);
             } catch (e) {
                 console.error(e);
             }
@@ -35,19 +32,17 @@ function LoginNavbar() {
         loadProfile();
     }, [])
 
-
-
     return (
         <nav className={styles["login-navbar"]}>
             <Link to="/">
-                <img className={styles["login-navbar__link__logo"]} src={logoPicture} alt="F.C.-image" />
+                <img className={styles["login-navbar__fc-logo"]} src={logoPicture} alt="F.C.-image" />
             </Link>
 
             <ul className={styles["login-navbar__menu"]}>
                 <li>
                     <Link
                         to="/myclasses"
-                        className={styles["login-navbar__item__link"]}>
+                        className={styles["login-navbar__menu__link"]}>
                         MY CLASSES
                     </Link>
                 </li>
@@ -55,7 +50,7 @@ function LoginNavbar() {
                 <li>
                     <Link
                         to="/categories"
-                        className={styles["login-navbar__item__link"]}>
+                        className={styles["login-navbar__menu__link"]}>
                         CATEGORIES
                     </Link>
                 </li>
@@ -63,7 +58,7 @@ function LoginNavbar() {
                 <li>
                     <Link
                         to="/newsletter"
-                        className={styles["login-navbar__item__link"]}>
+                        className={styles["login-navbar__menu__link"]}>
                         NEWSLETTER
                     </Link>
                 </li>
@@ -71,7 +66,7 @@ function LoginNavbar() {
                 <li>
                     <Link
                         to="/reviews"
-                        className={styles["login-navbar__item__link"]}>
+                        className={styles["login-navbar__menu__link"]}>
                         REVIEWS
                     </Link>
                 </li>
@@ -79,7 +74,7 @@ function LoginNavbar() {
 
             <div className={styles["login-navbar__login"]}>
                 <img className={styles["login-navbar__login__profile-picture"]} src={userPicture} alt="userIcon-image"/>
-                <p className={styles["login-navbar__login__message"]}> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
+                <p> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
             </div>
         </nav>
     );

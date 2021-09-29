@@ -1,0 +1,130 @@
+$light-red: #F62525;
+$pink-neon: #FF285C;
+$yellow-gold: #efbe11;
+$white: #fff;
+
+.cico-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin-top: 75px;
+
+    &__link {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        color: $light-red;
+        margin-top: 30px;
+        margin-bottom: 90px;
+
+        &:hover {
+            color: $yellow-gold;
+            transition: all 0.2s ease-out;
+        }
+    }
+
+    p {
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 68px;
+    }
+
+    &__form1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__button {
+            color: $white;
+            background-color: $pink-neon;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            border-color: $pink-neon;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $light-red;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__button {
+            color: $white;
+            background-color: $pink-neon;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            border-color: $pink-neon;
+            border-radius: 10px;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $light-red;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-height: 812px) {
+    .cico-content {
+
+        &__link {
+            font-size: 20px;
+            margin-top: 55px;
+        }
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .cico-content {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .cico-content {
+
+        &__link {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .cico-content {
+        margin-top: 105px;
+        margin-bottom: 105px;
+
+        &__link {
+            font-size: 26px;
+            margin-top: 12px;
+            margin-bottom: 76px;
+        }
+    }
+}

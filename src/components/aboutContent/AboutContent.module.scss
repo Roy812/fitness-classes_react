@@ -24,28 +24,6 @@
     }
 }
 
-@media screen and (min-width: 1600px) {
-    .about-content {
-        font-size: 22px;
-        margin-top: 52px;
-        margin-bottom: 52px;
-    }
-
-    .about-content__item1 {
-        width: 775px;
-    }
-
-    .about-content__item2 {
-        width: 775px;
-        margin-top: 30px;
-    }
-
-    .about-content__item3 {
-        width: 775px;
-        margin-top: 30px;
-    }
-}
-
 @media screen and (min-width: 375px) {
     .about-content {
         font-size: 16px;
@@ -57,20 +35,20 @@
         font-size: 20px;
         margin-top: 80px;
         margin-bottom: 80px;
-    }
 
-    .about-content__item1 {
-        width: 500px;
-    }
+        &__item1 {
+            width: 500px;
+        }
 
-    .about-content__item2 {
-        width: 500px;
-        margin-top: 70px;
-    }
+        &__item2 {
+            width: 500px;
+            margin-top: 70px;
+        }
 
-    .about-content__item3 {
-        width: 500px;
-        margin-top: 70px;
+        &__item3 {
+            width: 500px;
+            margin-top: 70px;
+        }
     }
 }
 
@@ -79,20 +57,20 @@
         font-size: 20px;
         margin-top: 112px;
         margin-bottom: 112px;
-    }
 
-    .about-content__item1 {
-        width: 620px;
-    }
+        &__item1 {
+            width: 620px;
+        }
 
-    .about-content__item2 {
-        width: 620px;
-        margin-top: 100px;
-    }
+        &__item2 {
+            width: 620px;
+            margin-top: 100px;
+        }
 
-    .about-content__item3 {
-        width: 620px;
-        margin-top: 100px;
+        &__item3 {
+            width: 620px;
+            margin-top: 100px;
+        }
     }
 }
 
@@ -101,15 +79,15 @@
         font-size: 20px;
         margin-top: 55px;
         margin-bottom: 55px;
-    }
 
-    .about-content__item2 {
-        width: 600px;
-        margin-top: 30px;
-    }
+        &__item2 {
+            width: 600px;
+            margin-top: 30px;
+        }
 
-    .about-content__item3 {
-        margin-top: 30px;
+        &__item3 {
+            margin-top: 30px;
+        }
     }
 }
 
@@ -122,9 +100,23 @@
 
 @media screen and (min-width: 1600px) {
     .about-content {
-        font-size: 20px;
-        margin-top: 45px;
-        margin-bottom: 45px;
+        font-size: 22px;
+        margin-top: 140px;
+        margin-bottom: 140px;
+
+        &__item1 {
+            width: 775px;
+        }
+
+        &__item2 {
+            width: 775px;
+            margin-top: 30px;
+        }
+
+        &__item3 {
+            width: 775px;
+            margin-top: 30px;
+        }
     }
 }
 

@@ -1,26 +1,23 @@
 import React, {createContext, useContext, useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
-import jwt_decode from "jwt-decode";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 
 export const AuthContext = createContext({});
 
 function AuthContextProvider({ children }) {
+
+    const history = useHistory();
+    const token = localStorage.getItem('token');
+    const userId = localStorage.getItem('id');
+
     const [authState, setAuthState] = useState({
         user: null,
         status: 'pending',
     });
-    const history = useHistory();
 
     async function fetchUserData(jwtToken) {
-        // const decodedToken = jwt_decode(jwtToken);
-        // console.log(decodedToken);
-        // const userId = decodedToken.sub;
-        const userId = localStorage.getItem('id');
         try {
-            const decodedToken = jwt_decode(jwtToken);
-            console.log(decodedToken);
             const result = await axios.get(`http://localhost:8080/users/id/${userId}`, {
                 headers: {
                     "Content-Type": "application/json",
@@ -44,12 +41,7 @@ function AuthContextProvider({ children }) {
     }
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-
         if (token && authState.user === null) {
-            // === undefined
-            // const decodedToken = jwt_decode(token);
-            // const userId = decodedToken.sub;
             fetchUserData(token);
         } else {
             setAuthState({
@@ -60,7 +52,6 @@ function AuthContextProvider({ children }) {
     }, []);
 
     async function loginFunction(userData) {
-        // localStorage.setItem('token', jwtToken);
         setAuthState({
             user: {
                 username: userData.username,
@@ -87,16 +78,6 @@ function AuthContextProvider({ children }) {
         logout: logoutFunction,
         fetch: fetchUserData,
     }
-
-    // function useAuthState(){
-    //     const authState = useContext(AuthContext);
-    //     const isDone = authState.status === 'done';
-    //     const isAuthenticated = authState.user !== null && isDone;
-    //     return {
-    //         ...authState,
-    //         isAuthenticated: isAuthenticated,
-    //     }
-    // }
 
     return (
         <AuthContext.Provider value={data}>

@@ -1,0 +1,127 @@
+$light-red: #F62525;
+$pink-neon: #FF285C;
+$white: #fff;
+$black: #000;
+
+.register-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    &__container1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+
+        &__input {
+            width: 166px;
+            -webkit-text-fill-color: $black;
+            font-size: 12px;
+            border-bottom: solid 3px $black;
+        }
+
+        &__error {
+            color: $light-red;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    &__container2 {
+        margin-top: 35px;
+
+        &__input {
+            width: 150px;
+            -webkit-text-fill-color: $black;
+            font-size: 12px;
+            border-bottom: solid 3px $black;
+        }
+
+        &__error {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: $light-red;
+        }
+    }
+
+    &__container3 {
+        width: 200px;
+        margin-top: 35px;
+
+        &__button {
+            color: $white;
+            background-color: $pink-neon;
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 10px;
+            border-color: $pink-neon;
+            padding: 10px;
+            margin-top: 25px;
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .register-content {
+        position: relative;
+        left: 0px;
+    }
+}
+
+@media screen and (min-height: 812px) {
+    .register-content {
+        position: relative;
+        left: 35px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .register-content {
+        width: 635px;
+        height: 1055px;
+        margin-bottom: 0px;
+        position: relative;
+        left: 210px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .register-content {
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .register-content {
+        position: relative;
+        left: 0px;
+        right: 40px;
+        margin-top: 120px;
+        margin-bottom: 120px;
+
+        &__container1 {
+            font-size: 20px;
+        }
+
+        &__container3 {
+            width: 300px;
+        }
+    }
+}
+
+

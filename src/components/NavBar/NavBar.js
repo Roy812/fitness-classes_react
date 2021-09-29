@@ -1,17 +1,18 @@
-import React, { useContext, useState } from "react";
-import styles from "./NavBar.module.css";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import styles from "./NavBar.module.scss";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { AuthContext } from "../../context/AuthContext";
 import logoPicture from "../../assets/Logo F.C. (1).svg";
 import loginIcon from "../../assets/Login(icon).png"
-import { useForm } from "react-hook-form";
-import axios from "axios";
-import { AuthContext } from "../../context/AuthContext";
 
-function NavBar( {message} ) {
 
+function NavBar({ message }) {
+
+    const { register, handleSubmit, formState: {errors} } = useForm();
     const [invalidInput, toggleInvalidInput] = useState(false);
     const { login } = useContext(AuthContext);
-    const {register, handleSubmit, formState: {errors}} = useForm();
 
     async function onSubmit(data) {
         console.log(data);
@@ -33,14 +34,14 @@ function NavBar( {message} ) {
     return (
         <nav className={styles["navbar"]}>
             <Link to="/">
-                <img className={styles["navbar__link__logo"]} src={logoPicture} alt="Fitness Classes Logo" />
+                <img className={styles["navbar__fc-logo"]} src={logoPicture} alt="Fitness Classes Logo" />
             </Link>
 
             <ul className={styles["navbar__menu"]}>
                 <li>
                     <Link
                         to="/categories"
-                        className={styles["navbar__menu__item__link"]}>
+                        className={styles["navbar__menu__link"]}>
                         CATEGORIES
                     </Link>
                 </li>
@@ -48,7 +49,7 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/about"
-                        className={styles["navbar__menu__item__link"]}>
+                        className={styles["navbar__menu__link"]}>
                         ABOUT
                     </Link>
                 </li>
@@ -56,7 +57,7 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/newsletter"
-                        className={styles["navbar__menu__item__link"]}>
+                        className={styles["navbar__menu__link"]}>
                         NEWSLETTER
                     </Link>
                 </li>
@@ -64,7 +65,7 @@ function NavBar( {message} ) {
                 <li>
                     <Link
                         to="/reviews"
-                        className={styles["navbar__menu__item__link"]}>
+                        className={styles["navbar__menu__link"]}>
                         REVIEWS
                     </Link>
                 </li>
@@ -101,8 +102,9 @@ function NavBar( {message} ) {
                             }
                         })}
                     />
-                    {errors.password && <p className={styles["navbar__login__form-container__error2"]}>{errors.password.message}</p>}
-                    {invalidInput && <p className={styles["navbar__login__form-container__invalid-input"]}>INVALID INPUT</p>}
+                    {errors.password && <p>{errors.password.message}</p>}
+                    {invalidInput && <p>INVALID INPUT</p>}
+
                     <button
                         type="submit"
                         className={styles["navbar__login__form-container__button"]}

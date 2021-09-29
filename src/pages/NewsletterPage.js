@@ -3,7 +3,9 @@ import RegisterHeader from "../components/registerHeader/RegisterHeader";
 import NewsletterContent from "../components/newsletterContent/NewsletterContent";
 import RegisterFooter from "../components/registerFooter/RegisterFooter";
 
+
 function NewsletterPage() {
+
     return (
         <>
             <RegisterHeader

@@ -3,8 +3,10 @@ import LoginNavbar from "../components/loginNavbar/LoginNavbar";
 import LoginFooter from "../components/loginFooter/LoginFooter";
 import MyClassesContent from "../components/myClassesContent/MyClassesContent";
 
+
 function MyClassesPage() {
-    return(
+
+    return (
         <>
             <LoginNavbar />
             <MyClassesContent />

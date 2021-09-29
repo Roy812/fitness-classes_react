@@ -1,20 +1,18 @@
 import React, { useState, useContext } from "react";
+import styles from "./CreateReviewBody.module.scss";
+import axios from "axios";
 import { useForm } from "react-hook-form";
-import styles from "./CreateReviewBody.module.css";
 import star1Picture from "../../assets/Star_one.svg";
 import star2Picture from "../../assets/Star_two.svg";
 import star3Picture from "../../assets/Star_three.svg";
 import star4Picture from "../../assets/Star_four.svg";
 import star5Picture from "../../assets/Star_five.svg";
-import {AuthContext} from "../../context/AuthContext";
-import axios from "axios";
 
 
 function CreateReviewBody() {
 
+    const { register, handleSubmit, formState: {errors} } = useForm();
     const [createReviewSuccess, toggleCreateReviewSuccess] = useState();
-    const {register, handleSubmit, formState: {errors}} = useForm();
-    const { user } = useContext(AuthContext);
 
     async function onSubmit(data) {
         console.log(data);
@@ -39,14 +37,10 @@ function CreateReviewBody() {
     }
 
     return (
-        <>
-            <h3 className={styles["create-review-body__title"]}>
-                CREATE A REVIEW FOR
-            </h3>
-
-            <form className={styles["create-review-body"]} onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles["create-review-body"]}>
+            <h3>CREATE A REVIEW FOR</h3>
+            <form className={styles["create-review-body__form"]} onSubmit={handleSubmit(onSubmit)}>
                 <select
-                    className={styles["create-review-body__dropdown"]}
                     {...register("title")}>
                     <option value="CICO, ITs ALL YOU NEED">"CICO, ITs ALL YOU NEED"</option>
                     <option value="SNACKS">"THE PERFECT POST WORKOUT SNACKS"</option>
@@ -54,7 +48,7 @@ function CreateReviewBody() {
                 </select>
 
                 <textarea
-                    className={styles["create-review-body__input"]}
+                    className={styles["create-review-body__form-input"]}
                     rows="4"
                     cols="40"
                     placeholder="WRITE YOUR REVIEW HERE"
@@ -70,23 +64,19 @@ function CreateReviewBody() {
                         }
                     })}
                 />
-                {errors.review && <p className={styles["create-review-body__error1"]}>{errors.review.message}</p>}
+                {errors.review && <p className={styles["create-review-body__form__error1"]}>{errors.review.message}</p>}
 
-                <h3
-                    className={styles["create-review-body__rating-message"]}>
-                    GIVE THIS CLASS A RATING<br/>OUT OF 5 STARS
-                </h3>
+                <h3>GIVE THIS CLASS A RATING<br/>OUT OF 5 STARS</h3>
 
-                <div className={styles["create-review-body__rating-container"]}>
-                    <img className={styles["create-review-body__rating-container__icon"]} src={star1Picture} alt="star1-image"/>
-                    <img className={styles["create-review-body__rating-container__icon"]} src={star2Picture} alt="star2-image"/>
-                    <img className={styles["create-review-body__rating-container__icon"]} src={star3Picture} alt="star3-image"/>
-                    <img className={styles["create-review-body__rating-container__icon"]} src={star4Picture} alt="star4-image"/>
-                    <img className={styles["create-review-body__rating-container__icon"]} src={star5Picture} alt="star5-image"/>
+                <div className={styles["create-review-body__form-ratings"]}>
+                    <img className={styles["create-review-body__form-ratings__icon"]} src={star1Picture} alt="star1-image"/>
+                    <img className={styles["create-review-body__form-ratings__icon"]} src={star2Picture} alt="star2-image"/>
+                    <img className={styles["create-review-body__form-ratings__icon"]} src={star3Picture} alt="star3-image"/>
+                    <img className={styles["create-review-body__form-ratings__icon"]} src={star4Picture} alt="star4-image"/>
+                    <img className={styles["create-review-body__form-ratings__icon"]} src={star5Picture} alt="star5-image"/>
                 </div>
 
                 <select
-                    className={styles["create-review-body__dropdown"]}
                     {...register("rating")}>
                     <option>1</option>
                     <option>2</option>
@@ -96,23 +86,15 @@ function CreateReviewBody() {
                 </select>
 
                 <button
-                    className={styles["create-review-body__post-button"]}
+                    className={styles["create-review-body__form__post-button"]}
                     type="submit">
                     POST
                 </button>
-                {createReviewSuccess && <p
-                    className={styles["create-review-body__review-created"]}
-                >
-                    REVIEW IS CREATED!</p>}
+
+                {createReviewSuccess && <p>REVIEW IS CREATED!</p>}
             </form>
-        </>
+        </div>
     );
 }
 
 export default CreateReviewBody;
-
-
-// <select className={styles["create-review-body__dropdown"]} onChange={(event => {
-//     const selectedClass = event.target.value;
-//     setChoiceClass(selectedClass)
-// })}>
