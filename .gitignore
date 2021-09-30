@@ -1,7 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-.idea
+.idea/watcherTasks.xml
+.idea/workspace.xml
+.idea/fitness_test1.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles
 /node_modules
 /.pnp
 .pnp.js
