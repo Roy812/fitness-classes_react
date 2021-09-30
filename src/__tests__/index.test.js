@@ -69,7 +69,7 @@ test('Count bookings by title SNACKS', () => {
     expect(result).toBe(1);
 })
 
-test('Count bookings by title TESTOSTERON', () => {
+test('Count bookings by title TESTOSTERONE', () => {
     //ARRANGE
     const bookings = [
         {
@@ -77,10 +77,10 @@ test('Count bookings by title TESTOSTERON', () => {
             title: "CICO"
         }, {
             lessonId: 3,
-            title: "TESTOSTERON"
+            title: "TESTOSTERONE"
         }, {
             lessonId: 3,
-            title: "TESTOSTERON"
+            title: "TESTOSTERONE"
         }
     ]
 
