@@ -79,7 +79,7 @@ function CICOPayContent({ classTitle, lessonId }) {
                     YOUR COINBALANCE IS 0, UPDATE YOUR COINS!</p>}
             </form>
 
-            <form
+            {payCoinsSuccess && <form
                 onSubmit={handleSubmit(onSubmitBook)}
                 className={styles["cico-pay-content__form2"]}
             >
@@ -97,7 +97,7 @@ function CICOPayContent({ classTitle, lessonId }) {
                     className={styles["cico-pay-content__form2__booking-failed"]}
                     >
                     SOMETHING WENT WRONG..</p>}
-            </form>
+            </form>}
         </div>
     );
 }

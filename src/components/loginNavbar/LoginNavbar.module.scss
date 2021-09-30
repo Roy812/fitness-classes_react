@@ -33,11 +33,11 @@ $blue-sky: #CFE2FF;
             font-size: 20px;
             font-weight: 600;
             text-decoration: none;
-        }
 
-        &:hover {
-            color: $blue-sky;
-            transition: all 0.2s linear;
+            &:hover {
+                color: $blue-sky;
+                transition: all 0.2s linear;
+            }
         }
     }
 
@@ -125,3 +125,8 @@ $blue-sky: #CFE2FF;
     }
 }
 
+@media screen and (min-width: 1700px) {
+    .login-navbar {
+        width: 100%;
+    }
+}

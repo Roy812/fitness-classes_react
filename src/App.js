@@ -32,7 +32,7 @@ function App() {
   return (
           <Switch>
               <Route exact path="/">
-                  <HomePage />
+                  {user === null ? <HomePage /> : <Redirect to="/login"/>}
               </Route>
               <Route path="/categories">
                   <CategoriesPage />

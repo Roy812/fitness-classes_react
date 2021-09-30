@@ -384,3 +384,12 @@ $light-red: #F62525;
     }
 }
 
+@media screen and (min-width: 1700px) {
+    .nutrition-body {
+        height: 100%;
+        position: relative;
+        right: 0px;
+        left: 880px;
+        margin-top: 0px;
+    }
+}

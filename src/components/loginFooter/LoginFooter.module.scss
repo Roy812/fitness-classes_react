@@ -50,3 +50,9 @@ $blue-sky: #CFE2FF;
         padding: 50px;
     }
 }
+
+@media screen and (min-width: 1700px) {
+    .login__footer {
+        width: 100%;
+    }
+}

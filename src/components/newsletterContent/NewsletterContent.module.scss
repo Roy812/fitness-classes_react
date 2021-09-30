@@ -96,8 +96,9 @@ $yellow-gold: #efbe11;
     }
 }
 
-
-
-
-
-
+@media Screen and (min-width: 1700px) {
+    .newsletter-content {
+        margin-top: 176px;
+        margin-bottom: 100px;
+    }
+}

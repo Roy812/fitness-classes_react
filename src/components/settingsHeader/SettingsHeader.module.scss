@@ -101,6 +101,18 @@ $white: #fff;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .settings-header {
+
+        &__user {
+
+            h1 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1600px) {
     .settings-header {
 

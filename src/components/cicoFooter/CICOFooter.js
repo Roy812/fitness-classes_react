@@ -7,7 +7,7 @@ function CICOFooter() {
     return (
         <div className={styles["cico-footer"]}>
             <Link
-                className={styles["CICO-footer__link"]}
+                className={styles["cico-footer__link"]}
                 to="reviews"
             >
                 REVIEW THIS CLASS <br/> AND MAKE YOUR LEARNING <br/> EXPERIENCE EVEN BETTER

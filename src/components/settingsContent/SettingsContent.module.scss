@@ -306,3 +306,38 @@ $white: #fff;
         }
     }
 }
+
+@media screen and (min-width: 1700px) {
+    .settings-content {
+
+        &__icon-container {
+
+            &__lock {
+                position: relative;
+                bottom: 216px;
+            }
+
+            &__photo {
+                position: relative;
+                top: 10px;
+            }
+
+            &__newsletter {
+                position: relative;
+                top: 330px;
+            }
+
+            &__delete {
+                position: relative;
+                top: 454px;
+            }
+        }
+
+        &__container1 {
+
+            p1 {
+                width: 320px;
+            }
+        }
+    }
+}

@@ -124,4 +124,11 @@ $black: #000;
     }
 }
 
-
+@media screen and (min-width: 1700px) {
+    .register-content {
+        position: relative;
+        left: 730px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

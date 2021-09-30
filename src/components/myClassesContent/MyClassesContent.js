@@ -43,9 +43,12 @@ function MyClassesContent() {
 
     return (
       <div className={styles["my-classes-content"]}>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={styles["my-classes-content__form"]}
+        >
             <button
-                className={styles["my-classes-content__button"]}
+                className={styles["my-classes-content__form__button"]}
                 type="submit">
                 GET MY BOOKINGS
             </button>

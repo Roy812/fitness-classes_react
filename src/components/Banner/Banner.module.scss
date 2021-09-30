@@ -64,3 +64,23 @@
         }
     }
 }
+
+@media Screen and (min-width: 1700px) {
+    .banner {
+
+        &__picture-lifting {
+            height: 290px;
+            flex-basis: 732px;
+        }
+
+        &__picture-food {
+            height: 290px;
+            flex-basis: 732px;
+        }
+
+        &__picture-home-gym {
+            height: 290px;
+            flex-basis: 732px;
+        }
+    }
+}

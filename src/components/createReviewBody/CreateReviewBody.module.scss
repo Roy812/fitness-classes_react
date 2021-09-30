@@ -148,3 +148,10 @@ $light-blue: #33769C;
         width: 110px;
     }
 }
+
+@media screen and (min-width: 1700px) {
+    .create-review-body {
+        margin-top: 80px;
+        margin-bottom: 54px;
+    }
+}
