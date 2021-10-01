@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 function LoginFooter() {
 
-    const { logout } = useContext(AuthContext);
+    const { user , logout } = useContext(AuthContext);
 
      function onSubmit() {
        logout();
@@ -21,13 +21,13 @@ function LoginFooter() {
                     GO TO SETTINGS
                 </Link>
 
-                <button
+                {user !== null && <button
                     className={styles["login__footer__button"]}
                     type="button"
                     onClick={onSubmit}
                 >
                     LOG OUT
-                </button>
+                </button>}
             </div>
     );
 }
