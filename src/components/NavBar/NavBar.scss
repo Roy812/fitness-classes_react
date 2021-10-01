@@ -1,0 +1,229 @@
+$light-red: #F62525;
+$black: #000;
+$white: #fff;
+$light-blue: #33769C;
+$yellow-neon: #FAFD83;
+$blue-sky: #CFE2FF;
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.fa-bars {
+  padding-top: 11px;
+  color: $white;
+}
+
+.navbar {
+  background: $light-red;
+  height: 93px;
+  width: 101%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding-top: 8px;
+
+  &__fc-logo-container {
+    position: absolute;
+    left: 50px;
+  }
+
+  &__fc-logo {
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    justify-content: end;
+    padding: 0 140px 0 290px;
+  }
+
+  &__item {
+    height: 80px;
+  }
+
+  &__links {
+    color: $white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-top: 20px;
+
+    &:hover {
+      border-bottom: 2.5px solid $white;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  &__menu-icon {
+    display: none;
+  }
+
+  &__login {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 10px;
+
+    &__icon {
+      max-width: 40px;
+      max-height: 40px;
+      margin-right: 8px;
+    }
+
+    &__form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-right: 12px;
+
+      &__input-mail {
+        width: 130px;
+        -webkit-text-fill-color: $black;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 10px;
+        text-align: center;
+
+        p {
+          color: $white;
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+          font-size: 8px;
+          font-weight: 600;
+        }
+      }
+
+      &__input-password {
+        width: 130px;
+        -webkit-text-fill-color: $black;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 10px;
+        text-align: center;
+        margin-top: 5px;
+
+        p {
+          color: $white;
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+          font-size: 8px;
+          font-weight: 600;
+        }
+      }
+
+      &__button {
+        color: $white;
+        background-color: $light-blue;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 10px;
+        border-color: $light-blue;
+        margin-top: 2px;
+
+        &:hover {
+          color: $yellow-neon;
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .navbar {
+
+    &__menu {
+      padding: 0 80px 0 170px;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .fa-times {
+    color: $white;
+    font-size: 2rem;
+    padding-top: 8px;
+  }
+
+  .navbar__menu.active {
+    background: $light-red;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    justify-content: center;
+  }
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 90px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    justify-content: center;
+  }
+
+  .navbar {
+
+    &__fc-logo-container {
+      position: absolute;
+      left: 20px;
+      top: -33px;
+    }
+
+    &__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+        border-radius: 0;
+      }
+    }
+
+    &__fc-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
+
+    &__menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  }
+}

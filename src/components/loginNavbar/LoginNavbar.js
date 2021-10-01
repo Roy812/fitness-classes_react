@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import styles from "./LoginNavbar.module.scss";
+import "./LoginNavbar.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
@@ -12,6 +12,12 @@ function LoginNavbar() {
     const { user } = useContext(AuthContext);
     const jwtToken = localStorage.getItem('token');
     const userId = localStorage.getItem('id');
+
+    const [click, setClick] = useState(false);
+    const [button, setButton] = useState(true);
+
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
 
     useEffect(() => {
         async function loadProfile() {
@@ -32,51 +38,77 @@ function LoginNavbar() {
         loadProfile();
     }, [])
 
+    const showButton = () => {
+        if (window.innerWidth <= 1060) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton();
+    }, []);
+
+    window.addEventListener('resize', showButton);
+
     return (
-        <nav className={styles["login-navbar"]}>
-            <Link to="/">
-                <img className={styles["login-navbar__fc-logo"]} src={logoPicture} alt="F.C.-image" />
-            </Link>
-
-            <ul className={styles["login-navbar__menu"]}>
-                <li>
-                    <Link
-                        to="/myclasses"
-                        className={styles["login-navbar__menu__link"]}>
-                        MY CLASSES
+        <>
+            <nav className="login-navbar">
+                <div className="login-navbar__fc-logo-container">
+                    <Link to="/">
+                        <img className="login-navbar__fc-logo" src={logoPicture} alt="Fitness Classes Logo" />
                     </Link>
-                </li>
+                </div>
+                <div className="login-navbar__container">
+                    <div className="login-navbar__menu-icon" onClick={handleClick}>
+                        <i className={click ? "fas fa-times" : "fas fa-bars"}/>
+                    </div>
+                    <ul className={click ? "login-navbar__menu active" : "login-navbar__menu"}>
+                        <li className="login-navbar__item">
+                            <Link to='/myclasses'
+                                  className="login-navbar__links"
+                                  onClick={closeMobileMenu}>
+                                MYCLASSES
+                            </Link>
+                        </li>
+                        <li className="login-navbar__item">
+                            <Link
+                                to='/categories'
+                                className="login-navbar__links"
+                                onClick={closeMobileMenu}
+                            >
+                                CATEGORIES
+                            </Link>
+                        </li>
+                        <li className="login-navbar__item">
+                            <Link
+                                to='/newsletter'
+                                className="login-navbar__links"
+                                onClick={closeMobileMenu}
+                            >
+                                NEWSLETTER
+                            </Link>
+                        </li>
+                        <li className="login-navbar__item">
+                            <Link
+                                to='/reviews'
+                                className="login-navbar__links"
+                                onClick={closeMobileMenu}
+                            >
+                                REVIEWS
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
 
-                <li>
-                    <Link
-                        to="/categories"
-                        className={styles["login-navbar__menu__link"]}>
-                        CATEGORIES
-                    </Link>
-                </li>
+                <div className="login-navbar__login">
+                    <img className="login-navbar__login__profile-picture" src={userPicture} alt="userIcon-image"/>
+                    <p> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
+                </div>
 
-                <li>
-                    <Link
-                        to="/newsletter"
-                        className={styles["login-navbar__menu__link"]}>
-                        NEWSLETTER
-                    </Link>
-                </li>
-
-                <li>
-                    <Link
-                        to="/reviews"
-                        className={styles["login-navbar__menu__link"]}>
-                        REVIEWS
-                    </Link>
-                </li>
-            </ul>
-
-            <div className={styles["login-navbar__login"]}>
-                <img className={styles["login-navbar__login__profile-picture"]} src={userPicture} alt="userIcon-image"/>
-                <p> YOU ARE CURRENTLY LOGGED IN AS: {user && user.username}</p>
-            </div>
-        </nav>
+            </nav>
+        </>
     );
 }
 

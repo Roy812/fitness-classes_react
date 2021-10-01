@@ -136,6 +136,7 @@ Zie onderstaand voorbeeld:
 ##CreateReview-page
 Op deze pagina kan de gebruiker een review aanmaken en versturen met de button 'post'.
 De volgende voorwaarden zijn van belang:
+* Elke gebruiker kan meer 1 review aanmaken per les!
 * Selecteer in de bovenste dropdown menu om welke class het gaat.
 * De tekst van de review mag maximaal 250 tekens bevatten, en mag niet leeg zijn.
 * Selecteer in de onderste dropdown menu een 'rating' van 1-5.
