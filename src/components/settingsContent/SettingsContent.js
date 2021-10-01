@@ -106,7 +106,7 @@ function SettingsContent() {
                 >
                     <input
                         className={styles["settings-content__container1__form__input"]}
-                        type="text"
+                        type="password"
                         placeholder="TYPE YOUR NEW PASSWORD"
                         name="newPassword"
                         id="newPassword"

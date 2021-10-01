@@ -56,7 +56,7 @@ function RegisterContent() {
                         <p>CREATE A PASSWORD</p>
                         <input
                             className={styles["register-content__container2__input"]}
-                            type="text"
+                            type="password"
                             placeholder="TYPE YOUR PASSWORD"
                             name="password"
                             id="password"
